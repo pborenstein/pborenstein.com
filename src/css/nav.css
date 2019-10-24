@@ -1,0 +1,39 @@
+nav {
+  grid-area: nav;
+  margin: 0 0 1rem 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none inside;
+  margin: 0 0 0 0rem;
+  padding: 0 0 0 .2em;
+  max-width: 4rem;
+  width: 6em;
+  border: 0;
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+.nav-item {
+  display: inline;
+  margin-right: 1em;
+  margin-left: 0;
+  font-family: var(--font-heading);
+  font-size: 60%;
+}
+
+.nav-item-active {
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.nav-item a[href] {
+  text-decoration: none;
+  color: var(--color-conrast)
+}
+
+.nav-item a[href]:hover {
+  text-decoration: underline;
+}

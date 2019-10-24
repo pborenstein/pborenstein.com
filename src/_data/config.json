@@ -1,0 +1,12 @@
+{
+  "siteName":             "fresh",
+  "madeInLabel":      "Made in Manchester, NH",
+  "madeWithLabel":    "with <span>🛠</span> and <a href='https://www.11ty.io/'>eleventy</a>",
+  "url":              "https://example.com",
+  "authorEmail":      "pborenstein@gmail.com",
+  "authorHandle":     "@pborenstein",
+  "authorName":       "Philip Borenstein",
+  "maxPostsPerPage":  5,
+  "kabel":            true,
+  "debug":            false
+}

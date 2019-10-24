@@ -1,0 +1,67 @@
+
+:root {
+  --color-table-background: var(--color-background);
+  --color-table-contrast:   var(--color-contrast);
+  --color-table-body:       var(--color-body);
+  --color-table-heading:    var(--color-heading);
+  --color-table-caption:    var(--color-heading);
+  --font-table-caption:     var(--font-heading);
+  --font-table-heading:     var(--font-heading);
+  --font-table-body:        var(--font-body);
+}
+
+table {
+  width:  100%;
+  border-collapse: collapse;
+  font-family: var(--font-table-body);
+  color: var(--color-table-body);
+  margin: 1.5em 0;
+}
+
+
+thead {
+  font-family: var(--font-table-heading);
+  border-bottom: 1px solid var(--base01);
+}
+
+tbody {
+  hyphens: manual;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--color-table-background);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-table-contrast);
+}
+
+td {
+  vertical-align: text-top;
+  padding: 5px;
+}
+
+th {
+  vertical-align: bottom;
+  padding-bottom: 0;
+  color: var(--color-table-heading);
+}
+
+
+table caption {
+  caption-side: top;
+  text-align: right;
+  font-family: var(--font-table-caption);
+  font-style: italic;
+  font-weight: 200;
+  color: var(--color-body-contrast);
+  margin-bottom: 0;
+}
+
+
+.table-caption {
+  width: max-content;
+  padding: 0;
+  float: right;
+  background-image: linear-gradient(180deg,transparent 75%,var(--color-fadedred) 0) /* from https://www.ideo.com/ */
+}

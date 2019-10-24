@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <title>{{ title }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/root.css">
+  <link rel="stylesheet" href="/css/logo.css">
+  <link rel="stylesheet" href="/css/headings.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/code.css">
+  <link rel="stylesheet" href="/css/tables.css">
+  <link rel="stylesheet" href="/css/footnotes.css">
+  <link rel="stylesheet" href="/css/lists.css">
+  <link rel="stylesheet" href="/css/base16-tomorrow.css">
+  {%- if config.kabel %}
+  <link rel="stylesheet" href="https://use.typekit.net/ztn6rcs.css">
+  {% endif -%}
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+  {% hasMermaid content %}
+</head>
+<body class="one-col-grid">
+ <header>
+    {% block header %}
+      {% include "partials/logo.njk" %}
+    {% endblock %}
+  </header>
+  <nav>
+    {% block nav %}
+      {% include "partials/nav.njk" %}
+    {% endblock %}
+  </nav>
+  <main>
+    {% block kontent %}
+      {{ content | safe }}
+    {% endblock %}
+  </main>
+  <footer>
+    {% block footer %}
+      {% include "partials/site-footer.njk" %}
+    {% endblock %}
+  </footer>
+</body>
+</html>

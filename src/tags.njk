@@ -1,0 +1,20 @@
+---
+date: 2001-03-15
+title: All the tags
+permalink: /tags/
+layout: layouts/page.njk
+tags:
+  - _nav
+navtitle: Tags
+---
+<h1>All the tags</h1>
+
+<ul>
+{#
+  https://mozilla.github.io/nunjucks/templating.html#sort-arr-reverse-casesens-attr
+                                         reverse, caseSens, attr  #}
+{% for tag in collections.tagList | sort(false,   true) %}
+  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+  <li><a href="{{ tagUrl | url }}" class="atag">{{ tag }}</a></li>
+{% endfor %}
+</ul>

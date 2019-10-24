@@ -1,0 +1,149 @@
+.one-col-grid {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1.2fr) minmax(12rem, 32rem) minmax(2rem, 1.2fr);
+  grid-template-rows: auto;
+  grid-row-gap: 0;
+  grid-column-gap: 0;
+  grid-template-areas:
+  "... head ..."
+  "... nav  ..."
+  "... main ..."
+  "... foot ...";
+  hyphens: auto;
+}
+
+/*  page header */
+
+header {
+  display: grid;
+  grid-area: head;
+  margin-bottom: 0;
+}
+
+
+/*  Main content */
+
+main {
+  grid-area: main;
+  padding-top: 0;
+}
+
+/*  Navigation */
+nav {
+  grid-area: nav;
+}
+
+
+/*  footer  */
+
+footer {
+  grid-area: foot;
+  font-size: 1rem;
+  color: var(--color-gray);
+  font-family: var(--font-footer);
+  font-size: 0.6rem;
+  margin: 0 0 1rem 0;
+  border-top: 1px solid var(--color-darkred);
+  padding-top: 0.5em;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between ;
+}
+
+.footer-text {
+  vertical-align: top;
+  margin: 0
+}
+
+.footer-item {
+	display: inline-block;
+}
+
+footer a[href] {
+  color: inherit;
+}
+
+
+/*  --------------- BLOCKS ----------------  */
+
+
+/*  dateline */
+
+.dateline {
+  font-size: .7rem;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  border-top: 1px solid var(--color-darkred);
+  border-bottom: 1px solid var(--color-darkred);
+  padding: .25rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.dateline-date {
+  font-weight: 300;
+}
+
+/* Text scale
+    https://www.modularscale.com/?1&em&1.25
+
+        1.953em
+        1.563em
+        1.25em
+>>>>>>  1em
+        0.8em
+        0.64em
+        0.512em
+        0.41em
+*/
+
+
+/*  -----  links  ---------- */
+a[href] {
+  text-decoration: none;
+  color: var(--color-link)
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+/*  --------  folding ------- */
+
+summary {
+  font-family: var(--font-body);
+  font-weight: 500;
+  background-color: var(--color-fadedred);
+  padding: .75em;
+  border-radius: 0.5em;
+  border-color: var(--base01);
+  border-width: thin;
+  border-style: solid;
+  margin-bottom: 0;
+}
+
+details[open] summary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+details[open] aside {
+  background-color: var(--base0x);
+  padding: 0.75em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+
+details:focus,
+summary:focus {
+  outline: 0;
+}
+
+details > summary::-webkit-details-marker {
+  color: var(--color-body-contrast);
+
+}

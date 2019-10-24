@@ -1,0 +1,23 @@
+<ul>
+  <li>
+    <p class="footer-text">
+      Copyright &copy; 2019 {{ config.authorName }}
+    </p>
+    <p class="footer-text" id="sha">
+      <a href="https://github.com/pborenstein/{{git.repo}}/blob/master{{ page.inputPath.slice(1) }}">
+      {%- if git.curbranch != 'HEAD' -%}
+        {{- git.curbranch-}}@
+      {%- endif -%}
+      {{- git.commitsha -}}
+      </a>
+    </p>
+  </li>
+  <li style="text-align: right">
+    <p class="footer-text"">
+      {{ config.madeInLabel | safe }}
+    </p>
+    <p class="footer-text">
+      {{ config.madeWithLabel | safe }}
+    </p>
+  </li>
+</ul>

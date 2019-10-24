@@ -1,0 +1,88 @@
+:root {
+  --color-body:         #111;
+  --color-heading:      #333;
+  --color-link:         var(--color-red);
+  --color-contrast:     var(--base0x);
+  --color-background:   #fff;
+  --color-body-contrast: var(--color-darkred);
+
+  --color-gray:         #C0C0C0;
+  --color-lightgray:    #f2f2f2;
+  --color-darkred:      #7F0036; /* 127, 0, 54 */
+  --color-fadedred:     #fde2e2;
+  --color-red:          #c22323;
+  --color-white:        #fff;
+  --color-shadow:       3px 3px 4px 0px rgba(0, 0, 0, 0.19);
+                        /* offset-x | offset-y | blur-radius | spread-radius | color */
+
+  --font-body:          Georgia, 'IBM Plex Serif', 'neue-kabel',   Georgia, serif;
+  --font-caption:       'Cochin', 'Times', serif;
+  --font-code-size:     .875em;
+  --font-code:          Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  --font-footer:        "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  --font-heading:       "Helvetica Neue",'neue-kabel',"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  --font-list:          "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+  --font-features:      "xnum"   /*  onum:   Old style numbers */
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  overflow: scroll;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    /* border: 1px solid red !important; */
+    margin-top: 0;
+    margin-bottom: 1em;
+        /*  The idea here is that the tops
+            of paragraphs (and other blocklike things)
+            have no margins. They butt up against
+            the bottom of the thing above them.
+            If that happens to be a para, which it
+            probably is, then they'll just use the
+            bottom margin of the preceding element.
+            Is this enough to keep headings close?
+            All this because I don't like there to be
+            a space between the heading and the next
+            chunk of content.
+        */ 
+}
+
+hr {
+  margin: initial;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight:  400;
+  color: var(--color-body);
+  background-color: var(--color-background);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+
+
+/* links to markdown header with disappearing # */
+.direct-link {
+	font-family: var(--font-heading);
+	text-decoration: none;
+	font-style: normal;
+	margin-left: .1em;
+}
+
+a[href].direct-link,
+a[href].direct-link:visited {
+	color: transparent;
+}
+
+a[href].direct-link:focus,
+a[href].direct-link:focus:visited,
+:hover > a[href].direct-link,
+:hover > a[href].direct-link:visited {
+  color: var(--color-body-contrast);
+  text-decoration: none;
+}
+

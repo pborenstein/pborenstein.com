@@ -1,0 +1,26 @@
+<ul>
+  {%- for nav in collections._nav  -%}
+    <li class="nav-item{% if nav.url == page.url %} nav-item-active{% endif %}">
+      <a href="{{ nav.url | url }}">{{ nav.data.navtitle or nav.data.title }}</a>
+      {%- if config.debug -%}
+        <br>
+        ####
+        {{nav.data.page | pdump}}
+      {%- endif -%}
+      </li>
+  {%- endfor -%}
+</ul>
+{%- if config.debug -%}
+<pre><code class="language-js">
+On this page:
+
+page.url: {{page.url}}
+date: {{ date | pdump | safe  }}
+page: {{ page | pdump | safe  }}
+tags: {{ tags | pdump | safe  }}
+title: {{ title | pdump | safe  }}
+navtitle: {{ navtitle | pdump | safe  }}
+git: {{ git | pdump | safe  }}
+<!-- layoutContent:: -->{# { layoutContent | pdump | safe } #}
+</code></pre>
+{%- endif -%}

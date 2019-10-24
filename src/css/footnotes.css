@@ -1,0 +1,14 @@
+.footnotes {
+  font-size: .8rem;
+}
+
+.footnote-ref {
+  font-size: .64em;
+  font-variant-numeric: oldstyle-nums;
+}
+
+.footnotes-sep {
+  margin-top: 2em;
+  border-top: 1px solid var(--color-darkred);
+  padding-top: 1em;
+}
