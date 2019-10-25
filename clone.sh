@@ -7,7 +7,7 @@ git clone --depth 1 --origin source   git@github.com:pborenstein/fresh.git  pb.f
 cd pb.frish
 
 START_COMMIT=$(git rev-list master|tail -n 1)
-# 8f2b66476319f7a27453abef64ffd399a22495c1
+# 7167a7106284e9663cb170bc612e6df9c0ca6786
 
 git checkout $START_COMMIT
 # detached head 
