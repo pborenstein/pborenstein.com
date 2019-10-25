@@ -48,3 +48,19 @@ CONFLICT (add/add): Merge conflict in README.md
 Auto-merging README.md
 Recorded preimage for 'README.md'
 Automatic merge failed; fix conflicts and then commit the result.
+
+
+to merge the template into the master
+use rebase (see how stree does it)
+
+git --no-optional-locks -c color.branch=false -c color.diff=false -c color.status=false -c diff.mnemonicprefix=false -c core.quotepath=false -c credential.helper=sourcetree rebase 136311e5b362949908e23254db1718f8b21432ab 
+First, rewinding head to replay your work on top of it...
+Applying: name
+
+git rebase 3725b9974a68937e3e3ef0c2a59b3c22ed5a9078 
+First, rewinding head to replay your work on top of it...
+Applying: name
+Applying: make our logo smaller
+
+the sha is the sha of template/master but not the symbolic
+
