@@ -102,7 +102,7 @@ Steps to success
 
     It's reall important that you stay calm.
 
-    ``` md
+    ``` markdown
     Code blocks in lists are the *worst*!
     ```
 
@@ -184,7 +184,7 @@ The `parameters` can be:
 
 The container above  looks like this:
 
-``` md
+``` markdown
 ::: style=background-color:aliceblue;padding:0.75em
 Divs are written like this:
 . . .

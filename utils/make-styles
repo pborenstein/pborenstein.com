@@ -1,9 +1,5 @@
 #! /usr/bin/env bash
 
-echo $PWD
-echo ha ha ha
-
-
 cat ./src/css/root.css       \
     ./src/css/logo.css       \
     ./src/css/headings.css   \

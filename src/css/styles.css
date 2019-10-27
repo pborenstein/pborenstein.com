@@ -1,5 +1,6 @@
 :root {
   --color-body:         #111;
+  --color-body-lighter: var(--base05);
   --color-heading:      #333;
   --color-link:         var(--color-red);
   --color-contrast:     var(--base0x);
@@ -152,11 +153,11 @@ nav ul {
 
 .nav-item a[href] {
   text-decoration: none;
-  color: var(--base05)
+  color: var(--color-body-lighter)
 }
 
 .nav-item a[href]:hover {
-  text-decoration: inherit;
+  text-decoration: underline;
   color: var(--color-body-highlight)
 }
 .one-col-grid {
