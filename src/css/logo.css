@@ -6,6 +6,6 @@
   color: var(--color-heading);
   font-family: var(--font-heading);
   font-size: 4rem;
-  line-height: 5rem;
+  line-height: 1;
   font-weight: 700;
 }
