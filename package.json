@@ -7,11 +7,12 @@
     "build": "npx eleventy",
     "debug": "DEBUG=* npx eleventy",
     "serve": "npx eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "poodle": "utils/make-styles; rm -rf ./dist; npx eleventy --serve "
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Philip Borenstein",
+  "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",

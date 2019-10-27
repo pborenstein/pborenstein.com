@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+
+echo $PWD
+echo ha ha ha
+
+
+cat ./src/css/root.css       \
+    ./src/css/logo.css       \
+    ./src/css/headings.css   \
+    ./src/css/nav.css        \
+    ./src/css/layout.css     \
+    ./src/css/code.css       \
+    ./src/css/tables.css     \
+    ./src/css/footnotes.css  \
+    ./src/css/lists.css      > ./src/css/styles.css
+  

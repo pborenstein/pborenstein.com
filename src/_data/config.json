@@ -7,6 +7,6 @@
   "authorHandle":     "@pborenstein",
   "authorName":       "Philip Borenstein",
   "maxPostsPerPage":  5,
-  "kabel":            true,
+  "kabel":            false,
   "debug":            false
 }
