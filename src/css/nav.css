@@ -21,7 +21,7 @@ nav ul {
   margin-right: 1em;
   margin-left: 0;
   font-family: var(--font-heading);
-  font-size: 60%;
+  font-size: 75%;
 }
 
 .nav-item-active {
@@ -31,9 +31,10 @@ nav ul {
 
 .nav-item a[href] {
   text-decoration: none;
-  color: var(--color-conrast)
+  color: var(--color-body-lighter)
 }
 
 .nav-item a[href]:hover {
   text-decoration: underline;
+  color: var(--color-body-highlight)
 }

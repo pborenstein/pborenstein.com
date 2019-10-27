@@ -144,6 +144,6 @@ summary:focus {
 }
 
 details > summary::-webkit-details-marker {
-  color: var(--color-body-contrast);
+  color: var(--color-body-highlight);
 
 }

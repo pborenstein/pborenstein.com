@@ -54,7 +54,7 @@ table caption {
   font-family: var(--font-table-caption);
   font-style: italic;
   font-weight: 200;
-  color: var(--color-body-contrast);
+  color: var(--color-body-highlight);
   margin-bottom: 0;
 }
 

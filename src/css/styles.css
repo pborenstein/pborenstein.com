@@ -4,7 +4,7 @@
   --color-link:         var(--color-red);
   --color-contrast:     var(--base0x);
   --color-background:   #fff;
-  --color-body-contrast: var(--color-darkred);
+  --color-body-highlight: var(--color-darkred);
 
   --color-gray:         #C0C0C0;
   --color-lightgray:    #f2f2f2;
@@ -82,7 +82,7 @@ a[href].direct-link:focus,
 a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
-  color: var(--color-body-contrast);
+  color: var(--color-body-highlight);
   text-decoration: none;
 }
 
@@ -142,7 +142,7 @@ nav ul {
   margin-right: 1em;
   margin-left: 0;
   font-family: var(--font-heading);
-  font-size: 60%;
+  font-size: 75%;
 }
 
 .nav-item-active {
@@ -152,11 +152,12 @@ nav ul {
 
 .nav-item a[href] {
   text-decoration: none;
-  color: var(--color-conrast)
+  color: var(--base05)
 }
 
 .nav-item a[href]:hover {
-  text-decoration: underline;
+  text-decoration: inherit;
+  color: var(--color-body-highlight)
 }
 .one-col-grid {
   display: grid;
@@ -304,7 +305,7 @@ summary:focus {
 }
 
 details > summary::-webkit-details-marker {
-  color: var(--color-body-contrast);
+  color: var(--color-body-highlight);
 
 }
 pre {
@@ -325,7 +326,7 @@ code {
 code:not([class]) {
 	font-family: var(--font-code);
   font-size: var(--font-code-size);
-  color: var(--color-body-contrast);
+  color: var(--color-body-highlight);
 }
 
 /* for naked <code> */
@@ -402,7 +403,7 @@ table caption {
   font-family: var(--font-table-caption);
   font-style: italic;
   font-weight: 200;
-  color: var(--color-body-contrast);
+  color: var(--color-body-highlight);
   margin-bottom: 0;
 }
 
