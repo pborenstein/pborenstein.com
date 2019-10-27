@@ -6,9 +6,8 @@
   "scripts": {
     "build": "npx eleventy",
     "debug": "DEBUG=* npx eleventy",
-    "serve": "npx eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "poodle": "utils/make-styles; rm -rf ./dist; npx eleventy --serve "
+    "serve": "utils/make-styles; rm -rf ./dist; npx eleventy --serve "
   },
   "keywords": [],
   "author": "Philip Borenstein",

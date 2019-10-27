@@ -8,5 +8,6 @@
   "authorName":       "Philip Borenstein",
   "maxPostsPerPage":  5,
   "kabel":            false,
-  "debug":            false
+  "debug":            false,
+  "oneCss":           true
 }

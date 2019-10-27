@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {%- if config.oneCss %}
   <link rel="stylesheet" href="/css/styles.css">
+  {% else -%}
+  {% include "partials/full-css.njk" %}
+  {%- endif %}
   <link rel="stylesheet" href="/css/base16-tomorrow.css">
   <link rel="stylesheet" href="/css/local.css">
-  {%- if config.kabel %}
+  {%- if config.kabel -%}
   <link rel="stylesheet" href="https://use.typekit.net/ztn6rcs.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap">
   {% endif -%}
