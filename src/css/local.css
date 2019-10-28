@@ -8,3 +8,47 @@
   font-size: 3em;
   line-height: 1.3;
 }
+
+.logo-beg {
+  color: var(--color-red);
+}
+
+#logo a[href]:hover .logo-beg {
+  color: var(--color-body)
+}
+
+
+.logo-med {
+  color: var(--color-body)
+}
+
+#logo a[href]:hover .logo-med {
+  color: var(--color-red)
+}
+
+
+.logo-end {
+  color: var(--color-body)
+}
+
+#logo a[href]:hover .logo-end {
+  color: var(--color-red)
+}
+
+
+
+
+#logo a[href] {
+  text-decoration: none;
+  color: inherit;
+
+#logo a[href]:hover {
+  text-decoration: none;
+  color: var(--color-red);
+}
+#logo a[href]:hover .slug{
+  text-decoration: none;
+  color: var(--color-heading);
+}
+
+ */
