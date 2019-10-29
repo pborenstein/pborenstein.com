@@ -96,7 +96,7 @@ a[href].direct-link:focus:visited,
   color: var(--color-heading);
   font-family: var(--font-heading);
   font-size: 4rem;
-  line-height: 5rem;
+  line-height: 1;
   font-weight: 700;
 }
 /* --- headings --- */
@@ -271,8 +271,13 @@ a[href] {
   color: var(--color-link)
 }
 
+.articleList a[href] {
+  color: var(--color-body);
+}
+
 a[href]:hover {
   text-decoration: underline;
+  color: var(--color-link)
 }
 
 /*  --------  folding ------- */
