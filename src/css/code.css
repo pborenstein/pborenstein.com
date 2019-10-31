@@ -1,3 +1,5 @@
+/* ----- code.css ------ */
+
 pre {
   max-width: 100%;
   overflow: scroll;
@@ -16,7 +18,7 @@ code {
 code:not([class]) {
 	font-family: var(--font-code);
   font-size: var(--font-code-size);
-  color: var(--color-body-highlight);
+  color: var(--color-code);
 }
 
 /* for naked <code> */
@@ -30,7 +32,7 @@ a[href] > code {
 
 
 code[class*="language-"], pre[class*="language-"] {
-  background: var(--base01) !important;
+  background: var(--color-code-bg) !important;
 }
 
 pre[class*="language-"] {

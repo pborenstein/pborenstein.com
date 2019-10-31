@@ -1,29 +1,57 @@
+/* ----- root.css ------ */
+
 :root {
-  --color-body:         #111;
-  --color-body-lighter: var(--base05);
-  --color-heading:      #333;
-  --color-link:         var(--color-red);
-  --color-contrast:     var(--base0x);
-  --color-background:   #fff;
-  --color-body-highlight: var(--color-darkred);
+  /*  GRAYS   */
+  
+  --color-gray-07:  #111111;  /* 07%  body text                             --color-black              */
+  --color-gray-20:  #333333;  /* 20%  headings, nav text                    --color-darkgray           */
+  --color-gray-30:  #4d4d4d;  /* 30%  prism background                      --base05                   */
+  --color-gray-75:  #c0c0c0;  /* 75%  footer                                --color-gray               */
+  --color-gray-88:  #e0e0e0;  /* 88%  table head/body sep, border of fold   --base01                   */
+  --color-gray-95:  #f2f2f2;  /* 95%  even row, bg of fold exp fold         --base0x --color-lightgray */
 
-  --color-gray:         #C0C0C0;
-  --color-lightgray:    #f2f2f2;
-  --color-darkred:      #7F0036; /* 127, 0, 54 */
-  --color-darkred-faded: #7f00364d;
-  --color-fadedred:     #fde2e2;
-  --color-red:          #c22323;
-  --color-white:        #fff;
-  --color-shadow:       3px 3px 4px 0px rgba(0, 0, 0, 0.19);
-                        /* offset-x | offset-y | blur-radius | spread-radius | color */
 
-  --font-body:          Georgia, 'IBM Plex Serif', 'neue-kabel',   Georgia, serif;
-  --font-caption:       'Cochin', 'Times', serif;
+  /* REDS   */
+
+  --color-red:            #c22323;
+  --color-red-faded:      #fde2e2;      /* folded text bg, table-caption highlight */
+  --color-darkred:        #7F0036;
+  --color-darkred-faded:  #7f00364d;
+
+  /*  FOREGROUND/BACKGROUND   */
+  
+  --color-white:          #fff;
+
+  --color-foreground:     var(--color-gray-07);
+  --color-background:     var(--color-white);
+  --color-bg-contrast:    var(--color-gray-95);     /* table even row */
+
+  --color-body:           var(--color-foreground);
+  --color-nav-text:       var(--color-gray-20);
+  --color-nav-hover:      var(--color-darkred);
+  --color-heading:        var(--color-gray-20);
+  --color-link:           var(--color-darkred);
+  --color-footer:         var(--color-gray-75);
+  --color-code:           var(--color-darkred);   /* naked <code> */
+  --color-code-bg:        var(--color-gray-88);
+  --color-fold-marker:    var(--color-darkred);
+  --color-fold-expanded:  var(--color-gray-95);
+  --color-fold-head:      var(--color-red-faded);
+  --color-fold-border:    var(--color-gray-88);
+
+
+  --font-serif:           Georgia, serif;
+  --font-sans-serif:      "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  --font-mono:            Consolas, Menlo, Monaco, "Courier New", Courier, monospace;
+
+  --font-body:          var(--font-serif);
+  --font-caption:       var(--font-sans-serif);
+  --font-footer:        var(--font-sans-serif);
+  --font-heading:       var(--font-sans-serif);
+  --font-list:          var(--font-sans-serif);
+  --font-code:          var(--font-mono);
   --font-code-size:     .875em;
-  --font-code:          Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-  --font-footer:        "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  --font-heading:       "Helvetica Neue",'neue-kabel',"Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
-  --font-list:          "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+
   --font-features:      "xnum"   /*  onum:   Old style numbers */
 }
 
@@ -84,7 +112,7 @@ a[href].direct-link:focus,
 a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
-  color: var(--color-body-highlight);
+  color: var(--color-link);
   text-decoration: none;
 }
 

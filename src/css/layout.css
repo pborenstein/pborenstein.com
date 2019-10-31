@@ -1,3 +1,5 @@
+/* ----- layout.css ------ */
+
 .one-col-grid {
   display: grid;
   grid-template-columns: minmax(2rem, 1.2fr) minmax(12rem, 32rem) minmax(2rem, 1.2fr);
@@ -39,7 +41,7 @@ nav {
 footer {
   grid-area: foot;
   font-size: 1rem;
-  color: var(--color-gray);
+  color: var(--color-footer);
   font-family: var(--font-footer);
   font-size: 0.6rem;
   margin: 0 0 1rem 0;
@@ -122,10 +124,10 @@ a[href]:hover {
 summary {
   font-family: var(--font-body);
   font-weight: 500;
-  background-color: var(--color-fadedred);
+  background-color: var(--color-fold-head);
   padding: .75em;
   border-radius: 0.5em;
-  border-color: var(--base01);
+  border-color: var(--color-fold-border);
   border-width: thin;
   border-style: solid;
   margin-bottom: 0;
@@ -137,7 +139,7 @@ details[open] summary {
 }
 
 details[open] aside {
-  background-color: var(--base0x);
+  background-color: var(--color-fold-expanded);
   padding: 0.75em;
   border-bottom-left-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
@@ -149,6 +151,5 @@ summary:focus {
 }
 
 details > summary::-webkit-details-marker {
-  color: var(--color-body-highlight);
-
+  color: var(--color-fold-marker);
 }

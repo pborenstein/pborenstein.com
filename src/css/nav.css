@@ -1,3 +1,5 @@
+/* ----- nav.css ------ */
+
 nav {
   grid-area: nav;
   margin: 0 0 1rem 0;
@@ -31,10 +33,10 @@ nav ul {
 
 .nav-item a[href] {
   text-decoration: none;
-  color: var(--color-body-lighter)
+  color: var(--color-nav-text)
 }
 
 .nav-item a[href]:hover {
   text-decoration: underline;
-  color: var(--color-body-highlight)
+  color: var(--color-nav-hover);
 }
