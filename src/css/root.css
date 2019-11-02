@@ -32,7 +32,7 @@
   --color-heading:        var(--color-gray-20);
   --color-link:           var(--color-darkred);
   --color-footer:         var(--color-gray-75);
-  --color-code:           var(--color-darkred);   /* naked <code> */
+  --color-code:           var(--color-darkred);   /* naked code */
   --color-code-bg:        var(--color-gray-88);
   --color-fold-marker:    var(--color-darkred);
   --color-fold-expanded:  var(--color-gray-95);
