@@ -50,7 +50,7 @@ code {
 <p style="color: var(--color-heading)">aptent conubia enim eleifend  habitasse id montes <code>color-heading: var(--color-gray-20)</code></p>
 <p style="color: var(--color-link)">aptent conubia enim eleifend  habitasse id montes <code>color-link: var(--color-darkred)</code></p>
 <p style="color: var(--color-footer)">aptent conubia enim eleifend  habitasse id montes <code>color-footer: var(--color-gray-75)</code></p>
-<p style="color: var(--color-code)">aptent conubia enim eleifend  habitasse id montes <code>color-code: var(--color-darkred)</code>   /* naked <code> */</p>
+<p style="color: var(--color-code)">aptent conubia enim eleifend  habitasse id montes <code>color-code: var(--color-darkred)</code>   /* naked code */</p>
 <p style="color: var(--color-code-bg)">aptent conubia enim eleifend  habitasse id montes <code>color-code-bg: var(--color-gray-88)</code></p>
 <p style="color: var(--color-fold-marker)">aptent conubia enim eleifend  habitasse id montes <code>color-fold-marker: var(--color-darkred)</code></p>
 <p style="color: var(--color-fold-expanded)">aptent conubia enim eleifend  habitasse id montes <code>color-fold-expanded: var(--color-gray-95)</code></p>
