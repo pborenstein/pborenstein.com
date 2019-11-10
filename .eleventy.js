@@ -43,7 +43,9 @@ module.exports = function (eleventyConfig) {
       permalinkClass: "direct-link",
       permalinkSymbol: "•"
     })
-    .use(mdtoc)
+    .use(mdtoc, {
+      listType: "ul"
+    })
     .use(mdcont, 'container',  {
         marker: '!',
       validate: function (params) {
