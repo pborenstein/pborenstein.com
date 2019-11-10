@@ -1,5 +1,9 @@
 /* ----- tables.css ------ */
 
+/*
+### Tables
+*/
+
 :root {
   --color-table-odd:        var(--color-background);
   --color-table-even:       var(--color-bg-contrast);

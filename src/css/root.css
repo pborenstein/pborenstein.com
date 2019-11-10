@@ -2,23 +2,31 @@
 
 :root {
   /*  GRAYS   */
-  
-  --color-gray-07:  #111111;  /* 07%  body text                             --color-black              */
-  --color-gray-20:  #333333;  /* 20%  headings, nav text                    --color-darkgray           */
-  --color-gray-30:  #4d4d4d;  /* 30%  prism background                      --base05                   */
-  --color-gray-75:  #c0c0c0;  /* 75%  footer                                --color-gray               */
-  --color-gray-88:  #e0e0e0;  /* 88%  table head/body sep, border of fold   --base01                   */
-  --color-gray-95:  #f2f2f2;  /* 95%  even row, bg of fold exp fold         --base0x --color-lightgray */
+
+/*
+### Grays
+*/
+
+  --color-gray-07:  #111111;  /* 07%  body text                            */
+  --color-gray-20:  #333333;  /* 20%  headings, nav text                   */
+  --color-gray-30:  #4d4d4d;  /* 30%  prism background                     */
+  --color-gray-75:  #c0c0c0;  /* 75%  footer                               */
+  --color-gray-88:  #e0e0e0;  /* 88%  table head/body sep, border of fold  */
+  --color-gray-95:  #f2f2f2;  /* 95%  even row, bg of fold exp fold        */
 
 
-  /* REDS   */
+/*
+### Reds
+*/
 
   --color-red:            #c22323;
   --color-red-faded:      #fde2e2;      /* folded text bg, table-caption highlight */
   --color-darkred:        #7F0036;
   --color-darkred-faded:  #7f00364d;
 
-  /*  FOREGROUND/BACKGROUND   */
+/*
+### Foreground/Background
+*/
   
   --color-white:          #fff;
 

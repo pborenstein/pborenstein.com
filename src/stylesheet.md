@@ -8,7 +8,7 @@ tags:
 ---
 <!-- markdownlint-disable  -->
 
-# {{title}} &mdash; H1
+# {{title}}
 
 Nostra gravida felis suspendisse lectus netus
 adipiscing, erat cubilia elementum nibh senectus,
@@ -60,14 +60,14 @@ preference. Announcing say boy precaution unaffected difficulty alteration him. 
         It's indented on the next line:
     ```
 
-## Lists, graphs, and tables &mdash; H2
+## Lists, graphs, and tables 
 
 Ac vel nulla fermentum quis condimentum etiam sapien
 egestas fames fermentum turpis aenean, commodo velit
 eros orci purus sagittis iaculis auctor habitasse
 primis inceptos.
 
-### Lists &mdash; H3
+### Lists
 
 I like my lists to be tight, with no space between
 one item and the next:
@@ -139,7 +139,7 @@ enthusiastically more alas when close unceremoniously
 hey well tragic while far far ouch unthinkingly one
 vibrant far much ouch.
 
-### Graphs &mdash; H3
+### Graphs
 
 ```mermaid
 graph TD;
@@ -212,7 +212,7 @@ module.exports = function pdump(obj) {
 }
 ```
 
-### Tables  &mdash; H3
+### Tables 
 
 Some because beseechingly staunch much hence while
 honey as one put llama carelessly alas over amid in off
@@ -239,7 +239,7 @@ per tristique nec dictum.
 | `fileSlug`        | Short name from the file name. [There are rules](https://www.11ty.io/docs/data/#fileslug). <hr><code class="phony">./src/articles/finding-oz.md</code>                      |
 [table caption][slug]
 
-## Date formats &mdash; H2
+## Date formats
 
 | prettyDate<br>format string | example |
 | :----- | :------ |
@@ -261,7 +261,7 @@ per tristique nec dictum.
 | locale | {{  page.date  | prettyDate('locale')}} |
 [ formatting dates<br>with `prettyDate`]
 
-## Weights &mdash; H2
+## Weights
 
 <div>
 <p style="font-weight: 100; margin-top: 0">
@@ -306,7 +306,7 @@ Taped mammoth adroit woefully aboard much  900
 
 </div>
 
-## Blockquote &mdash; H2
+## Blockquote
 
 Tempus rutrum taciti mollis diam dapibus ligula, sit
 malesuada feugiat aptent donec, curabitur habitasse
@@ -376,5 +376,49 @@ Don't use Heading 5
 Don't use Heading 6
 
 
+## Colors
 
+Semantic colors have semantic names. Semantic names use
+color mnemonics, not raw color values.
+
+The idea is that `var(--color-red)` can change to different
+shades of red without having to go through all the red styles.
+
+
+<style>
+tr {
+  hyphens: manual !important;
+  word-break: keep-all;
+}
+td {
+  width: max-content;
+  hyphens: manual !important;
+  word-break: keep-all;
+}
+th {
+  text-align: left
+}
+
+.color-var {
+  font-family: var(--font-code);
+  font-size: var(--font-code-size);
+  width: 35%;
+  hyphens: manual !important;
+  word-break: keep-all;
+}
+
+.color-val {
+  font-family: var(--font-code);
+  font-size: var(--font-code-size);
+}
+
+.color-sample {
+  width: 50%;
+
+}
+</style>
+
+
+
+{% include "colors.html" %}
 
