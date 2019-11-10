@@ -44,7 +44,8 @@ module.exports = function (eleventyConfig) {
       permalinkSymbol: "•"
     })
     .use(mdtoc, {
-      listType: "ul"
+      listType: "ul",
+      level: [1,2]
     })
     .use(mdcont, 'container',  {
         marker: '!',
