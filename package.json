@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx eleventy",
-    "debug": "DEBUG=* npx eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":  "npx eleventy",
+    "debug":  "DEBUG=* npx eleventy",
+    "test":   "echo \"Error: no test specified\" && exit 1",
     "colors": "utils/extract.awk src/css/styles.css > src/_includes/colors.html",
-    "serve": "utils/extract.awk src/css/styles.css > src/_includes/colors.html; utils/make-styles; rm -rf ./dist; npx eleventy --serve "
+    "serve":  "utils/make-styles; utils/extract.awk src/css/styles.css > src/_includes/colors.html; rm -rf ./dist; npx eleventy --serve "
   },
   "keywords": [],
   "author": "Philip Borenstein",
