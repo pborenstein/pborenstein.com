@@ -8,5 +8,6 @@ cat ./src/css/root.css       \
     ./src/css/code.css       \
     ./src/css/tables.css     \
     ./src/css/footnotes.css  \
-    ./src/css/lists.css      > ./src/css/styles.css
+    ./src/css/lists.css      \
+    ./src/css/toc.css > ./src/css/styles.css
   

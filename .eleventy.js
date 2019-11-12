@@ -23,6 +23,8 @@ module.exports = function (eleventyConfig) {
 
   const mddiv = require("markdown-it-div")
   const mdcont = require("markdown-it-container")
+  const mdtoc  = require('markdown-it-toc-done-right')
+
   
   const md = require("markdown-it")({
     html: true,
@@ -40,6 +42,10 @@ module.exports = function (eleventyConfig) {
       permalink: true,
       permalinkClass: "direct-link",
       permalinkSymbol: "•"
+    })
+    .use(mdtoc, {
+      listType: "ul",
+      level: [1,2]
     })
     .use(mdcont, 'container',  {
         marker: '!',

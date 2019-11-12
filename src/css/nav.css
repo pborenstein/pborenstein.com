@@ -1,11 +1,11 @@
 /* ----- nav.css ------ */
 
-nav {
+#sitenav {
   grid-area: nav;
   margin: 0 0 1rem 0;
 }
 
-nav ul {
+#sitenav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
