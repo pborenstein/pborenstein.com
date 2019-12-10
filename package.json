@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./dist; npm run build:colors && npm run build:styles && eleventy",
+    "build": "rm -rf ./dist; npm run build:styles && npm run build:colors && eleventy",
     "build:colors": "utils/make-colors",
     "build:styles": "utils/make-styles",
     "serve": "npm run build && eleventy --serve",
