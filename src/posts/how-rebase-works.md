@@ -89,7 +89,6 @@ C1---C2---C5---C6--C3'---C4'
                          |
                        HEAD
 ```
-
 !!!
 
 ## Rebase
@@ -110,6 +109,15 @@ which means:
 In our case, this is the command we'll use:
 
 > `git rebase master topic`
+
+According to its man page, rebase does its work in four steps:
+
+1. Switch to the branch that you want to move.
+2. Find the commits that need to move.
+3. Switch to the branch that will receive the commits.
+4. Apply the commits from step 2 to the current branch.
+
+Let's go through each step.
 
 ## Step 1: Switch branches
 
@@ -137,7 +145,7 @@ C1---C2---C5---C6
 
 ## Step 2: Identify the affected commits
 
-Then the `git rebase` man page goes on:
+The man page goes on:
 
 > All changes made by commits in the current branch
 > but that are not in `<upstream>` are saved to a
@@ -165,7 +173,7 @@ stashed^[I don't know that rebase actually uses the same
 mechanism as the stash command, but it seems plausible.]
 in a temporary area.
 
-## Excursus: dots
+!!! Excursus: dots
 
 OK, seriously?
 How does `master..topic` mean
@@ -278,6 +286,7 @@ $ git log --oneline --graph --decorate topic ^master
 * 0c1d724 (topic) C6
 * 5d4cdb5 C5
 ```
+!!!
 
 ## Step 3: Reset the current branch
 
