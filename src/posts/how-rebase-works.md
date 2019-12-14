@@ -33,10 +33,10 @@ And here's how `git log` renders
 the same graph.
 
 ``` text
-$ git log --oneline --all --graph
-* 1504acd C6
+$ git log --oneline --all --graph --decorate
+* 1504acd (master) C6
 * 2bdc51e C5
-| * 7011dcf C4
+| * 7011dcf (HEAD -> topic) C4
 | * 46908d0 C3
 |/  
 * 632c728 C2
@@ -171,10 +171,10 @@ The documentation says
 that these commits are
 stashed^[I don't know that rebase actually uses the same
 mechanism as the stash command, but it seems plausible.]
-in a temporary area.
+in a temporary area. The two commits
+that get stashed are `C3` and `C4`.
 
-!!! Excursus: dots
-
+!!! Excursus: dot dot
 OK, seriously?
 How does `master..topic` mean
 _all the commits in `topic` that are not in `master`_?
@@ -288,7 +288,7 @@ $ git log --oneline --graph --decorate topic ^master
 ```
 !!!
 
-## Step 3: Reset the current branch
+## Step 3: Switch to the upstream banch
 
 The man page goes on:
 
