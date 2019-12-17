@@ -58,7 +58,7 @@ module.exports = function (eleventyConfig) {
           // opening tag
           let summary =  m === ''
                          ? ''
-                         : '<summary>' + md.utils.escapeHtml(m) + '</summary>\n'
+                         : '<summary>' + md.renderInline(m) + '</summary>\n'
           
           return '<details>' + summary + '<aside>';
         } else {
