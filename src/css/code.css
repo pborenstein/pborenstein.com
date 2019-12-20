@@ -3,7 +3,7 @@
 pre {
   max-width: 100%;
   overflow: scroll;
-  padding: 1em 1.5em;
+  padding: 0 1em;
   display: block;
   overflow-wrap: normal;
 }
