@@ -38,4 +38,5 @@ code[class*="language-"], pre[class*="language-"] {
 pre[class*="language-"] {
   border-style: none;
   border-radius: 0.25em;
+  margin: 0 0 1em 0 !important;
 }
