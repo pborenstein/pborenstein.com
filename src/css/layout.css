@@ -125,7 +125,7 @@ summary {
   font-family: var(--font-body);
   font-weight: 500;
   background-color: var(--color-fold-head);
-  padding: .75em;
+  padding: .25em;
   border-radius: 0.5em;
   border-color: var(--color-fold-border);
   border-width: thin;

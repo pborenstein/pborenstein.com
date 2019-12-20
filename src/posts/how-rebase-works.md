@@ -64,15 +64,22 @@ C1---C2---C5---C6--C3---C4
 ```
 
 !!! Well, actually…
-It's possible
+We're not really _moving_
+the commits.
+We're making new
+identical commits
+on a different branch.
+Moreover,
+it's possible
 that commits
 `C3` and `C4`
-will introduce conflicts with
+introduce conflicts with
 `C5` and `C6`
-(the commits that were made while we were working on `topic`).
+(the commits that were made
+while we were working on `topic`).
 So the `C3` and `C4` commits
 that we tack on to the end of `C6`
-might be different.
+will be different.
 The end result is this,
 where `C3'` is like `C3` but with some changes.
 
