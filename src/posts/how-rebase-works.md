@@ -81,7 +81,7 @@ So the `C3` and `C4` commits
 that we tack on to the end of `C6`
 will be different.
 The end result is this,
-where `C3'` is like `C3` but with some changes.
+where `C3'` is like `C3` but possibly with some changes.
 
 ```
             master
