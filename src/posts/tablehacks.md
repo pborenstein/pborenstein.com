@@ -1,6 +1,6 @@
 ---
 title: Turning Lists into Tables for Markdown
-subhead: "Can we make it easier to make tables in Markdown?"
+summary: "Can we make it easier to make tables in Markdown?"
 date: 2019-02-15T20:28:40-05:00
 category: Tech
 tags:

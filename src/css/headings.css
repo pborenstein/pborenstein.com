@@ -14,9 +14,17 @@ h1 {
   margin-bottom: .125em;
 }
 
+h2, h3, h4, h5, h6 {
+  margin-bottom: .24em;
+}
 
-/* https://www.modularscale.com/?2&em&1.25 */
+/*  Default H1-H6 sizes
+    https://stackoverflow.com/questions/5410066/what-are-the-default-font-sizes-in-pixels-for-the-html-heading-tags-h1-h2 
+*/
+
 h1 { font-size: 2em }
-h2 { font-size: 1.6em }
-h3 { font-size: 1.28em }
-h4 { font-size: 1.024em }
+h2 { font-size: 1.5em }
+h3 { font-size: 1.3em }
+h4 { font-size: 1em }
+h5 { font-size: 0.8em }
+h6 { font-size: 0.7em }

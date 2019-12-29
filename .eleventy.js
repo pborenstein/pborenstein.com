@@ -2,10 +2,15 @@
 module.exports = function (eleventyConfig) {
   
   eleventyConfig.addPassthroughCopy("src/css")
+  eleventyConfig.addPassthroughCopy("src/assets")
 
   // Filters
   eleventyConfig.addFilter("pdump", require("./js/pdump.js"))
   eleventyConfig.addFilter("prettyDate", require("./js/pretty-date.js"))
+
+  // Get the first `n` elements of a collection.
+  eleventyConfig.addFilter("head", (array, n) =>
+        n < 0 ? array.slice(n) : array.slice(0,n))
 
   // shortcodes
   eleventyConfig.addShortcode('hasMermaid', require("./js/has-mermaid.js"))

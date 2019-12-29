@@ -10,6 +10,7 @@
   --color-gray-07:  #111111;  /* 07%  body text                            */
   --color-gray-20:  #333333;  /* 20%  headings, nav text                   */
   --color-gray-30:  #4d4d4d;  /* 30%  prism background                     */
+  --color-gray-40:  #666666;  /* 40% dateline date                         */
   --color-gray-75:  #c0c0c0;  /* 75%  footer                               */
   --color-gray-88:  #e0e0e0;  /* 88%  table head/body sep, border of fold  */
   --color-gray-95:  #f2f2f2;  /* 95%  even row, bg of fold exp fold        */
@@ -38,10 +39,10 @@
   --color-nav-text:       var(--color-gray-20);
   --color-nav-hover:      var(--color-darkred);
   --color-heading:        var(--color-gray-20);
-  --color-link:           var(--color-darkred);
+  --color-link:           var(--color-red);
   --color-footer:         var(--color-gray-75);
   --color-code:           var(--color-darkred);   /* naked code */
-  --color-code-bg:        var(--color-gray-88);
+  --color-code-bg:        var(--base0x);
   --color-fold-marker:    var(--color-darkred);
   --color-fold-expanded:  var(--color-gray-95);
   --color-fold-head:      var(--color-red-faded);
@@ -60,7 +61,22 @@
   --font-code:          var(--font-mono);
   --font-code-size:     .875em;
 
-  --font-features:      "xnum"   /*  onum:   Old style numbers */
+  --font-features:      "xnum";   /*  onum:   Old style numbers */
+
+  /*
+  ### Font size scale:
+
+    https://www.modularscale.com/?1&em&1.25
+  */
+
+    --font-size-p4: 1.953em ;
+    --font-size-p3: 1.563em ;
+    --font-size-p2: 1.25em ;
+    --font-size-p1: 1em ;
+    --font-size-m2: 0.8em ;
+    --font-size-m3: 0.64em ;
+    --font-size-m4: 0.512em ;
+    --font-size-m5: 0.41em ;
 }
 
 html {

@@ -87,22 +87,15 @@ footer a[href] {
 }
 
 .dateline-date {
-  font-weight: 300;
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-gray-40);
+  font-style: italic;
 }
 
-/* Text scale
-    https://www.modularscale.com/?1&em&1.25
-
-        1.953em
-        1.563em
-        1.25em
->>>>>>  1em
-        0.8em
-        0.64em
-        0.512em
-        0.41em
-*/
-
+.dateline-tags {
+  color: var(--color-red)
+}
 
 /*  -----  links  ---------- */
 a[href] {
@@ -126,8 +119,8 @@ summary {
   font-weight: 500;
   background-color: var(--color-fold-head);
   padding: .25em;
-  border-radius: 0.5em;
-  border-color: var(--color-fold-border);
+  border-radius: 0.1875em;
+  border-color: var(--color-fold-head);
   border-width: thin;
   border-style: solid;
   margin-bottom: 0;
@@ -139,10 +132,11 @@ details[open] summary {
 }
 
 details[open] aside {
-  background-color: var(--color-fold-expanded);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-fold-expanded);
   padding: 0.75em;
-  border-bottom-left-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.1875em;
+  border-bottom-right-radius: 0.1875em;
 }
 
 details:focus,

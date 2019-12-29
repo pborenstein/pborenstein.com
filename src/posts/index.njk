@@ -8,11 +8,6 @@ navtitle: Posts
 ---
 
 {% include "partials/common-title.njk" %}
+{% from "macros/posts-list.njk" import postsList %}
 
-<div class="articleList">
-    <ul>
-  {%-for post in collections.posts | reverse -%}
-      <li><a href="{{post.url | url}}">{{post.data.title}}</a></li>
-  {%-endfor -%}
-    </ul>
-</div>
+{{ postsList(collections.posts) }}

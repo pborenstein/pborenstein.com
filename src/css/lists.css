@@ -7,3 +7,38 @@
 main li {
   margin: 0 0 0 0;
 }
+
+.posts-list {
+
+}
+
+.posts-list-entry {
+
+}
+
+.posts-entry {
+
+}
+
+.posts-entry-title {
+  
+}
+
+.posts-entry-date::before {
+  /* en bullet en */
+  content: "\2005\2022\2005";
+
+}
+.posts-entry-date {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-gray-40);
+  font-style: italic;
+  font-size: var(--font-size-m2)
+}
+
+.posts-entry-summary {
+  display: block;
+  
+}
+

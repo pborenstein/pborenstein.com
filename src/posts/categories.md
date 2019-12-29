@@ -1,7 +1,7 @@
 ---
 title: Implementing Categories
 date: 2019-01-20
-subhead: A collection of collections.
+summary: A collection of collections.
 category: Tech
 tags:
   - eleventy

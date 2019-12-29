@@ -11,23 +11,12 @@ pagination:
 layout: layouts/page.njk
 permalink: /tags/{{ tag }}/
 ---
+{% from "macros/posts-list.njk" import postsList %}
 
 <h1>posts tagged {{tag}}</h1>
 
-<p></p>
-<ul>
-{%-for post in collections[ tag ] | reverse -%}
-<li>
-  <p>
-    <a href={{post.url}}>{{post.data.title}}</a>
-    <br>
-    {{post.data.subhead or
-       post.templateContent|truncate(128)}}
-    <br>
-    {{post.date | prettyDate('DmY')}}
-  </p>
-</li>
-{%- endfor -%}
-</ul>
+{{ postsList(collections[tag] | reverse ) }}
+
 
 <p>See <a href="/tags/">all tags</a>.</p>
+

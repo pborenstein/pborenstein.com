@@ -5,8 +5,8 @@
 */
 
 :root {
-  --color-table-odd:        var(--color-background);
-  --color-table-even:       var(--color-bg-contrast);
+  --color-table-odd:        var(--color-bg-contrast);
+  --color-table-even:       var(--color-background);
   --color-table-body:       var(--color-body);
   --color-table-heading:    var(--color-heading);
   --color-table-caption:    var(--color-darkred);

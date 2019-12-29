@@ -1,5 +1,6 @@
 ---
 title: Dot Dot Notation
+summary: Dot notation lets you specify sets of commits.
 tags:
   - git
   - learning
@@ -116,29 +117,7 @@ What does `git log master..topic`,
 mean in this case? _Commits from `master` to `topic`_
 doesn't make a lot of sense here.
 
-I find the dot notation
-difficult
-because when I see
-`master..topic`,
-I think of it as a
-range or sequence
-of commits.
-I mean you can
-write it that way
-on the graph itself:
-
-```
-             master .. topic
-               |         |
-L1---L2---L3---L4---L5---L6
-```
-
-It sure looks like
-`master..topic`
-means
-_the commits from `master` to `topic`_.
-
-But no. It turns out that
+It turns out that
 > `master..topic`
 
 is
