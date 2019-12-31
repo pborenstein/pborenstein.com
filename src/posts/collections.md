@@ -5,7 +5,6 @@ category: Tech
 summary: Collections are a central concept in Eleventy.
 tags:
   - eleventy
-  - collections
 ---
 <!-- markdownlint-disable html code-block-style -->
 

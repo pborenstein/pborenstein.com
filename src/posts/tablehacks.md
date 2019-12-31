@@ -6,7 +6,6 @@ category: Tech
 tags:
   - markdown
   - tables
-  - css
 ---
 <!-- markdownlint-disable html ul-indent list-indent code-block-style no-emphasis-as-header no-trailing-punctuation -->
 

@@ -4,7 +4,6 @@ summary: Rebasing step by step
 category: Tech
 tags:
   - git
-  - learning
 ---
 
 Do you find rebasing in Git confusing? I do.

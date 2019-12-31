@@ -3,7 +3,6 @@ title: Dot Dot Notation
 summary: Dot notation lets you specify sets of commits.
 tags:
   - git
-  - learning
 ---
 
 OK, seriously?

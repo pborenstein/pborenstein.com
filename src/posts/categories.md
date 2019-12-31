@@ -5,7 +5,6 @@ summary: A collection of collections.
 category: Tech
 tags:
   - eleventy
-  - collections
 ---
 
 I want there to be Categories in Eleventy
