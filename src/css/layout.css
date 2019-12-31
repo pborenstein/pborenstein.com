@@ -2,7 +2,7 @@
 
 .one-col-grid {
   display: grid;
-  grid-template-columns: minmax(2rem, 1.2fr) minmax(12rem, 32rem) minmax(2rem, 1.2fr);
+  grid-template-columns: minmax(.5rem, 1.2fr) minmax(12rem, 32rem) minmax(.5rem, 1.2fr);
   grid-template-rows: auto;
   grid-row-gap: 0;
   grid-column-gap: 0;
@@ -134,7 +134,8 @@ details[open] summary {
 details[open] aside {
   background-color: var(--color-background);
   border: 1px solid var(--color-fold-expanded);
-  padding: 0.75em;
+  padding-left: .5em;
+  padding-right: 0.5em;
   border-bottom-left-radius: 0.1875em;
   border-bottom-right-radius: 0.1875em;
 }
@@ -146,4 +147,12 @@ summary:focus {
 
 details > summary::-webkit-details-marker {
   color: var(--color-fold-marker);
+}
+
+
+/*  --------  blockquote ------- */
+
+blockquote {
+  margin-left: 1em;
+  margin-right: 1em;
 }
