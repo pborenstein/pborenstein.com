@@ -6,10 +6,8 @@ tags:
   - _nav
 navtitle: Posts
 ---
-
-{% include "partials/common-title.njk" %}
 {% from "macros/posts-list.njk" import postsList %}
+{% include "partials/common-title.njk" %}
 
 {{ postsList(collections.posts) }}
 
-<p>See <a href="/posts/">all posts</a>.</p>

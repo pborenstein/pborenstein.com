@@ -29,10 +29,12 @@ main ul {
   
 }
 
+.posts-entry-tag,
 .posts-entry-summary {
   font-family: var(--font-heading);
-  font-size: var(--font-size-m2)
+  font-size: var(--font-size-m2);
 }
+
 
 .posts-entry-date::before {
   /* en bullet en */
@@ -49,6 +51,7 @@ main ul {
 
 .posts-entry-summary {
   display: block;
+  margin: 0;
   
 }
 

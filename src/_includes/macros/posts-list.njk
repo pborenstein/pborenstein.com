@@ -10,12 +10,13 @@
           <span class="posts-entry-date">
             {{post.date | prettyDate('DmY')}}
           </span>
-          <span>
-          {{ tagslist(post.data.tags)}}
-          </span>
           <span class="posts-entry-summary">
             {{post.data.summary or "" }}
           </span>
+          <span class="posts-entry-tag">
+            {{ tagslist(post.data.tags)}}
+          </span>
+
         </div>
       </li>
     {%- endfor -%}
