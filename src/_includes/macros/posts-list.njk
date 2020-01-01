@@ -1,3 +1,4 @@
+{% from "macros/tags-list.njk" import tagslist %}
 {%- macro postsList(posts) -%}
   <ul class="posts-list">
     {%-for post in posts -%}
@@ -8,6 +9,9 @@
           </span>
           <span class="posts-entry-date">
             {{post.date | prettyDate('DmY')}}
+          </span>
+          <span>
+          {{ tagslist(post.data.tags)}}
           </span>
           <span class="posts-entry-summary">
             {{post.data.summary or "" }}

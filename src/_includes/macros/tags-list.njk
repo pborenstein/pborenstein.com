@@ -1,0 +1,15 @@
+{%- macro tagslist(theTags) -%}
+                        {# sort(reverse, caseSensitive) #}
+  {%- for tag in theTags | sort(false, true) %}
+                        {# ignore tags with '_xxx' #}
+    {%- if tag.substring(0,1) !== "_" -%}
+      {%- set tagUrl %}/tags/{{ tag }}/{%- endset -%}
+      <a href="{{ tagUrl | url }}" class="dateline-tags-link">
+        <span class="dateline-tags">{{ tag }}</span>
+      </a>
+      {%- if not loop.last  -%}
+      <span>•</span>
+      {%- endif -%}
+    {%- endif -%}
+  {%- endfor %}
+{%- endmacro -%}

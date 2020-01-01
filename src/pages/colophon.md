@@ -20,7 +20,7 @@ I liked the red and black. It's been done,
 (_cough_ Mad Men),
 but not by me.
 
-[Styles](/stylesheet/)
+[Styles](../stylesheet/)
 
 
 [VS Code]: https://code.visualstudio.com/
