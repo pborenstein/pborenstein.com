@@ -1,4 +1,4 @@
-{% from "macros/tags-list.njk" import tagslist %}
+{% from "macros/tags-list.njk" import tagsList %}
 <div class="dateline">
   <span class="dateline-date">
     {{ page.date | prettyDate('DMY')}}
@@ -7,6 +7,6 @@
     &emsp13;•&emsp13;
   </span>
   <span class="dateline-tags">
-    {{ tagslist(tags) }}
+    {{ tagsList(tags) }}
   </span>
 </div>

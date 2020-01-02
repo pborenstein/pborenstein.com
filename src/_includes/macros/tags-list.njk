@@ -1,4 +1,4 @@
-{%- macro tagslist(theTags) -%}
+{%- macro tagsList(theTags) -%}
                         {# sort(reverse, caseSensitive) #}
   {%- for tag in theTags | sort(false, true) %}
                         {# ignore tags with '_xxx' #}

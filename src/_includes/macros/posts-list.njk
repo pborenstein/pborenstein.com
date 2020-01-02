@@ -1,4 +1,4 @@
-{% from "macros/tags-list.njk" import tagslist %}
+{% from "macros/tags-list.njk" import tagsList %}
 {%- macro postsList(posts) -%}
   <ul class="posts-list">
     {%-for post in posts -%}
@@ -14,9 +14,8 @@
             {{post.data.summary or "" }}
           </span>
           <span class="posts-entry-tag">
-            {{ tagslist(post.data.tags)}}
+            {{ tagsList(post.data.tags)}}
           </span>
-
         </div>
       </li>
     {%- endfor -%}
