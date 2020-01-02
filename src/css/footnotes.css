@@ -1,11 +1,11 @@
 /* ----- footnotes.css ------ */
 
 .footnotes {
-  font-size: .8rem;
+  font-size: var(--font-size-m2);
 }
 
 .footnote-ref {
-  font-size: .64em;
+  font-size: var(--font-size-m3);
   font-variant-numeric: oldstyle-nums;
 }
 
