@@ -55,3 +55,8 @@ main ul {
   
 }
 
+.tagslist-tags-link {}
+
+.tagslist-tags {
+  color: var(--color-red)
+}

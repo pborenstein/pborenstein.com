@@ -1,7 +1,8 @@
 ---
-title: How Rebase Works
+title: "Rebase: How does it work?"
 summary: Rebasing step by step
 category: Tech
+date: 2020-01-05T21-05:00
 tags:
   - git
 ---

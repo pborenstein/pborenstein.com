@@ -92,9 +92,8 @@ footer a[href] {
   font-style: italic;
 }
 
-.dateline-tags {
-  color: var(--color-red)
-}
+
+
 
 /*  -----  links  ---------- */
 a[href] {
