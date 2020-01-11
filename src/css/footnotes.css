@@ -6,7 +6,11 @@
 
 .footnote-ref {
   font-size: var(--font-size-m3);
-  font-variant-numeric: oldstyle-nums;
+  margin-left: 1px;
+}
+
+.footnote-ref a {
+  color: var(--color-darkred)
 }
 
 .footnotes-sep {
