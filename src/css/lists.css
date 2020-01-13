@@ -32,7 +32,7 @@ main ul {
 .posts-entry-tag,
 .posts-entry-summary {
   font-family: var(--font-heading);
-  font-size: var(--font-size-m2);
+  font-size: var(--font-size-minus-1);
 }
 
 
@@ -46,7 +46,7 @@ main ul {
   font-weight: 400;
   color: var(--color-gray-40);
   font-style: italic;
-  font-size: var(--font-size-m2)
+  font-size: var(--font-size-minus-1)
 }
 
 .posts-entry-summary {

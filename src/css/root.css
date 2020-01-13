@@ -59,7 +59,7 @@
   --font-heading:       var(--font-sans-serif);
   --font-list:          var(--font-sans-serif);
   --font-code:          var(--font-mono);
-  --font-code-size:     .875em;
+  --font-code-size:     .875rem;
 
   --font-features:      "xnum";   /*  onum:   Old style numbers */
 
@@ -69,14 +69,16 @@
     https://www.modularscale.com/?1&em&1.25
   */
 
-    --font-size-p4: 1.953rem ;
-    --font-size-p3: 1.563rem ;
-    --font-size-p2: 1.25rem ;
-    --font-size-p1: 1rem ;
-    --font-size-m2: 0.8rem ;
-    --font-size-m3: 0.64rem ;
-    --font-size-m4: 0.512rem ;
-    --font-size-m5: 0.41rem ;
+    --font-size-plus-3:   1.953rem ;
+    --font-size-plus-2:   1.563rem ;
+    --font-size-plus-1:   1.25rem ;
+    --font-size-plus-0:   1rem ;
+    --font-size-base:     1rem ;
+    --font-size-minus-0:  1rem ;
+    --font-size-minus-1:  0.8rem ;
+    --font-size-minus-2:  0.64rem ;
+    --font-size-minus-3:  0.512rem ;
+    --font-size-minus-4:  0.41rem ;
 }
 
 html {
@@ -122,13 +124,13 @@ body {
 
 @keyframes body {
   0% {
-    font-size: var(--font-size-m3);
+    font-size: var(--font-size-minus-2);
   }
   62.5% {   /* 500px */
-    font-size: var(--font-size-p1);
+    font-size: var(--font-size-base);
   }
   100% {
-    font-size: var(--font-size-p1);
+    font-size: var(--font-size-base);
   }
 
 }

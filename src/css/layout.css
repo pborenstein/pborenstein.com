@@ -40,7 +40,7 @@ nav {
 
 footer {
   grid-area: foot;
-  font-size: var(--font-size-m3);
+  font-size: var(--font-size-minus-2);
   color: var(--color-footer);
   font-family: var(--font-footer);
   margin: 0 0 1rem 0;

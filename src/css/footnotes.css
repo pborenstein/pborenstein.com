@@ -1,11 +1,11 @@
 /* ----- footnotes.css ------ */
 
 .footnotes {
-  font-size: var(--font-size-m2);
+  font-size: var(--font-size-minus-1);
 }
 
 .footnote-ref {
-  font-size: var(--font-size-m3);
+  font-size: var(--font-size-minus-2);
   margin-left: 1px;
 }
 
