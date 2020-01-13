@@ -1,7 +1,7 @@
 {
   "siteName":         "pborenstein.com",
-  "madeInLabel":      "Made in Manchester, NH",
-  "madeWithLabel":    "with <a href='https://www.11ty.io/'>eleventy</a>",
+  "footerRightTop":   "made in Manchester, NH",
+  "footerRightBottom":  "built with <a href='https://www.11ty.io/'>eleventy</a>",
   "url":              "https://example.com",
   "authorEmail":      "pborenstein@gmail.com",
   "authorHandle":     "@pborenstein",

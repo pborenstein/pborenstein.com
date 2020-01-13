@@ -1,5 +1,9 @@
 /* ----- lists.css ------ */
 
+
+ul {
+  list-style-type: square;
+}
 /**
  *  list items should cuddle
  */
