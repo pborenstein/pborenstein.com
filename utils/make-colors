@@ -1,4 +1,4 @@
 #! /usr/bin/env bash
 
-./utils/extract.awk ./src/css/styles.css > ./src/_includes/colors.html
+./utils/extract.awk ./src/assets/css/styles.css > ./src/_includes/colors.html
 

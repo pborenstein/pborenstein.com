@@ -1,13 +1,13 @@
 #! /usr/bin/env bash
 
-cat ./src/css/root.css       \
-    ./src/css/logo.css       \
-    ./src/css/headings.css   \
-    ./src/css/nav.css        \
-    ./src/css/layout.css     \
-    ./src/css/code.css       \
-    ./src/css/tables.css     \
-    ./src/css/footnotes.css  \
-    ./src/css/lists.css      \
-    ./src/css/toc.css > ./src/css/styles.css
+cat ./src/assets/css/root.css       \
+    ./src/assets/css/logo.css       \
+    ./src/assets/css/headings.css   \
+    ./src/assets/css/nav.css        \
+    ./src/assets/css/layout.css     \
+    ./src/assets/css/code.css       \
+    ./src/assets/css/tables.css     \
+    ./src/assets/css/footnotes.css  \
+    ./src/assets/css/lists.css      \
+    ./src/assets/css/toc.css > ./src/assets/css/styles.css
   
