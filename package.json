@@ -1,5 +1,5 @@
 {
-  "name": "fresh",
+  "name": "pborenstein.com",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "debug": "DEBUG=* npx eleventy"
   },
   "keywords": [],
-  "repository": "github:pborenstein/fresh",
+  "repository": "github:pborenstein/pborenstein.com",
   "author": "Philip Borenstein",
   "license": "MIT",
   "devDependencies": {
