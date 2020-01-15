@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
 
+touch ./src/assets/css/styles.css
 awk -f ./utils/extract.awk ./src/assets/css/styles.css > ./src/_includes/colors.html
 
