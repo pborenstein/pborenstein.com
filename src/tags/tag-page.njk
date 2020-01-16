@@ -10,13 +10,15 @@ pagination:
     - posts
 layout: layouts/page.njk
 permalink: /tags/{{ tag }}/
+renderData:
+  title: tagged {{tag}}
 ---
+<!-- https://github.com/11ty/eleventy-base-blog/issues/15 -->
 {% from "macros/posts-list.njk" import postsList %}
 
 <h1>posts tagged {{tag}}</h1>
 
 {{ postsList(collections[tag] | reverse ) }}
-
 
 <p>See <a href="/tags/">all tags</a>.<br>
 See <a href="/posts/">all posts</a>.</p>
