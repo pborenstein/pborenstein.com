@@ -2,7 +2,11 @@
 title: Working with Collections
 date: 2019-01-15
 category: Tech
-summary: Collections are a central concept in Eleventy.
+summary:  Collections are a key concept
+          of Eleventy, but they confused
+          me at first. So I looked at the
+          source to figure out how
+          collections work.
 tags:
   - eleventy
 ---

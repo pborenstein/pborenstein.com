@@ -1,7 +1,6 @@
 
 module.exports = function (eleventyConfig) {
   
-  eleventyConfig.addPassthroughCopy("src/css")
   eleventyConfig.addPassthroughCopy("src/assets")
 
   // Filters
@@ -12,7 +11,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("head", (array, n) =>
         n < 0 ? array.slice(n) : array.slice(0,n))
 
-  // shortcodes
+  // The ever-popular markdown filter.
+  eleventyConfig.addFilter("markdown", (content) => md.render(content))
+
+
+
+        // shortcodes
   eleventyConfig.addShortcode('hasMermaid', require("./js/has-mermaid.js"))
 
   //  collections

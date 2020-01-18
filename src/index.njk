@@ -6,7 +6,8 @@ tags:
   _nav
 ---
 
-<img src="https://picsum.photos/512/128?gravity=center&random">
+<img src="https://picsum.photos/512/128?gravity=center&random"
+  width="100%" height="128" >
 
 {% from "macros/posts-list.njk" import postsList %}
 {{ postsList(collections.posts | head(4) ) }}

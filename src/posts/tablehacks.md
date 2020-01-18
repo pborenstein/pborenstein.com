@@ -1,6 +1,14 @@
 ---
 title: Turning Lists into Tables for Markdown
-summary: "Can we make it easier to make tables in Markdown?"
+summary:  I love tables. 
+          I love looking down the columns
+          and across the rows,
+          not having to  scan through
+          paragraphs of text to
+          get the information I want.
+          But tables are so annoying
+          to create in Markdown.
+          Turns out there's an easier way.
 date: 2019-02-15T20:28:40-05:00
 category: Tech
 tags:

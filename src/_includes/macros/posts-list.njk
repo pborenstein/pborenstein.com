@@ -4,18 +4,21 @@
     {%-for post in posts -%}
       <li class="posts-lists-entry">
         <div class="posts-entry">
-          <span class="posts-entry-title">
+          <div class="posts-entry-title">
             <a href={{post.url}}>{{post.data.title}}</a>
-          </span>
-          <span class="posts-entry-date">
-            {{post.date | prettyDate('DmY')}}
-          </span>
-          <span class="posts-entry-summary">
-            {{post.data.summary or "" }}
-          </span>
-          <span class="posts-entry-tag">
-            {{ tagsList(post.data.tags)}}
-          </span>
+          </div>
+          <div class="posts-entry-summary">
+            {{post.data.summary  | markdown | safe }}
+          </div>
+          <div class="posts-entry-footer">
+            <span class="posts-entry-date">
+              <a style="color:var(--color-darkred)" href={{post.url}}>#</a> 
+              {{post.date | prettyDate('DmY')}} •
+            </span>
+            <span class="posts-entry-tag">
+              {{ tagsList(post.data.tags)}}
+            </span>
+          </div>
         </div>
       </li>
     {%- endfor -%}

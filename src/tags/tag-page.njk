@@ -5,9 +5,10 @@ pagination:
   alias: tag
   filter:
     - all
+    - _draft
     - _nav
-    - tagList
     - posts
+    - tagList
 layout: layouts/page.njk
 permalink: /tags/{{ tag }}/
 renderData:
@@ -19,6 +20,3 @@ renderData:
 <h1>posts tagged {{tag}}</h1>
 
 {{ postsList(collections[tag] | reverse ) }}
-
-<p>See <a href="/tags/">all tags</a>.<br>
-See <a href="/posts/">all posts</a>.</p>

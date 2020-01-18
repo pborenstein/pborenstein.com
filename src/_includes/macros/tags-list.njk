@@ -1,10 +1,10 @@
 {%- macro tagsList(theTags) -%}
   {% set comma = joiner("•") %}
   {%- for tag in theTags | sort(false, true) %}{% if tag.substring(0,1) !== "_" %}
-  <span>{{comma() | safe }}</span>
-      {%- set tagUrl %}/tags/{{ tag }}/{%- endset -%}
-      <a href="{{ tagUrl | url }}" class="tagslist-tags-link">
-        <span class="dateline-tags">{{ tag }}</span>
-      </a>
+    <span>{{comma() | safe }}</span>
+    {%- set tagUrl %}/tags/{{ tag }}/{%- endset -%}
+    <a href="{{ tagUrl | url }}" class="tagslist-tags-link">
+      <span class="dateline-tags">{{ tag }}</span>
+    </a>
   {%- endif -%}{%- endfor %}
 {%- endmacro -%}

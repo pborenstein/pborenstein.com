@@ -1,7 +1,9 @@
 ---
 title: "Rebase: How does it work?"
-summary: Rebasing step by step
-category: Tech
+summary:  Rebasing has always confused me.
+          When it works, I'm a little surprised.
+          So I decided to try rebasing
+          by hand. It's pretty neat.
 date: 2020-01-05T21-05:00
 tags:
   - git
@@ -19,9 +21,7 @@ I decided to figure out how rebase works
 by doing it by hand. 
 
 
-
-
-!!! Refresher: _what does `git rebase` do?_
+!!! Refresher: what _does_ `git rebase` do?
 Rebasing is one way of
 ["integrat[ing] changes from one branch into another."](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 
@@ -180,15 +180,15 @@ rebase does its work in four steps:
     our repo looks like this:
 
     ```
-                master
-                  |
+                 master
+                   |
     C1---C2---C5---C6
           \
           C3---C4
-                |
-              topic
-                |
-              HEAD
+               |
+             topic
+               |
+             HEAD
     ```
     !!!
 

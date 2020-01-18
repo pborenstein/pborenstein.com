@@ -18,7 +18,9 @@ main ul {
 }
 
 .posts-list {
-
+  list-style-position: inside;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .posts-list-entry {
@@ -30,17 +32,23 @@ main ul {
 }
 
 .posts-entry-title {
-  
-}
-
-.posts-entry-tag,
-.posts-entry-summary {
   font-family: var(--font-heading);
-  font-size: var(--font-size-minus-1);
+  font-weight: 600;
+  margin: 0;
+}
+
+.posts-entry-title a {
+  color: var(--color-heading);
+}
+
+.posts-entry-summary {
+  font-family: var(--font-body);
+  font-size: var(--font-size-minus-0);
+  color: var(--color-gray-40);
 }
 
 
-.posts-entry-date::before {
+.xposts-entry-date::before {
   /* en bullet en */
   content: "\2005\2022\2005";
 
@@ -49,14 +57,22 @@ main ul {
   font-family: var(--font-body);
   font-weight: 400;
   color: var(--color-gray-40);
-  font-style: italic;
-  font-size: var(--font-size-minus-1)
+  font-size: var(--font-size-minus-1);
 }
 
-.posts-entry-summary {
+.posts-entry-tag {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-minus-1);
+}
+
+.posts-entry-footer {
+  line-height: 1;
+}
+
+.posts-entry-summary,
+.posts-entry-summary p {
   display: block;
-  margin: 0;
-  
+  margin-bottom: 0;
 }
 
 .tagslist-tags-link {}
