@@ -20,10 +20,9 @@ navtitle: Colophon
 
 [VS Code]: https://code.visualstudio.com/
 [BBEdit]: https://www.barebones.com/products/bbedit/
-[Eleventy]: https://www.11ty.io/
+[Eleventy]: https://www.11ty.dev/
 [eleventy base blog]: https://github.com/11ty/eleventy-base-blog
 [Netlify]: https://netlify.com
-[Typekit]: https://typekit.com
 [kabel]: https://www.monotype.com/resources/font-stories/neue-kabel-reshaping-a-lost-classic/
 [Lorem Picsum]: https://picsum.photos/
 [typetura]: https://github.com/typetura/typetura.js

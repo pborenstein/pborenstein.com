@@ -39,7 +39,7 @@
   --color-nav-text:       var(--color-gray-20);
   --color-nav-hover:      var(--color-darkred);
   --color-heading:        var(--color-gray-20);
-  --color-link:           var(--color-red);
+  --color-link:           var(--color-darkred);
   --color-footer:         var(--color-gray-75);
   --color-code:           var(--color-darkred);   /* naked code */
   --color-code-bg:        var(--base0x);

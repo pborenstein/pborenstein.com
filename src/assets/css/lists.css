@@ -38,7 +38,7 @@ main ul {
 }
 
 .posts-entry-title a {
-  color: var(--color-heading);
+  color: var(--color-gray-30);
 }
 
 .posts-entry-summary {
@@ -58,6 +58,7 @@ main ul {
   font-weight: 400;
   color: var(--color-gray-40);
   font-size: var(--font-size-minus-1);
+  font-style: italic;
 }
 
 .posts-entry-tag {

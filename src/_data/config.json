@@ -1,8 +1,8 @@
 {
   "siteName":         "pborenstein.com",
   "footerRightTop":   "made in Manchester, NH",
-  "footerRightBottom":  "built with <a href='https://www.11ty.io/'>eleventy</a>",
-  "url":              "https://example.com",
+  "footerRightBottom":  "built with <a href='https://www.11ty.dev/'>eleventy</a> and <a href='/pages/colophon'>other stuff</a>",
+  "url":              "https://www.pborenstein.com",
   "authorEmail":      "pborenstein@gmail.com",
   "authorHandle":     "@pborenstein",
   "authorName":       "Philip Borenstein",

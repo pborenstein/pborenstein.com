@@ -58,7 +58,8 @@ footer ul {
 
 .footer-text {
   vertical-align: top;
-  margin: 0
+  margin: 0;
+  line-height: 1.4;
 }
 
 .footer-item {
