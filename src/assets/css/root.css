@@ -119,7 +119,7 @@ body {
   scroll-behavior: smooth;
   --tt-key: body;
   --tt-ease: linear;
-  --tt-max: 800;
+  --tt-max: 1200;
 }
 
 @keyframes body {
