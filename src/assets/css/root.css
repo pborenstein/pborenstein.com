@@ -130,7 +130,7 @@ body {
     font-size: var(--font-size-base);
   }
   100% {
-    font-size: var(--font-size-plus-0);
+    font-size: var(--font-size-plus-1);
   }
 
 }
