@@ -126,7 +126,7 @@ body {
   0% {
     font-size: var(--font-size-minus-2);
   }
-  62.5% {   /* 500px */
+  41.67% {   /* 500px */
     font-size: var(--font-size-base);
   }
   100% {
