@@ -41,7 +41,7 @@
   --color-heading:        var(--color-gray-20);
   --color-link:           var(--color-darkred);
   --color-footer:         var(--color-gray-75);
-  --color-code:           var(--color-darkred);   /* naked code */
+  --color-code:           var(--color-gray-30);   /* naked code */
   --color-code-bg:        var(--base0x);
   --color-fold-marker:    var(--color-darkred);
   --color-fold-expanded:  var(--color-gray-95);
@@ -59,7 +59,7 @@
   --font-heading:       var(--font-sans-serif);
   --font-list:          var(--font-sans-serif);
   --font-code:          var(--font-mono);
-  --font-code-size:     .875rem;
+  --font-code-size:     1em;
 
   --font-features:      "xnum";   /*  onum:   Old style numbers */
 

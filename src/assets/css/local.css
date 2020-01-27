@@ -49,3 +49,11 @@
   text-decoration: none;
   color: var(--color-heading);
 }
+
+
+/**
+ * the $ in our theme is too garish
+ **/
+.token.important {
+  color: var(--color-darkred);
+}
