@@ -12,6 +12,7 @@ code {
   word-break: normal;
 }
 
+
 /*  how to display in-line code:
       apply only to naked <code> blocks
 */
@@ -24,6 +25,7 @@ code:not([class]) {
 /* for naked <code> */
 pre:not([class]) code:not([class]) {
   background-color: inherit;
+  color: var(--color-darkred)
 }
 
 a[href] > code {
