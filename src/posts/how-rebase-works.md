@@ -317,15 +317,15 @@ rebase does its work in four steps:
 
     ```
                   HEAD
-                  |
-                master
-                topic
-                  |
+                   |
+                 master
+                 topic
+                   |
     C1---C2---C5---C6
           \
           C3---C4
-                |
-            ORIG_HEAD
+               |
+           ORIG_HEAD
     ```
     !!!
 
@@ -431,14 +431,14 @@ Or in ASCII art:
 
 ```
             master
-              |
+               |
 C1---C2---C5---C6
-    \          \
+      \         \
       C3---C4    C3'---C4'
-          |           |
-      ORIG_HEAD     topic
-                      |
-                    HEAD
+           |           |
+       ORIG_HEAD     topic
+                       |
+                     HEAD
 ```
 
 Which is exactly the same as if
