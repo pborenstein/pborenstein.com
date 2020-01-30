@@ -106,8 +106,25 @@ html {
         */ 
 }
 
-hr {
-  margin: initial;
+        /*  ... and of course
+            the '*' selectors were catching
+            the inline elements, giving them
+            huge margins, which wouldn't
+            ordinarily matter, but sometimes,
+            in cases like
+            <span class="foo">
+            where "foo" has "display: inline-block",
+            the margin on <span> takes on
+            a strange and sinister quality.
+            So, we reset the margins of
+            inline elementsto their initial state.
+                    */
+
+em,
+hr,
+span,
+strong, em {
+  margin: initial
 }
 
 body {

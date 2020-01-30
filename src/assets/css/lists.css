@@ -1,9 +1,36 @@
 /* ----- lists.css ------ */
 
 
+/**
+ * definition lists
+ **/
+
+dl {
+  font-size: var(--font-size-minus-0);
+}
+
+dt {
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  margin-bottom: 0rem;
+
+}
+
+dd {
+  margin-left: 1em;
+}
+
+/**
+ * This is what happens when you don't
+ * document why you did something because
+ * it's obvious.
+ **/
+
 ul {
   list-style-type: square;
 }
+
 /**
  *  list items should cuddle
  */
@@ -16,6 +43,10 @@ main ol,
 main ul {
   padding-left: 1em;
 }
+
+/**
+ * List of posts
+ **/
 
 .posts-list {
   list-style-position: inside;
@@ -47,12 +78,6 @@ main ul {
   color: var(--color-gray-40);
 }
 
-
-.xposts-entry-date::before {
-  /* en bullet en */
-  content: "\2005\2022\2005";
-
-}
 .posts-entry-date {
   font-family: var(--font-body);
   font-weight: 400;

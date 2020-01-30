@@ -1,23 +1,50 @@
 ---
 date: 2001-05-01
-title: "Made with:"
+title: "Colophon"
 tags:
   - _nav
 navtitle: Colophon
 ---
-# {{ title }}
 
-- [Netlify][]
-- [Eleventy]
-- [typetura][]
-- [BBEdit][]
-- [VS Code]
-- [RandomTextGenerator.com][]
-- [Lorem Picsum][]
+<img src="https://picsum.photos/512/128?gravity=center&random"
+  width="100%" height="128" >
+## Made with: 
+
+<div style='columns: 2'>
+
+[Netlify][]
+: Hosting and building
+
+[Eleventy][]
+: Static site generator
+
+[Typetura][]
+: Typography
+
+[BBEdit][]
+: My goto editor
+
+[VS Code][]
+: Debugging and editing
+
+[RandomTextGenerator.com][]
+: Society excited by cottage private an
+  it esteems.
+  
+[Mermaid][]
+: Diagrams
+
+[Lorem Picsum][]
+: Hero pics
 
 [Styles](../stylesheet/)
+: All the styles
+
+</div>
 
 
+
+[Mermaid]: https://mermaid-js.github.io/mermaid/#/
 [VS Code]: https://code.visualstudio.com/
 [BBEdit]: https://www.barebones.com/products/bbedit/
 [Eleventy]: https://www.11ty.dev/

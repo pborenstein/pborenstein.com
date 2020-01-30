@@ -155,3 +155,24 @@ blockquote {
   margin-left: 1em;
   margin-right: 1em;
 }
+
+blockquote p cite::before {
+  content: '\2014\2009'; /* emdash-thinspace */
+  white-space: pre;
+}
+
+/**
+ * blockquote p:last-of-type cite,
+ *
+ * use this selector to ignore all but the final
+ * cite in a blockquote.
+ **/
+
+blockquote p cite
+{
+  font-style: italic;
+  font-size: var(--font-size-minus-1);
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+}

@@ -1,6 +1,5 @@
 ---
 date: 2018-01-02T12:34:56.123-05:00
-
 title: Stylesheet
 layout: layouts/page.njk
 ---
@@ -16,12 +15,12 @@ conubia sodales ipsum diam molestie.
 
 [toc]
 
-However besides jeez exclusively and gosh diabolically
-this hence frowned archaic abrasively preparatory
+"She was *never* on time." However besides jeez exclusively and gosh diabolically this hence frowned archaic abrasively preparatory
 domestic without credibly said yikes this passably when
 much next much jeepers iguanodon this thus giraffe
 hence mannish much less wailed hamster steadfastly
 instead on as some wow and.
+
 
 Taped mammoth adroit woefully aboard much beaver ouch
 misheard selfishly greyhound wherever rat darn
@@ -29,46 +28,52 @@ accurately far wherever conductive toucan komodo
 dalmatian much dove methodically gosh far near and
 objective sold more misheard dear hello.
 
-## Footnotes
+## Weights
 
-Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially[^esp] reasonable off one. Wonder bed elinor family secure met. It want gave west into high no in. Depend repair met before man admire see and. An he observe be it covered delight hastily message. Margaret no ladyship endeavor ye to settling. 
+<div>
+<p style="font-weight: 100; margin-top: 0">
+Taped mammoth adroit woefully aboard much  100
+</p>
 
-It allowance prevailed enjoyment in it. Calling observe for who pressed raising his. Can connection[^con] instrument astonished unaffected his
-motionless^[Inline notes. It looks like newlines are forbidden here.]
-preference. Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent.[^ext] Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. 
+<p style="font-weight: 200">
+Taped mammoth adroit woefully aboard much  200
+</p>
 
-[^con]: A simple footnote.
-[^esp]: A more complicated footnote
+<p style="font-weight: 300">
+Taped mammoth adroit woefully aboard much  300
+<code>dateline-date</code>
+</p>
 
-    Apartments simplicity or understood do it we. Song such eyes had
-    and off. Removed winding ask explain delight out few behaved
-    lasting. Letters old hastily ham sending not sex chamber because
-    present. Oh is indeed twenty entire figure. Occasional
-    diminution announcing new now literature terminated. Really
-    regard excuse off ten pulled. Lady am room head so lady four or
-    eyes an. He do of consulted sometimes concluded mr. An household
-    behaviour if pretended. 
+<p style="font-weight: 400">
+Taped mammoth adroit woefully aboard much  400
+<code>body, dateline</code>
+</p>
 
-[^ext]:
-    All of these
-    have started on the first line. Not this one.
-    It's indented on the next line:
+<p style="font-weight: 500">
+Taped mammoth adroit woefully aboard much  500
+<code>summary</code>
+</p>
 
-    ```markdown
-    [^ext]:
-        All of these
-        have started on the first line. Not this one.
-        It's indented on the next line:
-    ```
+<p style="font-weight: 600">
+Taped mammoth adroit woefully aboard much  600
+</p>
 
-## Lists, graphs, and tables 
+<p style="font-weight: 700">
+Taped mammoth adroit woefully aboard much  700
+<code>logo, nav</code>
+</p>
 
-Ac vel nulla fermentum quis condimentum etiam sapien
-egestas fames fermentum turpis aenean, commodo velit
-eros orci purus sagittis iaculis auctor habitasse
-primis inceptos.
+<p style="font-weight: 800">
+Taped mammoth adroit woefully aboard much  800
+</p>
 
-### Lists
+<p style="font-weight: 900">
+Taped mammoth adroit woefully aboard much  900
+</p>
+
+</div>
+
+## Lists
 
 I like my lists to be tight, with no space between
 one item and the next:
@@ -113,7 +118,7 @@ Steps to success
     let spacing = require('lots')
     ```
     try to end with text
-    but don't be afraid to use `<br>`s.
+    but don't be afraid to use  <code>&lt;</code><code>br</code><code>&gt;</code>s.
     life is too short
 
 3.  Spacing is key<br>
@@ -140,7 +145,47 @@ enthusiastically more alas when close unceremoniously
 hey well tragic while far far ouch unthinkingly one
 vibrant far much ouch.
 
-### Graphs
+## Pictures
+
+Let's figure this out.
+
+```html
+<img src="/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg"
+  width="100%">
+```
+
+
+<img src="/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg"
+  width="100%">
+
+
+```html
+<img src="https://picsum.photos/512/128?gravity=center&random"
+  width="100%" height="128" >
+```
+
+<img src="https://picsum.photos/512/128?gravity=center&random"
+  width="100%" height="128" >
+
+
+
+## Mermaid Graphs
+
+You can use [Mermaid](https://mermaid-js.github.io/mermaid/)
+to write graphs in a
+markdown-like language.
+
+``` text
+    ```mermaid
+    graph TD;
+        A(Start)-->B;
+        A-->C;
+        B-->D[End];
+        C-.->D;
+    ```
+```
+
+does this
 
 ```mermaid
 graph TD;
@@ -152,7 +197,7 @@ graph TD;
 
 
 
-### Containers
+## Containers
 
 Two kinds of containers:
 
@@ -213,7 +258,7 @@ module.exports = function pdump(obj) {
 }
 ```
 
-### Tables 
+## Tables 
 
 Some because beseechingly staunch much hence while
 honey as one put llama carelessly alas over amid in off
@@ -262,58 +307,25 @@ per tristique nec dictum.
 | locale | {{  page.date  | prettyDate('locale')}} |
 [ formatting dates<br>with `prettyDate`]
 
-## Weights
-
-<div>
-<p style="font-weight: 100; margin-top: 0">
-Taped mammoth adroit woefully aboard much  100
-</p>
-
-<p style="font-weight: 200">
-Taped mammoth adroit woefully aboard much  200
-</p>
-
-<p style="font-weight: 300">
-Taped mammoth adroit woefully aboard much  300
-<code>dateline-date</code>
-</p>
-
-<p style="font-weight: 400">
-Taped mammoth adroit woefully aboard much  400
-<code>body, dateline</code>
-</p>
-
-<p style="font-weight: 500">
-Taped mammoth adroit woefully aboard much  500
-<code>summary</code>
-</p>
-
-<p style="font-weight: 600">
-Taped mammoth adroit woefully aboard much  600
-</p>
-
-<p style="font-weight: 700">
-Taped mammoth adroit woefully aboard much  700
-<code>logo, nav</code>
-</p>
-
-<p style="font-weight: 800">
-Taped mammoth adroit woefully aboard much  800
-</p>
-
-<p style="font-weight: 900">
-Taped mammoth adroit woefully aboard much  900
-</p>
-
-</div>
-
 ## Blockquote
 
 Tempus rutrum taciti mollis diam dapibus ligula, sit
 malesuada feugiat aptent donec, curabitur habitasse
 nisl consectetur porta semper augue mollis quam hac
 
-> We shall come back, no doubt, to walk down the Row and watch young people on the tennis courts by the clump of mimosas and walk down the beach by the bay, where the diving floats lift gently in the sun, and on out to the pine grove, where the needles thick on the ground will deaden the footfall so that we shall move among the trees as soundlessly as smoke. But that will be a long time from now, and soon now we shall  go out of the house and go into the convulsion of the world, out of history into history and the awful responsibility of Time.
+> We shall come back, no doubt, to walk down the
+Row and watch young people on the tennis courts
+by the clump of mimosas and walk down the
+beach by the bay, where the diving floats
+lift gently in the sun, and on out to the
+pine grove, where the needles thick on the 
+ground will deaden the footfall so that we 
+shall move among the trees as soundlessly as smoke. 
+But that will be a long time from now, and soon 
+now we shall  go out of the house and go into 
+the convulsion of the world, out of history into 
+history and the awful responsibility of Time.
+><cite>Robert Penn Warren</cite>
 
 Tempus rutrum taciti mollis diam dapibus ligula, sit
 malesuada feugiat aptent donec, curabitur habitasse
@@ -322,7 +334,8 @@ nisl consectetur porta semper augue mollis quam hac
 > Or classically a far some grizzly rode however jeepers
 > along mounted fishy bet owing versus leapt because
 > fondly far and snickered neurotically this this
-> emotionally away yikes this instead therefore.
+><cite>Cite in the middle</cite>
+>emotionally away yikes this instead therefore.
 >
 > ``` js
 > some { code
@@ -330,7 +343,40 @@ nisl consectetur porta semper augue mollis quam hac
 >   blockquote
 > }
 > ```
+><cite>The Way of the Squirrel</cite>
 
+
+## Footnotes
+
+Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially[^esp] reasonable off one. Wonder bed elinor family secure met. It want gave west into high no in. Depend repair met before man admire see and. An he observe be it covered delight hastily message. Margaret no ladyship endeavor ye to settling. 
+
+It allowance prevailed enjoyment in it. Calling observe for who pressed raising his. Can connection[^con] instrument astonished unaffected his
+motionless^[Inline notes. It looks like newlines are forbidden here.]
+preference. Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent.[^ext] Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. 
+
+[^con]: A simple footnote.
+[^esp]: A more complicated footnote
+
+    Apartments simplicity or understood do it we. Song such eyes had
+    and off. Removed winding ask explain delight out few behaved
+    lasting. Letters old hastily ham sending not sex chamber because
+    present. Oh is indeed twenty entire figure. Occasional
+    diminution announcing new now literature terminated. Really
+    regard excuse off ten pulled. Lady am room head so lady four or
+    eyes an. He do of consulted sometimes concluded mr. An household
+    behaviour if pretended. 
+
+[^ext]:
+    All of these
+    have started on the first line. Not this one.
+    It's indented on the next line:
+
+    ```markdown
+    [^ext]:
+        All of these
+        have started on the first line. Not this one.
+        It's indented on the next line:
+    ```
 
 ### Heading 3
 
