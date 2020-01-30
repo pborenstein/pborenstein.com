@@ -11,7 +11,7 @@ tags:
 
 Do you find rebasing in Git confusing? I do.
 
-<img src="/assets/samuel-sianipar-scUBcasSvbE-unsplash.jpg" width=100%>
+<img src="/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg" width=100%>
 
 If you’re like me, you learned Git by looking at examples and memorizing a handful of Git commands.
 Most of the time the commands do what I want,
