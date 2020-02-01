@@ -8,7 +8,8 @@
     "build:colors": "utils/make-colors",
     "build:styles": "utils/make-styles",
     "serve": "npm run build && eleventy --serve",
-    "debug": "DEBUG=* npx eleventy"
+    "debug": "DEBUG=* npx eleventy",
+    "postinstall": "patch-package"
   },
   "keywords": [],
   "repository": "github:pborenstein/pborenstein.com",
@@ -32,6 +33,7 @@
     "markdown-it-multimd-table": "^3.2.3",
     "markdown-it-prism": "^2.0.3",
     "markdown-it-toc-done-right": "^4.1.0",
+    "patch-package": "^6.2.0",
     "typeturajs": "^1.1.1"
   }
 }

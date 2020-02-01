@@ -11,7 +11,8 @@ module.exports = function (eleventyConfig) {
   //    wtf cheerio? 
   
   const typesetPlugin = require('eleventy-plugin-typeset');
-  eleventyConfig.addPlugin(typesetPlugin({ only: 'p' }));
+  eleventyConfig.addPlugin(typesetPlugin({ only: 'p',
+     disable: []}));
 
 
   eleventyConfig.addPassthroughCopy("src/assets")
