@@ -1,0 +1,10 @@
+{%- macro figure(imgSrc, caption) -%}
+
+<figure>
+<img src="{{ imgSrc }}" width="100%">
+<figcaption>
+{{ caption | markdown | safe }}
+</figcaption>
+</figure>
+
+{%- endmacro -%}

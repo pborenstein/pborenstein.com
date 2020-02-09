@@ -11,7 +11,9 @@ tags:
 
 Do you find rebasing in Git confusing? I do.
 
-<img src="/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg" width=100%>
+{% from "macros/figure.njk" import figure %}
+{{ figure("/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg",
+"Photo by [Samuel Sianipar](https://unsplash.com/@samthewam24) • [Unsplash](https://unsplash.com)") }}
 
 If you’re like me, you learned Git by looking at examples and memorizing a handful of Git commands.
 Most of the time the commands do what I want,
@@ -456,5 +458,3 @@ we had used `git rebase`.
     ``` shell-session
     $ git log --oneline ^master topic
     ```
-
-Photo by [Samuel Sianipar](https://unsplash.com/@samthewam24?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

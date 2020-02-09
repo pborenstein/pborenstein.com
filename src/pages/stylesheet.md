@@ -147,7 +147,48 @@ vibrant far much ouch.
 
 ## Pictures
 
-Let's figure this out.
+Use the `figure` macro for pictures.
+The first argument is the image source.
+The second argument is the caption.
+You can use Markdown in the caption.
+
+{% from "macros/figure.njk" import figure %}
+
+{{ figure("https://picsum.photos/512/128?gravity=center&random",
+          "[Lorem Picsum](https://picsum.photos/)") }}
+
+
+```html
+{%- raw -%}
+{{
+  figure("https://picsum.photos/512/128?gravity=center&random",
+    "[Lorem Picsum](https://picsum.photos/)")
+}}
+{% endraw %}
+```
+
+The first argument to `figure` can
+be anything that would be valid
+for and `<img>` tag's `src` attribute.
+
+{{ figure("/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg",
+"Photo by [Samuel Sianipar](https://unsplash.com/@samthewam24) • [Unsplash](https://unsplash.com)") }}
+
+```html
+{%- raw -%}
+{{
+  figure("/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg",
+    "Photo by [Samuel Sianipar](https://unsplash.com/@samthewam24) • [Unsplash](https://unsplash.com)")
+}}
+{% endraw %}
+```
+
+Of course you can use a naked
+`<img>` tag.
+
+<img src="/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg"
+  width="100%">
+
 
 ```html
 <img src="/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg"
@@ -155,8 +196,8 @@ Let's figure this out.
 ```
 
 
-<img src="/assets/img/samuel-sianipar-scUBcasSvbE-unsplash.jpg"
-  width="100%">
+<img src="https://picsum.photos/512/128?gravity=center&random"
+  width="100%" height="128" >
 
 
 ```html
@@ -164,8 +205,6 @@ Let's figure this out.
   width="100%" height="128" >
 ```
 
-<img src="https://picsum.photos/512/128?gravity=center&random"
-  width="100%" height="128" >
 
 
 
@@ -237,7 +276,7 @@ Divs are written like this:
 :::
 ```
 
-which gets rendered like this:
+which gets rendered into HTML like this:
 
 ``` html
 <div style="background-color:aliceblue;padding:0.75em">

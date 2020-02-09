@@ -1,0 +1,24 @@
+/* ----- figures.css ------ */
+
+
+figure {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+figure img {
+  margin: 0;
+  border-radius: 4px;
+}
+
+figcaption {
+  line-height: 1;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+  margin-bottom: 0;
+  text-align: right;
+  font-family: var(--font-caption);
+  font-size: var(--font-size-minus-2);
+  font-weight: 400;
+  color: var(--color-figure-caption);
+}

@@ -6,8 +6,11 @@ tags:
 navtitle: Colophon
 ---
 
-<img src="https://picsum.photos/512/128?gravity=center&random"
-  width="100%" height="128" >
+{% from "macros/figure.njk" import figure %}
+{{ figure("https://picsum.photos/512/128?gravity=center&random",
+          "[Lorem Picsum](https://picsum.photos/)") }}
+
+
 ## Made with: 
 
 <div style='columns: 2'>
