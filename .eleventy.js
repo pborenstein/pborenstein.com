@@ -1,18 +1,20 @@
 
 module.exports = function (eleventyConfig) {
- 
- 
-  // https://github.com/johanbrook/eleventy-plugin-typeset
-  // https://typeset.lllllllllllllllll.com/
-  //    adding this was unnecessarily fidleish
-  //    somehow `eleventy-plugin-typeset` was
-  //    doing weird shit on a typoed path?
-  //    and after all that, cheerio was missing
-  //    wtf cheerio? 
-  
-  const typesetPlugin = require('eleventy-plugin-typeset');
-  eleventyConfig.addPlugin(typesetPlugin({ only: 'p',
-     disable: []}));
+
+
+
+  const syntaxHighlight = require("@pborenstein/eleventy-md-syntax-highlight")
+
+
+  eleventyConfig.addPlugin(syntaxHighlight,
+    {showLineNumbers: true})
+
+
+
+  // eleventyConfig.addPlugin(
+  //   typesetPlugin({ only: 'p',
+  //                   disable: []
+  //                 }))
 
 
   eleventyConfig.addPassthroughCopy("src/assets")
@@ -26,7 +28,7 @@ module.exports = function (eleventyConfig) {
         n < 0 ? array.slice(n) : array.slice(0,n))
 
   // The ever-popular markdown filter.
-  eleventyConfig.addFilter("markdown", (content) => md.render(content))
+  eleventyConfig.addFilter("markdown", (content) => md.renderInline(content))
 
 
 
@@ -37,96 +39,83 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("tagList", require("./js/get-tag-list.js"))
 
 
-  // https://remysharp.com/2019/06/26/scheduled-and-draft-11ty-posts
-
-  const nodrafts = function (item) {
-    if (!('tags' in item.data)) return false
-
-    let tags = (typeof item.data.tags === 'string')
-      ? [item.data.tags]
-      : item.data.tags
-
-    return ! tags.some(tag => tag === '_draft')
-  }
-  
-
   eleventyConfig.addCollection('posts', collection => {
     return collection.getFilteredByGlob('./src/posts/*.md')
-                     .filter(nodrafts)
                      .reverse();
   });
 
 
   //  Set our markdown processor just how we like it.
-  //  note that we're not using the official 11ty syntax highlighter
-  //  we're using markdown-it's plugin instead
 
-  const mddiv = require("markdown-it-div")
-  const mdcont = require("markdown-it-container")
-  const mdtoc  = require('markdown-it-toc-done-right')
-
-  
   const md = require("markdown-it")({
-    html: true,
-    breaks: false,
-    linkify: false,
-    typographer: true
-  })
+                      html: true,
+                      breaks: false,
+                      linkify: false,
+                      typographer: true
+                    })
 
-    md
-    .use(mddiv)
+  eleventyConfig.setLibrary("md", md)
+
+  md.use(require("markdown-it-div"))
     .use(require("markdown-it-multimd-table"))
     .use(require('markdown-it-deflist'))
     .use(require('markdown-it-footnote'))
-    .use(require("markdown-it-prism"))
     .use(require("markdown-it-anchor"), {
-      permalink: true,
-      permalinkClass: "direct-link",
-      permalinkSymbol: "•"
-    })
-    .use(mdtoc, {
-      listType: "ul",
-      level: [1,2]
-    })
-    .use(mdcont, 'container',  {
-        marker: '!',
-      validate: function (params) {
-        return true
-      },
-      render: function (tokens, idx) {
-        var m = tokens[idx].info.trim() // .match(/^well\s+(.*)$/);
-        if (tokens[idx].nesting === 1) {
-          // opening tag
-          let summary =  m === ''
-                         ? ''
-                         : '<summary>' + md.renderInline(m) + '</summary>\n'
-          
-          return '<details>' + summary + '<aside>';
-        } else {
-          // closing tag
-          return '</aside>\n</details>\n';
-        }
-      }
-    })
-  
-    md.renderer.rules.footnote_caption = (tokens, idx/*, options, env, slf*/) => {
-      let n = Number(tokens[idx].meta.id + 1).toString();
-    
-      if (tokens[idx].meta.subId > 0) {
-        n += ':' + tokens[idx].meta.subId;
-      }
-    
-      return n;
+          permalink: true,
+          permalinkClass: "direct-link",
+          permalinkSymbol: "•"
+        })
+    .use(require('markdown-it-toc-done-right'), {
+          listType: "ul",
+          level: [1,2]
+        })
+    .use(require("markdown-it-container"), 'container',  {
+          marker: '!',
+          validate: function (params) {
+            return true
+          },
+          render: function (tokens, idx) {
+            var m = tokens[idx].info.trim() // .match(/^well\s+(.*)$/);
+            if (tokens[idx].nesting === 1) {
+              // opening tag
+              let summary =  m === ''
+                             ? ''
+                             : '<summary>' + md.renderInline(m) + '</summary>\n'
+
+              return '<details>' + summary + '<aside>';
+            } else {
+              // closing tag
+              return '</aside>\n</details>\n';
+            }
+          }
+        })
+
+
+  //  Footnote customizations
+
+    //  Replace the footnote caption from
+    //  [n] to just n
+    //  https://github.com/markdown-it/markdown-it-footnote/blob/cab6665ba39c6eb517cbbae3baeb549004bf740c/index.js#L19-L27
+
+  md.renderer.rules.footnote_caption = (tokens, idx/*, options, env, slf*/) => {
+    let n = Number(tokens[idx].meta.id + 1).toString();
+
+    if (tokens[idx].meta.subId > 0) {
+      n += ':' + tokens[idx].meta.subId;
     }
+
+    return n;
+  }
+
+    //  Replace the block-open because we really
+    //  don't like <hr>s
+    //  https://github.com/markdown-it/markdown-it-footnote/blob/cab6665ba39c6eb517cbbae3baeb549004bf740c/index.js#L41-L45
 
   md.renderer.rules.footnote_block_open = (tokens, idx) => (
      `<div class="footnotes-sep"></div>
       <section class="footnotes">
       <ol class="footnotes-list">`
   )
-    
-  
-  eleventyConfig.setLibrary("md", md)
 
 
   // and a little help to render mermaid diagrams
@@ -139,7 +128,7 @@ module.exports = function (eleventyConfig) {
 
   //  If we use the standard `markdown-it-prism` highlighter
   //  then `eleventyConfig.markdownHighlighter` doesn't get set
-  //  because prism stashes its highlighting function
+  //  because `markdown-it-prism` stashes its highlighting function
   //  in `md.options.highlight`
 
   //  In order to patch in mermaid highlighting

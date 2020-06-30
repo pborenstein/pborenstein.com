@@ -11,18 +11,15 @@ navtitle: Colophon
           "[Lorem Picsum](https://picsum.photos/)") }}
 
 
-## Made with: 
+## Made with:
 
-<div style='columns: 2'>
+<div style='columns: 1;'>
 
 [Netlify][]
 : Hosting and building
 
 [Eleventy][]
 : Static site generator
-
-[Typetura][]
-: Typography
 
 [BBEdit][]
 : My goto editor
@@ -33,7 +30,7 @@ navtitle: Colophon
 [RandomTextGenerator.com][]
 : Society excited by cottage private an
   it esteems.
-  
+
 [Mermaid][]
 : Diagrams
 
@@ -42,7 +39,6 @@ navtitle: Colophon
 
 [Styles](../stylesheet/)
 : All the styles
-
 </div>
 
 
@@ -55,5 +51,4 @@ navtitle: Colophon
 [Netlify]: https://netlify.com
 [kabel]: https://www.monotype.com/resources/font-stories/neue-kabel-reshaping-a-lost-classic/
 [Lorem Picsum]: https://picsum.photos/
-[typetura]: https://github.com/typetura/typetura.js
 [RandomTextGenerator.com]: http://randomtextgenerator.com/

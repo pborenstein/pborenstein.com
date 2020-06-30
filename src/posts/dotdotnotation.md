@@ -47,7 +47,7 @@ L1---L2---L3---L4---L5---L6
 
 The `git log` output looks like this:
 
-``` shell-session
+``` bash
 $ git log --oneline --all --graph --decorate
 * 0c1d724 (topic) L6
 * 5d4cdb5 L5
@@ -62,7 +62,7 @@ we expect
 the output of
 `git log master..topic` to be?
 
-``` shell-session
+``` bash
 $ git log --oneline --graph --decorate master..topic
 * 0c1d724 (topic) L6
 * 5d4cdb5 L5
@@ -76,7 +76,7 @@ are `L5` and `L6`
 OK. What if we reverse the
 order of the commits?
 
-``` shell-session
+``` bash
 $ git log --oneline --graph --decorate topic..master
 <no output>
 ```
@@ -89,7 +89,7 @@ So
 >_The commits from `master` to `topic`_.^[Not
 including the `master` commit itself.]
 
-Then it makes sense that `topic..master` 
+Then it makes sense that `topic..master`
 produces no output because
 
 >_the commits from `topic` to `master`_
@@ -146,12 +146,12 @@ spells mean.]
 > History-traversing commands, such as `git log`,
 > operate on a set of commits, not just a single
 > commit.
-> 
+>
 > For these commands, specifying a single revision,
 > using the notation described in the previous
 > section, means the set of commits reachable from
 > the given commit.
-> 
+>
 > A commit’s reachable set is the commit itself and
 > the commits in its ancestry chain.
 
@@ -176,7 +176,7 @@ which means:
   C3---C4
   ```
 
-``` shell-session
+``` bash
 $ git log --oneline --graph --decorate master..topic
 * 703d475 (HEAD -> topic) C4
 * 3ffdcab C3
