@@ -1,9 +1,9 @@
 ---
 title: Dot Dot Notation
 summary: Dot notation lets you specify sets of commits.
+date: 2020-04-25T21-05:00
 tags:
   - git
-  - _draft
 ---
 
 OK, seriously?
