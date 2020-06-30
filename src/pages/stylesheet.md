@@ -235,6 +235,49 @@ graph TD;
 ```
 
 
+## Code
+
+
+Fence text <code>```json</code>:
+
+```json
+collections: {
+  "all": [ items ],
+  "categories": {
+    "Culture": [ items ],
+    "Life": [ items ],
+    "Thinking": [ items ]
+  }
+}
+```
+
+Fence text <code>```json#</code>:
+
+```json#
+collections: {
+  "all": [ items ],
+  "categories": {
+    "Culture": [ items ],
+    "Life": [ items ],
+    "Thinking": [ items ]
+  }
+}
+```
+
+Fence text <code>```json#28</code>:
+
+```json#28
+collections: {
+  "all": [ items ],
+  "categories": {
+    "Culture": [ items ],
+    "Life": [ items ],
+    "Thinking": [ items ]
+  }
+}
+```
+
+
 
 ## Containers
 
@@ -285,7 +328,7 @@ which gets rendered into HTML like this:
 </div>
 ```
 
-Not far stuff she think the jokes. Going as by do known noise he wrote round leave. Warmly put branch people narrow see. Winding its waiting yet parlors married own feeling. Marry fruit do spite jokes an times. Whether at it unknown warrant herself winding if. Him same none name sake had post love. An busy feel form hand am up help. Parties it brother amongst an fortune of. Twenty behind wicket why age now itself ten. 
+Not far stuff she think the jokes. Going as by do known noise he wrote round leave. Warmly put branch people narrow see. Winding its waiting yet parlors married own feeling. Marry fruit do spite jokes an times. Whether at it unknown warrant herself winding if. Him same none name sake had post love. An busy feel form hand am up help. Parties it brother amongst an fortune of. Twenty behind wicket why age now itself ten.
 
 ```js
 const decycle = require('json-cycle').decycle
@@ -297,7 +340,7 @@ module.exports = function pdump(obj) {
 }
 ```
 
-## Tables 
+## Tables
 
 Some because beseechingly staunch much hence while
 honey as one put llama carelessly alas over amid in off
@@ -357,12 +400,12 @@ Row and watch young people on the tennis courts
 by the clump of mimosas and walk down the
 beach by the bay, where the diving floats
 lift gently in the sun, and on out to the
-pine grove, where the needles thick on the 
-ground will deaden the footfall so that we 
-shall move among the trees as soundlessly as smoke. 
-But that will be a long time from now, and soon 
-now we shall  go out of the house and go into 
-the convulsion of the world, out of history into 
+pine grove, where the needles thick on the
+ground will deaden the footfall so that we
+shall move among the trees as soundlessly as smoke.
+But that will be a long time from now, and soon
+now we shall  go out of the house and go into
+the convulsion of the world, out of history into
 history and the awful responsibility of Time.
 ><cite>Robert Penn Warren</cite>
 
@@ -387,11 +430,22 @@ nisl consectetur porta semper augue mollis quam hac
 
 ## Footnotes
 
-Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially[^esp] reasonable off one. Wonder bed elinor family secure met. It want gave west into high no in. Depend repair met before man admire see and. An he observe be it covered delight hastily message. Margaret no ladyship endeavor ye to settling. 
+Unpacked now declared put you confined daughter improved.
+Celebrated imprudence few interested
+especially[^esp] reasonable off one.
+Wonder bed elinor family secure met.
+It want gave west into high no in.
+Depend repair met before man admire see and.
+An he observe be it covered delight hastily message.
+Margaret no ladyship endeavor ye to settling.
 
-It allowance prevailed enjoyment in it. Calling observe for who pressed raising his. Can connection[^con] instrument astonished unaffected his
+It allowance prevailed enjoyment in it.
+Calling observe for who pressed raising his.
+Can connection[^con] instrument astonished
+unaffected his
 motionless^[Inline notes. It looks like newlines are forbidden here.]
-preference. Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent.[^ext] Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived. 
+preference.
+Announcing say boy precaution unaffected difficulty alteration him. Above be would at so going heard. Engaged at village at am equally proceed. Settle nay length almost ham direct extent.[^ext] Agreement for listening remainder get attention law acuteness day. Now whatever surprise resolved elegance indulged own way outlived.
 
 [^con]: A simple footnote.
 [^esp]: A more complicated footnote
@@ -403,7 +457,7 @@ preference. Announcing say boy precaution unaffected difficulty alteration him. 
     diminution announcing new now literature terminated. Really
     regard excuse off ten pulled. Lady am room head so lady four or
     eyes an. He do of consulted sometimes concluded mr. An household
-    behaviour if pretended. 
+    behaviour if pretended.
 
 [^ext]:
     All of these

@@ -28,7 +28,7 @@
 /*
 ### Foreground/Background
 */
-  
+
   --color-white:          #fff;
 
   --color-foreground:     var(--color-gray-07);
@@ -60,7 +60,7 @@
   --font-heading:       var(--font-sans-serif);
   --font-list:          var(--font-sans-serif);
   --font-code:          var(--font-mono);
-  --font-code-size:     1em;
+  --font-code-size:     var(--font-size-base);
 
   --font-features:      "xnum";   /*  onum:   Old style numbers */
 
@@ -80,7 +80,13 @@
     --font-size-minus-2:  0.64em;
     --font-size-minus-3:  0.512em;
     --font-size-minus-4:  0.41em;
+
+    --line-height-body:   1.5;
+    --line-height-code:   1.5;
 }
+
+
+
 
 html {
   box-sizing: border-box;
@@ -104,7 +110,7 @@ html {
             All this because I don't like there to be
             a space between the heading and the next
             chunk of content.
-        */ 
+        */
 }
 
         /*  ... and of course
@@ -135,22 +141,6 @@ body {
   color: var(--color-body);
   background-color: var(--color-background);
   scroll-behavior: smooth;
-  --tt-key: body;
-  --tt-ease: linear;
-  --tt-max: 1200;
-}
-
-@keyframes body {
-  0% {
-    font-size: var(--font-size-minus-2);
-  }
-  41.67% {   /* 500px */
-    font-size: var(--font-size-base);
-  }
-  100% {
-    font-size: var(--font-size-plus-1);
-  }
-
 }
 
 /* links to markdown header with disappearing # */

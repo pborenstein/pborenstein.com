@@ -1,5 +1,16 @@
 #! /usr/bin/env bash
 
+#   SUPER IMPORTANT to note
+#   we're using GNU awk
+
+VERSION=$(awk --version)
+
+if [[ ! ( "$VERSION" =~ ^GNU.* ) ]]  ; then
+  echo "This script requires GNU awk"
+  echo "https://www.gnu.org/software/gawk/"
+  exit
+fi
+
 touch ./src/assets/css/styles.css
 awk -f ./utils/extract.awk ./src/assets/css/styles.css > ./src/_includes/colors.html
 
