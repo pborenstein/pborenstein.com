@@ -7,7 +7,7 @@ module.exports = function (eleventyConfig) {
 
 
   eleventyConfig.addPlugin(syntaxHighlight,
-    {showLineNumbers: true})
+    {showLineNumbers: false})
 
 
 
