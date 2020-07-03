@@ -5,12 +5,12 @@
  **/
 
 #logo {
-  font-size: 2em;
+  font-size: 3.25em;
   line-height: 1.3;
 }
 
 .logo-beg {
-  color: var(--color-red);
+  color: var(--color-darkred);
 }
 
 #logo a[href]:hover .logo-beg {
@@ -23,7 +23,7 @@
 }
 
 #logo a[href]:hover .logo-med {
-  color: var(--color-red)
+  color: var(--color-darkred)
 }
 
 
@@ -32,7 +32,7 @@
 }
 
 #logo a[href]:hover .logo-end {
-  color: var(--color-red)
+  color: var(--color-darkred)
 }
 
 #logo a[href] {
@@ -42,7 +42,7 @@
 
 #logo a[href]:hover {
   text-decoration: none;
-  color: var(--color-red);
+  color: var(--color-darkred);
 }
 
 #logo a[href]:hover .slug{

@@ -20,7 +20,7 @@ Most of the time the commands do what I want,
 but I don't always understand how and why they work.
 
 I decided to figure out how rebase works
-by doing it by hand. 
+by doing it by hand.
 
 
 !!! Refresher: what _does_ `git rebase` do?
@@ -55,13 +55,13 @@ C1---C2---C5---C6
 
 Here's how `git log` draws the graph.
 
-``` shell-session
+``` bash
 $ git log --oneline --all --graph --decorate
 * 6adbbb9 (master) C6
 * 88f76a2 C5
 | * ff2d8db (HEAD -> topic) C4
 | * c409bd6 C3
-|/  
+|/
 * 1c74366 C2
 * f50bc06 C1
 ```
@@ -92,7 +92,7 @@ C1---C2---C5---C6
 
 The rebase command is invoked like this:
 
-> ``` shell-session
+> ``` bash
 > $ git rebase <upstream> <branch>
 > ```
 
@@ -123,7 +123,7 @@ C1---C2---C5---C6
 
 After running the rebase command:
 
-> ``` shell-session
+> ``` bash#
 > $ git rebase master topic
 > ```
 
@@ -149,7 +149,7 @@ rebase does its work in four steps:
 
 1. Make the _branch to rebase_ the current branch.
 
-    ``` shell-session
+    ``` bash
     $ git checkout topic
     Switched to branch 'topic'
     ```
@@ -165,7 +165,7 @@ rebase does its work in four steps:
     In our case,
     we switch to `topic`.
 
-    ``` shell-session
+    ``` bash
     $ git checkout topic
     Switched to branch 'topic'
 
@@ -173,7 +173,7 @@ rebase does its work in four steps:
     * 88f76a2 C5
     | * ff2d8db (HEAD -> topic) C4
     | * c409bd6 C3
-    |/  
+    |/
     * 1c74366 C2
     * f50bc06 C1
     ```
@@ -196,7 +196,7 @@ rebase does its work in four steps:
 
 2. Find the affected commits and save them:
 
-    ``` shell-session
+    ``` bash
     $ git log --oneline master..HEAD
     ff2d8db C4
     c409bd6 C3
@@ -221,7 +221,7 @@ rebase does its work in four steps:
     These are the commits listed
     by the following command:[^ex]
 
-    ``` shell-session
+    ``` bash
     $ git log --oneline master..topic
     ff2d8db C4
     c409bd6 C3
@@ -236,7 +236,7 @@ rebase does its work in four steps:
 
     First the `C3` commit:
 
-    ``` shell-session
+    ``` bash
     $ git show -p c409bd6 | tee c3.patch
     commit c409bd679e63fe351023d27b8050c7d1ec538128
     Author: Philip Borenstein <pborenstein@gmail.com>
@@ -255,7 +255,7 @@ rebase does its work in four steps:
 
     Now the `C4` commit:
 
-    ``` shell-session
+    ``` bash
     $ git show -p ff2d8db | tee c4.patch
     commit ff2d8db733d8e0d4ef5c6c375345c3e424916be2
     Author: Philip Borenstein <pborenstein@gmail.com>
@@ -278,7 +278,7 @@ rebase does its work in four steps:
    That means setting `topic` (which is also the current branch)
    to the same commit as `master`.
 
-    ``` shell-session
+    ``` bash
     $ git reset --hard master
     ```
 
@@ -301,7 +301,7 @@ rebase does its work in four steps:
     `git log` output. I put that in to make
     what's going on clearer.]
 
-    ``` shell-session
+    ``` bash
     $ git reset --hard master
     HEAD is now at 6adbbb9 C6
 
@@ -335,7 +335,7 @@ rebase does its work in four steps:
 
 4. Apply the commits from step 2 to the current branch
 
-    ``` shell-session
+    ``` bash
     $ git apply -3 c3.patch
     $ git commit -m "C3"
     [topic 4cb79ee] C3
@@ -367,7 +367,7 @@ rebase does its work in four steps:
     This is the state of our repo before
     any patches are applied.
 
-    ``` shell-session
+    ``` bash
     $ git log --oneline --graph --decorate --all
     * 6adbbb9 (HEAD -> topic, master) C6
     * 88f76a2 C5
@@ -387,7 +387,7 @@ rebase does its work in four steps:
     enabled, so Git remembers how I resolved the
     conflict the first time and does it again.]
 
-    ``` shell-session
+    ``` bash
     $ git apply -3 c3.patch
     error: patch failed: file1:1
     Falling back to three-way merge...
@@ -404,7 +404,7 @@ rebase does its work in four steps:
 
     And now we apply the `C4` commit:
 
-    ``` shell-session
+    ``` bash
     $ git apply -3 c4.patch
     <no output>
     $ git commit -m "C4'"
@@ -416,7 +416,7 @@ rebase does its work in four steps:
 
 This is how things end up:
 
-``` shell-session
+``` bash
 $ git log --oneline --graph --decorate --all
 * 703d475 (HEAD -> topic) C4'
 * 3ffdcab C3'
@@ -449,12 +449,12 @@ we had used `git rebase`.
 
 [^ex]: Another way of writing
 
-    ``` shell-session
+    ``` bash
     $ git log --oneline master..topic
     ```
 
     is like this, which I find clearer:
 
-    ``` shell-session
+    ``` bash
     $ git log --oneline ^master topic
     ```

@@ -47,7 +47,7 @@ L1---L2---L3---L4---L5---L6
 
 The `git log` output looks like this:
 
-``` bash
+``` bash#
 $ git log --oneline --all --graph --decorate
 * 0c1d724 (topic) L6
 * 5d4cdb5 L5
@@ -62,7 +62,7 @@ we expect
 the output of
 `git log master..topic` to be?
 
-``` bash
+``` bash#
 $ git log --oneline --graph --decorate master..topic
 * 0c1d724 (topic) L6
 * 5d4cdb5 L5
@@ -76,7 +76,7 @@ are `L5` and `L6`
 OK. What if we reverse the
 order of the commits?
 
-``` bash
+``` bash#
 $ git log --oneline --graph --decorate topic..master
 <no output>
 ```
@@ -176,7 +176,7 @@ which means:
   C3---C4
   ```
 
-``` bash
+``` bash#
 $ git log --oneline --graph --decorate master..topic
 * 703d475 (HEAD -> topic) C4
 * 3ffdcab C3
