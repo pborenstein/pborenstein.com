@@ -5,9 +5,21 @@
  **/
 
 #logo {
-  font-size: 3.25em;
   line-height: 1.3;
+  font-size: 1em;
 }
+
+
+
+@media all and (min-width: 200px)  {  #logo  { font-size:1.5em;  } }
+@media all and (min-width: 300px)  {  #logo  { font-size:2.3em;  } }
+@media all and (min-width: 400px)  {  #logo  { font-size:2.6em;  } }
+@media all and (min-width: 500px)  {  #logo  { font-size:3.5em;  } }
+@media all and (min-width: 600px)  {  #logo  { font-size:3.7em;  } }
+@media all and (min-width: 700px)  {  #logo  { font-size:3.8em;  } }
+@media all and (min-width: 800px)  {  #logo  { font-size:3.8em;  } }
+
+
 
 .logo-beg {
   color: var(--color-darkred);
