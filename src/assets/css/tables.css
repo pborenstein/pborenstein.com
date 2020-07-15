@@ -1,22 +1,5 @@
 /* ----- tables.css ------ */
 
-/*
-### Tables
-*/
-
-:root {
-  --color-table-odd:        var(--color-bg-contrast);
-  --color-table-even:       var(--color-background);
-  --color-table-body:       var(--color-body);
-  --color-table-heading:    var(--color-heading);
-  --color-table-caption:    var(--color-darkred);
-  --color-table-sep:        var(--color-gray-88);
-
-  --font-table-caption:     var(--font-heading);
-  --font-table-heading:     var(--font-heading);
-  --font-table-body:        var(--font-body);
-}
-
 table {
   width:  100%;
   border-collapse: collapse;

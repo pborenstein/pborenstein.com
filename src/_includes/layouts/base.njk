@@ -12,13 +12,15 @@
   {% else -%}
   {% include "partials/full-css.njk" %}
   {%- endif %}
-  <link rel="stylesheet" href="/assets/css/base16-tomorrow.css">
+  <link rel="stylesheet" href="/assets/css/prism/prism-tomorrow.css">
+  <link rel="stylesheet" href="/assets/css/prism/prism-line-numbers.css">
   <link rel="stylesheet" href="/assets/css/local.css">
   {%- if config.kabel -%}
   <link rel="stylesheet" href="https://use.typekit.net/ztn6rcs.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i&display=swap">
   {% endif -%}
   {% hasMermaid content %}
+  <script src="/assets/js/darkmode.js" defer></script>
 </head>
 <body class="one-col-grid">
  <header>

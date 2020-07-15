@@ -1,0 +1,16 @@
+  --color-foreground:     var(--color-gray-07);
+  --color-background:     #fff;
+  --color-bg-contrast:    var(--color-gray-95);     /* table even row */
+
+  --color-body:           var(--color-foreground);
+  --color-nav-text:       var(--color-gray-20);
+  --color-nav-hover:      var(--color-darkred);
+  --color-heading:        var(--color-gray-20);
+  --color-figure-caption: var(--color-gray-40);
+  --color-link:           var(--color-darkred);
+  --color-footer:         var(--color-gray-75);
+  --color-code:           var(--color-gray-30);   /* naked code */
+  --color-fold-marker:    var(--color-darkred);
+  --color-fold-expanded:  var(--color-gray-95);
+  --color-fold-head:      var(--color-red-faded);
+  --color-fold-border:    var(--color-gray-88);

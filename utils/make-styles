@@ -5,11 +5,9 @@ cat ./src/assets/css/root.css       \
     ./src/assets/css/headings.css   \
     ./src/assets/css/nav.css        \
     ./src/assets/css/layout.css     \
-    ./src/assets/css/code.css       \
     ./src/assets/css/tables.css     \
     ./src/assets/css/footnotes.css  \
     ./src/assets/css/lists.css      \
     ./src/assets/css/toc.css        \
-    ./src/assets/css/figures.css    \
-    ./src/assets/css/typeset.css    > ./src/assets/css/styles.css
-  
+    ./src/assets/css/figures.css    > ./src/assets/css/styles.css
+

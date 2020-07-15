@@ -1,0 +1,17 @@
+--color-foreground:     var(--color-gray-60);
+--color-background:     var(--color-gray-10);
+--color-bg-contrast:    var(--color-gray-20);     /* table even row */
+
+--color-body:           var(--color-foreground);
+--color-nav-text:       var(--color-gray-50);
+--color-nav-hover:      var(--color-darkred);
+--color-heading:        var(--color-gray-50);
+--color-figure-caption: var(--color-gray-40);
+--color-link:           #bf0909;
+--color-footer:         var(--color-gray-25);
+--color-code:           var(--color-gray-60);   /* naked code */
+--color-fold-marker:    var(--color-red-faded);
+--color-fold-expanded:  #4d1f1f;
+--color-fold-head:      #4d1f1f;
+--color-fold-border:    #4d1f1f;
+

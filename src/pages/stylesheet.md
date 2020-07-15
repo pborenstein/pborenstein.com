@@ -4,11 +4,13 @@ title: Stylesheet
 layout: layouts/page.njk
 ---
 <!-- markdownlint-disable  -->
-
 # {{title}}
 
 Nostra gravida felis suspendisse lectus netus
 adipiscing, erat cubilia elementum nibh senectus,
+
+<button class="btn-toggle">Toggle Dark-Mode</button>
+
 nostra eros lectus tempor aenean senectus rutrum congue
 mauris nunc diam ut, in pretium semper ultrices odio,
 conubia sodales ipsum diam molestie.

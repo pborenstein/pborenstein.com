@@ -1,136 +1,5 @@
 /* ----- code.css ------ */
 
-/* base16-prism (https://github.com/atelierbram/base16-prism)
- * by Bram de Haan (http://atelierbramdehaan.nl)
- * Tomorrow scheme by Chris Kempson (http://chriskempson.com)
-*/
-
-/*
-https://transform.isthe.link/?dropEmpty=null&replace=%2F.base%2F--base%2F&replace=%2F%7B+color%2F%2F&replace=%2F%7B+background-color%2F%2F&replace=%2F%3B+%7D%2F%2F
-*/
-
-:root,
-.base16-tomorrow {
-  --base00: #ffffff;  /* 0 - Default Background  */
-  --base0x: #f2f2f2;  /* x - between 0 and 1 */
-  --base01: #e0e0e0;  /* 1 - Lighter Background (Used for status bars)  */
-  --base02: #d6d6d6;  /* 2 - Selection Background  */
-  --base03: #8e908c;  /* 3 - Comments, Invisibles, Line Highlighting  */
-  --base04: #969896;  /* 4 - Dark Foreground (Used for status bars)  */
-  --base05: #4d4d4c;  /* 5 - Default Foreground, Caret, Delimiters, Operators  */
-  --base06: #282a2e;  /* 6 - Light Foreground (Not often used)  */
-  --base07: #1d1f21;  /* 7 - Light Background (Not often used)  */
-  --base08: #c82829;  /* 8 - Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted  */
-  --base09: #f5871f;  /* 9 - Integers, Boolean, Constants, XML Attributes, Markup Link Url  */
-  --base0A: #eab700;  /* A - Classes, Markup Bold, Search Text Background  */
-  --base0B: #718c00;  /* B - Strings, Inherited Class, Markup Code, Diff Inserted  */
-  --base0C: #3e999f;  /* C - Support, Regular Expressions, Escape Characters, Markup Quotes  */
-  --base0D: #4271ae;  /* D - Functions, Methods, Attribute IDs, Headings  */
-  --base0E: #8959a8;  /* E - Keywords, Storage, Selector, Markup Italic, Diff Changed  */
-  --base0F: #a3685a;  /* F - Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>  */
-}
-
-/* begin token */
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: var(--base03);
-}
-
-.token.punctuation {
-  color: var(--base05);
-}
-
-.token.namespace {
-  opacity: .7;
-}
-
-.token.operator,
-.token.boolean,
-.token.number {
-  color: var(--base0D);
-}
-.token.property {
-  color: var(--base08)
-}
-.token.tag {
-  color: var(--base0D);
-}
-.token.string {
-  color: var(--base0C);
-}
-.token.selector {
-  color: var(--base0E);
-}
-.token.attr-name {
-  color: var(--base09);
-}
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: var(--base0C);
-}
-
-.token.attr-value,
-.token.keyword,
-.token.control,
-.token.directive,
-.token.unit {
-  color: var(--base0B);
-}
-
-.token.statement,
-.token.regex,
-.token.atrule {
-  color: var(--base0C);
-}
-
-.token.placeholder,
-.token.variable {
-  color: var(--base0D);
-}
-
-.token.deleted {
-  text-decoration: line-through;
-}
-
-.token.inserted {
-  border-bottom: 1px dotted var(--base07);
-  text-decoration: none;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold;
-  color: var(--base08);
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.token.char,
-.token.builtin,
-.token.constant,
-.token.symbol {
- color: var(--base09);
-}
- 
- 
- .token.function,
- .token.class-name {
-   color: #DD4A68;
- }
- 
-/* end token */
-
 
 pre {
   max-width: 100%;
@@ -165,28 +34,7 @@ a[href] > code {
 
 
 
-code[class*="language-"],
-pre[class*="language-"] {
-  -moz-hyphens: none;
-  -moz-tab-size: 4;
-  -ms-hyphens: none;
-  -o-tab-size: 4;
-  -webkit-hyphens: none;
-  background: var(--color-code-bg);
-  color: black;
-  direction: ltr;
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-  font-size: 1em;
-  hyphens: none;
-  line-height: 1.5;
-  tab-size: 4;
-  text-align: left;
-  white-space: pre;
-  word-break: normal;
-  word-spacing: normal;
-  word-wrap: normal;
-}
- 
+
 
 /* Code blocks */
 pre[class*="language-"] {
@@ -230,14 +78,14 @@ pre > code.highlight {
    text-shadow: none;
    background: #b3d4fc;
  }
- 
+
  @media print {
    code[class*="language-"],
    pre[class*="language-"] {
      text-shadow: none;
    }
  }
- 
+
 
 
  ins,
@@ -245,12 +93,12 @@ pre > code.highlight {
    background-color: rgb(197, 234, 197);
    text-decoration: none;
  }
- 
+
  .highlight-line-remove {
    background-color: rgb(253, 204, 204);
    text-decoration: none;
  }
- 
+
 /*-------*/
 
 .highlight-line {
