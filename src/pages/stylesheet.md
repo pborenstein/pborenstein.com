@@ -10,6 +10,7 @@ Nostra gravida felis suspendisse lectus netus
 adipiscing, erat cubilia elementum nibh senectus,
 
 <button class="btn-toggle">Toggle Dark-Mode</button>
+<button class="btn-system">Use System Mode</button>
 
 nostra eros lectus tempor aenean senectus rutrum congue
 mauris nunc diam ut, in pretium semper ultrices odio,

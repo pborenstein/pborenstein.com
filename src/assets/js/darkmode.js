@@ -8,6 +8,7 @@
  ****/
 
 const btn = document.querySelector(".btn-toggle");
+const reset = document.querySelector(".btn-system")
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const currentTheme = localStorage.getItem("theme");
@@ -16,6 +17,11 @@ if (currentTheme == "dark") {
 } else if (currentTheme == "light") {
   document.body.classList.toggle("light-theme");
 }
+
+reset.addEventListener("click", () => {
+  localStorage.removeItem('theme')
+  window.location.reload()
+})
 
 btn.addEventListener("click", function () {
   if (prefersDarkScheme.matches) {
