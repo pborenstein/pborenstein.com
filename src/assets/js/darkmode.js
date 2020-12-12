@@ -4,36 +4,38 @@
  *  dark mode handler from:
  *    https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
  *    https://codepen.io/adhuham/pen/BaNroxd
- *
+ *    https://codepen.io/pborenstein/details/WNraaGx
+ *    https://andy-bell.design/wrote/create-a-user-controlled-dark-or-light-mode/
  ****/
 
-const btn = document.querySelector(".btn-toggle");
-const reset = document.querySelector(".btn-system")
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+const STORAGE_KEY = 'user-color-scheme-pref'
+const DARK        = '  '
+const LIGHT       = 'initial'
 
-const currentTheme = localStorage.getItem("theme");
-if (currentTheme == "dark") {
-  document.body.classList.toggle("dark-theme");
-} else if (currentTheme == "light") {
-  document.body.classList.toggle("light-theme");
+const light   = document.querySelector(".btn-light")
+const dark    = document.querySelector(".btn-dark")
+const system  = document.querySelector(".btn-system")
+
+
+function applySetting (passedSetting) {
+  let setting = passedSetting
+             || localStorage.getItem(STORAGE_KEY)
+
+  if (setting) {
+    localStorage.setItem(STORAGE_KEY, setting)
+    document.documentElement /* root */
+    .style.setProperty('--is-dark',
+                       setting == 'dark' ? DARK
+                                         : LIGHT)
+  }
 }
 
-reset.addEventListener("click", () => {
-  localStorage.removeItem('theme')
-  window.location.reload()
-})
+if (light && dark && system) {
+  light.addEventListener ("click", () => applySetting('light'))
+  dark.addEventListener  ("click", () => applySetting('dark'))
+  system.addEventListener("click", () => { localStorage.removeItem(STORAGE_KEY)
+                                           window.location.reload()
+                                         })
+}
 
-btn.addEventListener("click", function () {
-  if (prefersDarkScheme.matches) {
-    document.body.classList.toggle("light-theme");
-    var theme = document.body.classList.contains("light-theme")
-      ? "light"
-      : "dark";
-  } else {
-    document.body.classList.toggle("dark-theme");
-    var theme = document.body.classList.contains("dark-theme")
-      ? "dark"
-      : "light";
-  }
-  localStorage.setItem("theme", theme);
-});
+applySetting(null)

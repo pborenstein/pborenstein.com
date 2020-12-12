@@ -5,13 +5,18 @@
   clear: both;
   padding: 0 0em 0.1em 0em;
   margin-bottom: 0rem;
-  color: var(--color-heading);
+  color: var(--color-logo);
   font-family: var(--font-heading);
   font-size: 4rem;
   line-height: 1;
   font-weight: 700;
 }
 
+#logo a[href] {
+  color:   var(--color-logo-link);;
+}
+
 .nav-item {
   font-weight: 400;
 }
+

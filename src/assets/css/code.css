@@ -25,7 +25,7 @@ code:not([class]) {
 /* for naked <code> */
 pre:not([class]) code:not([class]) {
   background-color: inherit;
-  color: var(--color-darkred)
+  color: var(--color-accent)
 }
 
 a[href] > code {

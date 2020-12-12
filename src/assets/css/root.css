@@ -1,170 +1,170 @@
 /* ----- root.css ------ */
 
+/* https://codepen.io/RockStarwind/pen/vYKBadV?editors=1100 */
+
 :root {
+	--true: ;
+	--false: initial;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --is-dark: var(--true);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --is-dark: var(--false);
+  }
+}
+
+
+
 /*
 ### Grays
 */
 
-  --color-gray-07:  hsl(0,0%,07%);  /* 07%  #121212 body text                            */
-  --color-gray-10:  hsl(0,0%,10%);
-  --color-gray-13:  hsl(0,0%,13%);  /* 13%                     */
-  --color-gray-15:  hsl(0,0%,15%);
-  --color-gray-20:  hsl(0,0%,20%);  /* 20%  headings, nav text                   */
-  --color-gray-25:  hsl(0,0%,25%);
-  --color-gray-30:  hsl(0,0%,30%);  /* 30%  prism background                     */
-  --color-gray-35:  hsl(0,0%,35%);
-  --color-gray-40:  hsl(0,0%,40%);  /* 40% dateline date                         */
-  --color-gray-50:  hsl(0,0%,50%);
-  --color-gray-60:  hsl(0,0%,60%);
-  --color-gray-75:  hsl(0,0%,75%);  /* 75%  footer                               */
-  --color-gray-88:  hsl(0,0%,88%);  /* 75%  footer                               */
-  --color-gray-95:  hsl(0,0%,95%);  /* 95%  even row, bg of fold exp fold        */
+:root {
+  --color-gray-00:  black;
+  --color-gray-10:  hsl(0, 0%, 10%);
+  --color-gray-20:  hsl(0, 0%, 20%);
+  --color-gray-30:  hsl(0, 0%, 30%);
+  --color-gray-40:  hsl(0, 0%, 40%);
+  --color-gray-50:  hsl(0, 0%, 50%);
+  --color-gray-60:  hsl(0, 0%, 60%);
+  --color-gray-70:  hsl(0, 0%, 70%);
+  --color-gray-80:  hsl(0, 0%, 80%);
+  --color-gray-90:  hsl(0, 0%, 90%);
+  --color-gray-95:  hsl(0, 0%, 95%);
+  --color-gray-100: white;
+}
 
-  --color-white:    #fff;
+:root {
+
+  /***
+   *    light-mode: foreground (lighter->) background
+   *    dark-mode:  foreground (darker ->) background
+   ***/
+
+  --lt-color-foreground:          var(--color-gray-10);
+  --lt-color-foreground-lighter:  var(--color-gray-30);
+  --lt-color-foreground-lightest: var(--color-gray-40);
+  --lt-color-background-darkest:  var(--color-gray-70);
+  --lt-color-background-darker:   var(--color-gray-80);
+  --lt-color-background:          var(--color-gray-95);
+
+  --dk-color-foreground:          var(--is-dark) var(--color-gray-90);
+  --dk-color-foreground-lighter:  var(--is-dark) var(--color-gray-80);
+  --dk-color-foreground-lightest: var(--is-dark) var(--color-gray-70);
+  --dk-color-background-darkest:  var(--is-dark) var(--color-gray-30);
+  --dk-color-background-darker:   var(--is-dark) var(--color-gray-20);
+  --dk-color-background:          var(--is-dark) var(--color-gray-10);
 
 /*
-### Reds
+### Foreground / Background
 */
 
-  --color-red:            #c22323;
-  --color-red-faded:      #fde2e2;      /* folded text bg, table-caption highlight */
-  --color-darkred:        #7f0036;
-  --color-darkred-faded:  #7f00364d;
-  --color-terracotta:     #4d1f1f;
-  --color-brightred:      #a00707;
+  --color-foreground:             var(--dk-color-foreground         , var(--lt-color-foreground         ));
+  --color-foreground-lighter:     var(--dk-color-foreground-lighter , var(--lt-color-foreground-lighter ));
+  --color-foreground-lightest:    var(--dk-color-foreground-lightest, var(--lt-color-foreground-lightest));
+  --color-background-darkest:     var(--dk-color-background-darkest , var(--lt-color-background-darkest ));
+  --color-background-darker:      var(--dk-color-background-darker  , var(--lt-color-background-darker  ));
+  --color-background:             var(--dk-color-background         , var(--lt-color-background         ));
 
-}
+/*
+### Accents
+*/
 
-/****
- *  darkmode implementation from
- *  https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
- ****/
-
-
-body {
-  --color-foreground:     var(--color-gray-07);
-  --color-background:     var(--color-white);
-  --color-bg-contrast:    var(--color-gray-95);     /* table even row */
-
-  --color-nav-text:       var(--color-gray-20);
-  --color-nav-hover:      var(--color-darkred);
-
-  --color-body:           var(--color-foreground);
-  --color-heading:        var(--color-gray-20);
-  --color-figure-caption: var(--color-gray-40);
-  --color-link:           var(--color-darkred);
-  --color-footer:         var(--color-gray-75);
-  --color-code:           var(--color-gray-30);   /* naked code */
-
-  --color-fold-marker:    var(--color-darkred);
-  --color-fold-expanded:  var(--color-gray-95);
-  --color-fold-head:      var(--color-red-faded);
-  --color-fold-border:    var(--color-gray-88);
-}
-
-body.dark-theme {
-  --color-foreground:     var(--color-gray-60);
-  --color-background:     var(--color-gray-10);
-  --color-bg-contrast:    var(--color-gray-20);     /* table even row */
-
-  --color-nav-text:       var(--color-gray-50);
-  --color-nav-hover:      var(--color-darkred);
-
-  --color-body:           var(--color-foreground);
-  --color-heading:        var(--color-brightred);
-  --color-figure-caption: var(--color-gray-40);
-  --color-link:           var(--color-brightred);
-  --color-footer:         var(--color-gray-25);
-  --color-code:           var(--color-gray-60);   /* naked code */
-
-  --color-fold-marker:    var(--color-red-faded);
-  --color-fold-expanded:  var(--color-terracotta);
-  --color-fold-head:      var(--color-terracotta);
-  --color-fold-border:    var(--color-terracotta);
+  --color-accent-lightest:        hsl(  0,  87%, 94%) /* #fde2e2 */;
+  --color-accent-lighter:         hsl(344,  52%, 92%) /* #f5e0e6 */;
+  --color-accent:                 hsl(340,  37%, 59%) /* #be718b */;
+  --color-accent-darker:          hsl(336,  48%, 42%) /* #9e3861 */;
+  --color-accent-darkest:         hsl(334, 100%, 25%) /* #7f0036 */;
 }
 
 
+/*
+### Elements
+*/
+
+:root {
+  --color-body:                   var(--color-foreground);
+  --color-body-light:             var(--color-foreground-lighter);
+  --color-heading:                var(--color-foreground);
+  --color-figure-caption:         var(--color-accent);
+  --color-link:                   var(--color-accent-darkest);
+  --color-code:                   var(--color-foreground);
+
+  --color-logo:                   var(--color-accent-darkest);
+  --color-logo-link:              var(--color-accent-darkest);
 
 
-@media (prefers-color-scheme: dark) {
+  --color-nav-text:               var(--color-foreground-lighter);
+  --color-nav-hover:              var(--color-accent);
 
-  body {
-    --color-foreground:     var(--color-gray-60);
-    --color-background:     var(--color-gray-10);
-    --color-bg-contrast:    var(--color-gray-20);     /* table even row */
 
-    --color-nav-text:       var(--color-gray-50);
-    --color-nav-hover:      var(--color-darkred);
 
-    --color-body:           var(--color-foreground);
-    --color-heading:        var(--color-brightred);
-    --color-figure-caption: var(--color-gray-40);
-    --color-link:           var(--color-brightred);
-    --color-footer:         var(--color-gray-25);
-    --color-code:           var(--color-gray-60);   /* naked code */
 
-    --color-fold-marker:    var(--color-red-faded);
-    --color-fold-expanded:  var(--color-terracotta);
-    --color-fold-head:      var(--color-terracotta);
-    --color-fold-border:    var(--color-terracotta);
-  }
+  /****
+   *    we want to use different colors for
+   *    dark and light modes
+   ****/
 
-  body.light-theme {
-    --color-foreground:     var(--color-gray-07);
-    --color-background:     var(--color-white);
-    --color-bg-contrast:    var(--color-gray-95);     /* table even row */
+  --dk-color-fold-marker:         var(--is-dark) var(--color-accent-lighter);
+  --dk-color-fold-head:           var(--is-dark) var(--color-accent-darker);
+  --dk-color-fold-expanded:       var(--is-dark) var(--color-accent);
 
-    --color-nav-text:       var(--color-gray-20);
-    --color-nav-hover:      var(--color-darkred);
+  --color-fold-marker:            var(--dk-color-fold-marker,   var(--color-accent-darkest));
+  --color-fold-head:              var(--dk-color-fold-head,     var(--color-accent-lighter));
+  --color-fold-expanded:          var(--dk-color-fold-expanded, var(--color-accent-lighter));
 
-    --color-body:           var(--color-foreground);
-    --color-heading:        var(--color-gray-20);
-    --color-figure-caption: var(--color-gray-40);
-    --color-link:           var(--color-darkred);
-    --color-footer:         var(--color-gray-75);
-    --color-code:           var(--color-gray-30);   /* naked code */
 
-    --color-fold-marker:    var(--color-darkred);
-    --color-fold-expanded:  var(--color-gray-95);
-    --color-fold-head:      var(--color-red-faded);
-    --color-fold-border:    var(--color-gray-88);
-  }
-
+  --color-footer:                 var(--color-background-darker);
+  --color-footer-sep:             var(--color-accent-lightest);
 }
-
-
-
 
 /*
 ### Tables
 */
 
 :root {
-  --color-table-odd:        var(--color-bg-contrast);
-  --color-table-even:       var(--color-background);
-  --color-table-body:       var(--color-body);
-  --color-table-heading:    var(--color-heading);
-  --color-table-caption:    var(--color-darkred);
-  --color-table-sep:        var(--color-gray-88);
+  --color-table-odd:              var(--color-background-darker);
+  --color-table-even:             var(--color-background);
+  --color-table-body:             var(--color-body);
+  --color-table-heading:          var(--color-heading);
+  --color-table-caption:          var(--color-accent-darker);
+  --color-table-sep:              var(--color-background-darkest);
+}
 
+:root {
+  --color-logo:   var(--color-accent-darkest);
+}
+
+/*
+### Fonts
+*/
+
+:root {
   --font-table-caption:     var(--font-heading);
   --font-table-heading:     var(--font-heading);
   --font-table-body:        var(--font-body);
 
 
-  --font-serif:           Georgia, serif;
-  --font-sans-serif:      "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
-  --font-mono:            Consolas, Menlo, Monaco, "Courier New", Courier, monospace;
+  --font-serif:             Georgia, serif;
+  --font-sans-serif:        "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+  --font-mono:              Consolas, Menlo, Monaco, "Courier New", Courier, monospace;
 
-  --font-body:          var(--font-serif);
-  --font-caption:       var(--font-sans-serif);
-  --font-footer:        var(--font-sans-serif);
-  --font-heading:       var(--font-sans-serif);
-  --font-list:          var(--font-sans-serif);
-  --font-code:          var(--font-mono);
-  --font-code-size:     var(--font-size-base);
+  --font-body:              var(--font-serif);
+  --font-caption:           var(--font-sans-serif);
+  --font-footer:            var(--font-sans-serif);
+  --font-heading:           var(--font-sans-serif);
+  --font-list:              var(--font-sans-serif);
+  --font-code:              var(--font-mono);
+  --font-code-size:         var(--font-size-base);
 
-  --font-features:      "xnum";   /*  onum:   Old style numbers */
+  --font-features:          "xnum";   /*  onum:   Old style numbers */
 
   /*
   ### Font size scale:
@@ -193,27 +193,34 @@ body.dark-theme {
 
 html {
   box-sizing: border-box;
-  font-size: 100%;
-  overflow: scroll;
+  font-size:  100%;
+  overflow:   scroll;
 }
 
 
 body {
-  font-family: var(--font-body);
-  font-weight:  400;
-  line-height: 1.5;
-  color: var(--color-body);
+  font-family:      var(--font-body);
+  font-weight:      400;
+  line-height:      1.5;
+  color:            var(--color-body);
   background-color: var(--color-background);
-  scroll-behavior: smooth;
+  scroll-behavior:  smooth;
+}
+
+hr {
+  border-top:       1px;
+  border-color:     var(--color-accent);
 }
 
 
-/* links to markdown header with disappearing # */
+
+
+/* links to markdown header with disappearing link symbol */
 .direct-link {
-	font-family: var(--font-heading);
-	text-decoration: none;
-	font-style: normal;
-	margin-left: .1em;
+	font-family:      var(--font-heading);
+	text-decoration:  none;
+	font-style:       normal;
+	margin-left:      .1em;
 }
 
 a[href].direct-link,
@@ -234,9 +241,9 @@ a[href].direct-link:focus:visited,
       apply only to naked <code> blocks
 */
 code:not([class]) {
-	font-family: var(--font-code);
-  font-size: var(--font-code-size);
-  color: var(--color-code);
+	font-family:  var(--font-code);
+  font-size:    var(--font-code-size);
+  color:        var(--color-code);
 }
 
 /***
