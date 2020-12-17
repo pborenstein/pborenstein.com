@@ -61,8 +61,8 @@ function printEntry() {
 
   printf "  <tr>\n"
   printf "    <td  class='color-var'>%s</td>\n", $1
-  printf "    <td  class='color-val'>%s</td>\n", $2
-  printf "    <td  class='color-val'>%s</td>\n", $3
+  printf "    <td colspan=2  class='color-val'>%s</td>\n", $2
+#   printf "    <td  class='color-val'>%s</td>\n", $3
   printf "  </tr>\n"
 
   if (substr($2, 1, 2) == "--") {
