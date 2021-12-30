@@ -1,0 +1,20 @@
+<ul>
+  <li>&copy; 2022 Philip Borenstein<br>Made in New Hampshire</li>
+  <li class="button-bar">
+    <button class="btn btn-dark">D</button>
+    <button class="btn btn-light">L</button>
+    <button class="btn btn-system">S</button>
+  </li>
+  <li>
+    {% if date and github -%}
+      post:  <a href={{github}}>{{date.toDateString()}}</a><br>
+    {%- else %}
+      there is a crack in everything<br>
+    {%- endif %}
+    {% if draftDate and draft -%}
+      draft: <a href={{draft}}>{{draftDate.toDateString()}}</a>
+    {%- else -%}
+      that’s how the light gets in
+    {%- endif %}
+  </li>
+</ul>
