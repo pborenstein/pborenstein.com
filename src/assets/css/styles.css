@@ -64,7 +64,6 @@ body {
   font-family: var(--font-body);
   font-weight:  var(--weight-body);
   font-size: 19px;
-  line-height: 1.5;
   color: var(--color-body);
   background-color: var(--color-background);
   scroll-behavior: smooth;
@@ -112,7 +111,6 @@ header {
 /*  Main content */
 main {
   grid-area: main;
-  /* overflow: scroll; */
 }
 
 /*  Navigation */
@@ -181,6 +179,12 @@ h2, h3, h4, h5, h6 {
 h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   margin-top: 0em;
 }
+
+code[class*="language-"] {
+  font-size: .75em;
+  line-height: 1.0 !important;
+}
+
 
 
 /***
@@ -258,7 +262,6 @@ h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .tepiton section {
   font-weight: var(--weight-body);
   font-size:  1em;
-  line-height: 1.53;
   font-family: var(--font-body);
   margin: 0;
 }
