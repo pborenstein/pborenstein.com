@@ -11,6 +11,8 @@ module.exports = class Home {
 
   async renderPost(post) {
     let excerpt = post.data.excerpt || 'oops'
+    let noTitle = false
+    let header
 
     excerpt = await this.renderTemplate(excerpt, 'md,njk')
 
@@ -18,23 +20,38 @@ module.exports = class Home {
       excerpt = excerpt.trim().replace(/\n/g, '<br>\n')
     }
 
-    let noTitle = false
-    let header  = post.data.title && `<header><a href="${post.url}">${this.markdown(post.data.title)}</a></header>`
-    let section = `<section>${excerpt}</section>`
-    let footer  = `<footer><a href="${post.data.draft}"># ${post.date.toDateString()}</a></footer>`
-
-    if (post.data.title === stars) {
-      header = `<a href="${post.url}"><div class="ex"></div></a>`
-      footer = ``
+    if (!post.data.title || post.data.title === stars) {
+      header = ''
       noTitle = true
+    } else {
+      header = `
+      <header>
+        <a href="${post.url}">${this.markdown(post.data.title)}</a>
+      </header>`
     }
 
-    let body = `
-<article ${noTitle ? 'class="noTitle"' : ''}>
-  ${header}
-  ${section}
-</article>
-`
+    let section = `
+    <section>
+      ${excerpt}
+    </section>`
+    let footer  = `
+    <footer>
+      <a href="${post.data.draft}"># ${post.date.toDateString()}</a>
+    </footer>`
+
+    let body = `<article${noTitle ? ' class="noTitle"' : ''}>`
+
+    if (noTitle)
+      body += `<a href="${post.url}">`
+    else
+      body += header
+
+    body += section
+
+    if (noTitle)
+      body += '</a>'
+    body += '\n</article>\n'
+
     return body
   }
 
@@ -44,8 +61,8 @@ module.exports = class Home {
         //                     to copy an array
     let posts = data.collections.tepiton.slice().reverse()
 
-    let head = `<h1 class="logo">${ data.pkg.name }</h1>`
-    let prolog = `<div class="tepiton">`
+    let head = `<h1 class="logo">${ data.pkg.name }</h1>\n`
+    let prolog = `<div class="tepiton">\n`
     let epilog = '</div>'
     let body = ''
     for (const post of posts) {
