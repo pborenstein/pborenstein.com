@@ -19,29 +19,29 @@
   --lt-color-link-hover:      tomato;
   --lt-color-foreground:      hsl(  0,  0%, 07%);
   --lt-color-background:      hsl(  0,  0%, 95%);
-  --lt-color-heading:         hsl(  0,  0%, 10%, 1.0);
-  --lt-color-logo:            tomato;
-  --lt-color-border:          green;
+  --lt-color-heading:         hsl(  0,  0%, 10%);
+  --lt-color-logo:            hsl(  0,  0%, 07%);
+  --lt-color-border:          hsl(  0,  0%, 75%);
   --lt-weight-body:           400;
 
   --dk-color-link:            var(--is-dark)  tomato;
   --dk-color-link-hover:      var(--is-dark)  green;
-  --dk-color-foreground:      var(--is-dark)  #CAD1D8;
+  --dk-color-foreground:      var(--is-dark)  hsl(  0,  0%, 90%);
   --dk-color-background:      var(--is-dark)  #0e1116;
-  --dk-color-heading:         var(--is-dark)  tomato;
-  --dk-color-logo:            var(--is-dark)  tomato;
+  --dk-color-heading:         var(--is-dark)  hsl(9, 100%, 64%);
+  --dk-color-logo:            var(--is-dark)  var(--color-heading);
   --dk-color-border:          var(--is-dark)  hsl(  0,  0%, 25%);
-  --dk-weight-body:           var(--is-dark)  var(--is-dark)  300;
+  --dk-weight-body:           var(--is-dark)  300;
 
-  --color-link:               var(--dk-color-link ,       var(--lt-color-link));
+  --color-link:               var(--dk-color-link       , var(--lt-color-link));
   --color-link-hover:         var(--dk-color-link-hover , var(--lt-color-link-hover));
   --color-foreground:         var(--dk-color-foreground , var(--lt-color-foreground));
   --color-background:         var(--dk-color-background , var(--lt-color-background));
   --color-heading:            var(--dk-color-heading    , var(--lt-color-heading));
-  --color-logo:               var(--dk-color-logo,        var(--lt-color-logo));
-  --color-border:             var(--dk-color-border,      var(--lt-color-border));
-  --weight-body:              var(--dk-weight-body,       var(--lt-weight-body));
-
+  --color-logo:               var(--dk-color-logo       , var(--lt-color-logo));
+  --color-border:             var(--dk-color-border     , var(--lt-color-border));
+  --color-body:               var(--color-foreground);
+  --weight-body:              var(--dk-weight-body      , var(--lt-weight-body));
 
   --font-serif:               Spectral, Georgia, serif;
   --font-sans-serif:          neue-kabel, 'Poiret One',Vibes, 'Abril Fatface','Onyx','Helvetica Neue', Helvetica, sans-serif;
@@ -68,7 +68,6 @@
   --space:    var(--s2);
   --measure:  min(100%, 64ch);
 
-  --color-body:               var(--color-foreground);
 
 
   --font-serif:               Spectral, Georgia, serif;
@@ -286,6 +285,14 @@ figcaption  a {
   text-align: right;
 }
 
+
+
+.post h1,
+.post h1 a,
+.post h1 a:hover,
+.post h1 a:visited {
+  color: var(--color-heading);
+}
 
 /***
  *
