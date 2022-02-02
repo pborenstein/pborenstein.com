@@ -28,7 +28,7 @@
   --dk-color-link-hover:      var(--is-dark)  green;
   --dk-color-foreground:      var(--is-dark)  hsl(  0,  0%, 90%);
   --dk-color-background:      var(--is-dark)  #0e1116;
-  --dk-color-heading:         var(--is-dark)  hsl(9, 100%, 64%);
+  --dk-color-heading:         var(--is-dark)  hsl(  9,100%, 64%);
   --dk-color-logo:            var(--is-dark)  var(--color-heading);
   --dk-color-border:          var(--is-dark)  hsl(  0,  0%, 25%);
   --dk-weight-body:           var(--is-dark)  300;
