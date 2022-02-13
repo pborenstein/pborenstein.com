@@ -5,8 +5,8 @@ module.exports = class Home {
   data() {
     return {
       layout: "base.njk",
-      home: true
-    }
+      home: true,
+      excerpt: "all the little things",    }
   }
 
   async renderPost(post) {

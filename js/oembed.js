@@ -1,12 +1,15 @@
 const { extract, findProvider }    = require('oembed-parser')
 const imageShortcode = require('./image.js')
+const Cache = require("@11ty/eleventy-cache-assets");
+
+
 
 module.exports = async function oembed(url, params) {
 
-  provider = findProvider(url)
-  if (!provider) {
-    console.error(`no handler for ${url}`)
-    return url
+  let provider = findProvider(url)
+  if (! provider) {
+    console.error(`no oembed handler for ${url}`)
+    return microlink(url)
   }
 
   if (params?.native){
@@ -31,8 +34,6 @@ module.exports = async function oembed(url, params) {
           return defaultHandler(url, params)
             break
       }
-
-
 }
 
 
@@ -52,7 +53,6 @@ async function twitterHandler (url, params) {
     let oembed_data = await extract(url, params)
     return oembed_data.html
 }
-
 
 async function  nytHandler (url, params) {
     let oembed_data = await extract(url, params)
@@ -76,4 +76,30 @@ async function defaultHandler (url, params) {
     // console.log(url, params)
     // console.log(JSON.stringify(oembed_data, null, 2))
     return embed_html
+}
+
+async function microlink(urlp) {
+  const metadata = await Cache(`https://api.microlink.io/?url=${urlp}`, { duration: "1m",
+    type: "json",
+  })
+
+  let { title, description,
+    author, publisher,
+    image, date,
+    url, logo
+  } = metadata.data
+
+  let ret = `
+  <div class="tepiton qembed">
+    <h3>${title}</h3>
+    <p>${description}</p>
+    <img src="${image.url}" alt="${title}" width="50%">
+    <cite>
+      <a href="${url}">
+        ${publisher}
+      </a>
+      <br>${date}</cite>
+    </div>`
+  return ret
+
 }

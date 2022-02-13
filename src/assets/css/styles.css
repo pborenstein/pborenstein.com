@@ -15,18 +15,18 @@
 }
 
 :root {
-  --lt-color-link:            green;
+  --lt-color-link:            hsl( 11, 53%, 52%);
   --lt-color-link-hover:      tomato;
   --lt-color-foreground:      hsl(  0,  0%, 07%);
-  --lt-color-background:      hsl(  0,  0%, 95%);
+  --lt-color-background:      hsl(  0,  0%, 85%);
   --lt-color-heading:         hsl(  0,  0%, 10%);
   --lt-color-logo:            hsl(  0,  0%, 07%);
   --lt-color-border:          hsl(  0,  0%, 75%);
   --lt-weight-body:           400;
 
   --dk-color-link:            var(--is-dark)  tomato;
-  --dk-color-link-hover:      var(--is-dark)  green;
-  --dk-color-foreground:      var(--is-dark)  hsl(  0,  0%, 90%);
+  --dk-color-link-hover:      var(--is-dark)  hsl(11,53%, 62%);
+  --dk-color-foreground:      var(--is-dark)  hsl(  0,  0%, 90%, 0.8);
   --dk-color-background:      var(--is-dark)  #0e1116;
   --dk-color-heading:         var(--is-dark)  hsl(  9,100%, 64%);
   --dk-color-logo:            var(--is-dark)  var(--color-heading);
@@ -91,6 +91,9 @@ code  {
   line-height: 1.0;
 }
 
+hr {
+  margin: initial;
+}
 
 /***
  *
@@ -176,17 +179,23 @@ footer > :nth-last-child(n+ 5) ~ * {
  *
  */
 
-.tepiton {
+ body,
+.tepiton,
+.post {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.tepiton > *  {
+body > *,
+.tepiton > *,
+.post > * {
   margin-block: 0;
 }
 
-.tepiton  > * + * {
+body  > * + * ,
+.tepiton  > * + * ,
+.post > * + *  {
   margin-block-start: var(--space, 1.5rem);
 }
 
@@ -196,7 +205,8 @@ footer > :nth-last-child(n+ 5) ~ * {
  *
  ***/
 
-.tepiton article {
+.tepiton article,
+div.qembed   { 
   position: relative;
   padding: 1em ;
   border: 1px solid var(--color-border);
