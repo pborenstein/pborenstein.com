@@ -256,10 +256,10 @@ div.qembed   {
 
 }
 
-.tepiton h1,
-.tepiton h2,
-.tepiton h3,
-.tepiton h4   { color: var(--color-heading) }
+.tepiton h1, h1,
+.tepiton h2, h2,
+.tepiton h3, h3,
+.tepiton h4, h4   { color: var(--color-heading) }
 
 .tepiton h1 {
   font-size: var(--s5)*var(--tepiton-head-factor)
