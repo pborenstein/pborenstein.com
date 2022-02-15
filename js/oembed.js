@@ -19,7 +19,8 @@ module.exports = async function oembed(url, params) {
 
   switch ( provider.providerName ) {
         case 'The New York Times':
-            return nytHandler(url, params)
+          return microlink(url)
+          return nytHandler(url, params)
             break
 
         case 'Twitter':
@@ -90,16 +91,11 @@ async function microlink(urlp) {
   } = metadata.data
 
   let ret = `
-  <div class="tepiton qembed">
-    <h3>${title}</h3>
-    <p>${description}</p>
-    <img src="${image.url}" alt="${title}" width="50%">
-    <cite>
-      <a href="${url}">
-        ${publisher}
-      </a>
-      <br>${date}</cite>
-    </div>`
+<div class="tepiton qembed">
+<header><a href="${url}">${title}</a></header>
+<p>${description}</p>
+<cite>${publisher} <span>&ensp;&bull;&ensp;</span> ${new Date(date).toDateString()}</cite>
+</div>`
   return ret
 
 }

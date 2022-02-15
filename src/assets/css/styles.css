@@ -199,6 +199,16 @@ body  > * + * ,
   margin-block-start: var(--space, 1.5rem);
 }
 
+div.qembed {
+  font-size: var(--s0);
+  line-height: 1.5;
+}
+
+
+div.qembed p {
+  margin-block-start: 0;
+}
+
 /*
  *
  *  end stack
@@ -214,9 +224,26 @@ div.qembed   {
 
 }
 
-.tepiton article.noTitle {
+.tepiton article.noTitle,
+ div.qembed {
   font-family: neue-kabel, 'Poiret One',Vibes, 'Abril Fatface','Onyx','Helvetica Neue', Helvetica, sans-serif;
 }
+
+div.qembed cite {
+  font-feature-settings:
+  "onum",   /*  onum:   Old style numbers */
+  "ss04",   /*  ss04:   Overlapping W   */
+  "xs06",   /*  ss06:   happy e */
+  "ss08",   /*  ss08:   diamond I dots */
+  "ss11",   /*  ss11:   round a */
+  "xs14";   /*  ss14:   tail l */
+
+  padding-top: var(--s-2);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-heading);
+  
+}
+
 
 .tepiton article.noTitle > a,
 .tepiton article.noTitle > a:hover,
@@ -303,6 +330,8 @@ figcaption  a {
 .post h1 a:visited {
   color: var(--color-heading);
 }
+
+
 
 /***
  *
