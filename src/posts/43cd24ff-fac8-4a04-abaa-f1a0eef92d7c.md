@@ -1,9 +1,9 @@
 ---
-title: xocoyotl notes
-date: 2021-12-19T06:50:58.002Z
+title: tepiton notes
+date: 2022-02-17T08:38:12.586Z
 draftDate: 2021-12-14T02:12:11.497Z
 draft: drafts://open?uuid=43CD24FF-FAC8-4A04-ABAA-F1A0EEF92D7C
-github: https://github.com/tepiton/xocoyotl/blob/main/src/posts/43cd24ff-fac8-4a04-abaa-f1a0eef92d7c.md
+github: https://github.com/tepiton/tepiton/blob/main/src/posts/43cd24ff-fac8-4a04-abaa-f1a0eef92d7c.md
 newlines: false
 summary: "fake summary"
 ---
