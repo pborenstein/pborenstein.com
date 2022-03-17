@@ -90,6 +90,10 @@ async function microlink(urlp) {
     url, logo
   } = metadata.data
 
+  if (!image) {
+    image = { url: "https://picsum.photos/1024/1024?gravity=center&random" }
+  }
+
   let ret = `
 <div class="tepiton qembed rounded-border">
   <header><a href="${url}">${title}</a></header>
