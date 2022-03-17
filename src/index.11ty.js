@@ -39,7 +39,7 @@ module.exports = class Home {
       <a href="${post.data.draft}"># ${post.date.toDateString()}</a>
     </footer>`
 
-    let body = `<article${noTitle ? ' class="noTitle"' : ''}>`
+    let body = `<article class="rounded-border ${noTitle ? ' noTitle' : ''}">`
 
     if (noTitle)
       body += `<a href="${post.url}">`
@@ -62,7 +62,7 @@ module.exports = class Home {
     let posts = data.collections.tepiton.slice().reverse()
 
     let head = `<h1 class="logo">${ data.pkg.name }</h1>\n`
-    let prolog = `<div class="tepiton">\n`
+    let prolog = `<div class="tepiton stack">\n`
     let epilog = '</div>'
     let body = ''
     for (const post of posts) {

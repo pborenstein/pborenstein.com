@@ -91,15 +91,16 @@ async function microlink(urlp) {
   } = metadata.data
 
   let ret = `
-
-<div class="tepiton qembed">
+<div class="tepiton qembed rounded-border">
   <header><a href="${url}">${title}</a></header>
-  <section class="with-sidebar">
+  <section class="with-sidebar" style="--space: 0">
     <div class="qimg"><img src="${image.url}"></div>
-    <p>${description}</p>
+    <div style="display: flex; flex-direction: column; justify-content: space-between;">
+      <p>${description}</p>
+      <cite>${publisher} ${new Date(date).toDateString()}</cite>
+    </div>
   </section>
-  <cite>${publisher} <span>&ensp;&bull;&ensp;</span> ${new Date(date).toDateString()}</cite>
-</div>`
+</div>
+`
   return ret
-
 }

@@ -15,7 +15,7 @@
 }
 
 :root {
-  --lt-color-link:            hsl( 11, 53%, 52%);
+  --lt-color-link:            #F52500;
   --lt-color-link-hover:      tomato;
   --lt-color-foreground:      hsl(  0,  0%, 07%);
   --lt-color-background:      hsl(  0,  0%, 85%);
@@ -66,9 +66,7 @@
   --s5:   calc(var(--s4)  *   var(--ratio));  /*  3.05  */
 
   --space:    var(--s2);
-  --measure:  min(100%, 64ch);
-
-
+  --measure:  min(90%, 64ch);
 
   --font-serif:               Spectral, Georgia, serif;
   --font-sans-serif:          neue-kabel, 'Poiret One',Vibes, 'Abril Fatface','Onyx','Helvetica Neue', Helvetica, sans-serif;
@@ -79,7 +77,6 @@
 
   --tepiton-head-factor:      var(--s-1)
 }
-
 
 pre {
   overflow: scroll;
@@ -101,6 +98,17 @@ hr {
  *
  ***/
 
+ :root {
+    --font-min: .5rem;
+    --font-max: 2rem;
+    --font-min-width: 600px;
+    --font-max-width: 900px;
+ }
+
+html {
+  /* https://css-tricks.com/simplified-fluid-typography/ */
+  font-size: clamp(100%, .8rem + 1vw, 20px);
+}
 
 body {
   margin: 0;
@@ -110,8 +118,8 @@ body {
   max-inline-size: var(--measure);
   /* border: 1px solid green */;
 
+  font-size: var(--s0);
   font-family:  var(--font-body);
-  font-size:    var(--s1);
   line-height:  var(--s3);
 
   background-color: var(--color-background);
@@ -123,6 +131,9 @@ body {
   padding-inline-end: 1rem;
 }
 
+main {
+  margin-block-start: 0 !important;
+}
 
 .newlines p {
   margin-top: 0;
@@ -156,22 +167,13 @@ footer button {
   font-size: inherit;
 }
 
-
-/*
-footer > * {
-  flex-grow: 1;
-  flex-basis: calc(( 30rem - 100%) * 999);
-}
- */
+footer *,
+footer * + * { margin-top: 0 !important; }
 
 footer > :nth-last-child(n+ 5),
 footer > :nth-last-child(n+ 5) ~ * {
   flex-basis: 100%;
 }
-
-
-
-
 
 /***
  *
@@ -179,26 +181,26 @@ footer > :nth-last-child(n+ 5) ~ * {
  *
  */
 
- body,
-.tepiton,
-.post {
+ ul,
+ .stack {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-body > *,
-.tepiton > *,
-.post > * {
+ul,
+.stack  * {
   margin-block: 0;
-}
+} 
 
-body  > * + * ,
-.tepiton  > * + * ,
-.post > * + *  {
+ul li + li
+ {
+   --space: 0rem;
+ }
+
+.stack  * + * {
   margin-block-start: var(--space, 1.5rem);
 }
-
 
 /*
  *
@@ -206,18 +208,32 @@ body  > * + * ,
  *
  ***/
 
-.tepiton article,
-div.qembed   { 
+.rounded-border { 
   position: relative;
-  padding: 1em ;
+  padding: var(--s-3) var(--s0) ;
   border: 1px solid var(--color-border);
   border-radius: 10px ;
-
 }
 
 .tepiton article.noTitle,
  div.qembed {
   font-family: neue-kabel, 'Poiret One',Vibes, 'Abril Fatface','Onyx','Helvetica Neue', Helvetica, sans-serif;
+}
+
+div.qembed {
+  padding-right: 0;
+}
+
+div.qembed header,
+div.qembed header a,
+div.qembed header a:hover {
+  font-size: var(--s-1);
+}
+
+div.qembed section {
+  font-size: var(--s-1);
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 div.qembed cite {
@@ -229,12 +245,16 @@ div.qembed cite {
   "ss11",   /*  ss11:   round a */
   "xs14";   /*  ss14:   tail l */
 
-  border-top: 1px solid var(--color-border);
+  margin-top: 1em;
   color: var(--color-heading);
-  font-size: var(--s-1);
-  text-align: end;
-}
+  font-size: var(--s-2);
 
+  /* border-top: 1px solid var(--color-border) ;
+  border-top-left-radius: 10px;
+  border-left: 1px solid var(--color-border);
+  padding: 0 var(--s-2) 0 var(--s0);
+  text-align: end; */
+}
 
 .tepiton article.noTitle > a,
 .tepiton article.noTitle > a:hover,
@@ -279,29 +299,10 @@ div.qembed cite {
 .tepiton h3, h3,
 .tepiton h4, h4   { color: var(--color-heading) }
 
-.tepiton h1 {
-  font-size: var(--s5)*var(--tepiton-head-factor)
-}
-.tepiton h2 {
-  font-size: var(--s3)*var(--tepiton-head-factor)
-}
-.tepiton h3 {
-  font-size: var(--s2)*var(--tepiton-head-factor)
-}
-.tepiton h4 {
-  font-size: var(--s1)*var(--tepiton-head-factor)
-}
-
-.tepiton section {
-}
-.tepiton section > *  {
-  margin-block: 0;
-}
-
-.tepiton section  > * + * {
-  margin-block-start: var(--space, 1.5rem);
-}
-
+.tepiton h1 { font-size: var(--s5)*var(--tepiton-head-factor) }
+.tepiton h2 { font-size: var(--s3)*var(--tepiton-head-factor) }
+.tepiton h3 { font-size: var(--s2)*var(--tepiton-head-factor) }
+.tepiton h4 { font-size: var(--s1)*var(--tepiton-head-factor) }
 
 figcaption,
 figcaption  a {
@@ -311,32 +312,26 @@ figcaption  a {
   font-family: var(--font-sans-serif);
   font-size:  var(--s-1);
   text-align: right;
+  --space: 0;
 }
-
-
 
 .post h1,
 .post h1 a,
 .post h1 a:hover,
-.post h1 a:visited {
-  color: var(--color-heading);
-}
+.post h1 a:visited { color: var(--color-heading); }
 
+.qimg {  margin-right: .5em;}
 
-.qimg img {
-  width: auto;
-  height: 100px;
-}
+.qimg img { width: auto;  }
 
 .with-sidebar {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s1);
-  /* align-items: end;  */
 }
 
 .with-sidebar > :first-child {
-  flex-basis: 10rem; 
+  flex-basis: 8rem; 
   flex-grow: 1;
 }
 
@@ -345,19 +340,15 @@ figcaption  a {
   flex-basis: 0;
   flex-grow: 999;
   min-inline-size: 60%;
-  font-size: var(--s0);
-  line-height: 1.5;
 }
 
-
-
+.with-sidebar p { padding-right: 2em; }
 
 /***
  *
  *  headers
  *
  ***/
-
 
 h1,
 h2,
@@ -373,16 +364,13 @@ h4 {
                         "ss08",   /*  ss08:   diamond I dots */
                         "ss11",   /*  ss11:   round a */
                         "xs14";   /*  ss14:   tail l */
-
 }
 h1 {  font-size: var(--s5)  }
 h2 {  font-size: var(--s3)  }
 h3 {  font-size: var(--s2)  }
 h4 {  font-size: var(--s1)  }
 
-.logo {
-  color: var(--color-logo);
-}
+.logo { color: var(--color-logo); }
 
 /***
  *
@@ -399,24 +387,13 @@ a:hover {
   color: var(--color-link-hover);
 }
 
-
-
 /***
  *
  *  fixups
  *
  ***/
 
-figure {
-  margin: 0;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  margin-block-start: 0;
-}
-
-iframe {
-  max-width: 100%;
-}
+figure  { margin: 0; }
+img     { max-width: 100%;
+          height: auto; }
+iframe  { max-width: 100%;}
