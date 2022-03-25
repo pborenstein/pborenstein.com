@@ -18,7 +18,7 @@
   --lt-color-link:            #F52500;
   --lt-color-link-hover:      tomato;
   --lt-color-foreground:      hsl(  0,  0%, 07%);
-  --lt-color-background:      hsl(  0,  0%, 85%);
+  --lt-color-background:      hsl(  0,  0%, 95%);
   --lt-color-heading:         hsl(  0,  0%, 10%);
   --lt-color-logo:            hsl(  0,  0%, 07%);
   --lt-color-border:          hsl(  0,  0%, 75%);
@@ -92,6 +92,12 @@ hr {
   margin: initial;
 }
 
+article {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+
 /***
  *
  *  center https://every-layout.dev/layouts/center/
@@ -107,7 +113,7 @@ hr {
 
 html {
   /* https://css-tricks.com/simplified-fluid-typography/ */
-  font-size: clamp(100%, .8rem + 1vw, 20px);
+  font-size: clamp(12px, .7rem + 1vw, 24px);
 }
 
 body {
@@ -191,7 +197,7 @@ footer > :nth-last-child(n+ 5) ~ * {
 ul,
 .stack  * {
   margin-block: 0;
-} 
+}
 
 ul li + li
  {
@@ -208,7 +214,7 @@ ul li + li
  *
  ***/
 
-.rounded-border { 
+.rounded-border {
   position: relative;
   padding: var(--s-3) var(--s0) ;
   border: 1px solid var(--color-border);
@@ -312,7 +318,8 @@ figcaption  a {
   font-family: var(--font-sans-serif);
   font-size:  var(--s-1);
   text-align: right;
-  --space: 0;
+  --space: -0.75rem;
+  margin-right: 1px;
 }
 
 .post h1,
@@ -331,7 +338,7 @@ figcaption  a {
 }
 
 .with-sidebar > :first-child {
-  flex-basis: 8rem; 
+  flex-basis: 8rem;
   flex-grow: 1;
 }
 
@@ -395,5 +402,6 @@ a:hover {
 
 figure  { margin: 0; }
 img     { max-width: 100%;
-          height: auto; }
+          height: auto;
+          margin-top: 0 !important;}
 iframe  { max-width: 100%;}
