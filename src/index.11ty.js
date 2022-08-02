@@ -14,7 +14,11 @@ module.exports = class Home {
     let noTitle = false
     let header
 
-    excerpt = await this.renderTemplate(excerpt, 'md,njk')
+    try {
+      excerpt = await this.renderTemplate(excerpt, 'md,njk')   
+    } catch (error) {
+      excerpt = 'so annoying'
+    }
 
     if (post.data.newlines) {
       excerpt = excerpt.trim().replace(/\n/g, '<br>\n')
