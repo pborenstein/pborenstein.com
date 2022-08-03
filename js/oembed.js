@@ -51,8 +51,13 @@ async function twitterHandler (url, params) {
                 maxwidth: 320,
                 ...params
     }
-    let oembed_data = await extract(url, params)
-    return oembed_data.html
+    
+    try {
+      let oembed_data = await extract(url, params)
+      return oembed_data.html
+    } catch (error) {
+      return `<p style="font-size: 75%"><code>${error.message}</code></p>`
+    }
 }
 
 async function  nytHandler (url, params) {
@@ -84,11 +89,15 @@ async function microlink(urlp) {
     type: "json",
   })
 
+
   let { title, description,
     author, publisher,
     image, date,
     url, logo
   } = metadata.data
+
+  console.log(`url ${url}`)
+
 
   if (!image) {
     image = { url: "https://picsum.photos/1024/1024?gravity=center&random" }

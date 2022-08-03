@@ -7,6 +7,10 @@ const   imageShortcodeFn        = require('./js/image.js')
 const   oembedShortcodeFn       = require('./js/oembed.js')
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.setBrowserSyncConfig({
+    notify: true
+  })
+
   eleventyConfig.addPlugin(EleventyRenderPlugin)
   eleventyConfig.addPlugin(pluginUnfurl)
 
