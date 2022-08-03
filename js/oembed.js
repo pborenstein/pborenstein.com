@@ -85,9 +85,23 @@ async function defaultHandler (url, params) {
 }
 
 async function microlink(urlp) {
-  const metadata = await Cache(`https://api.microlink.io/?url=${urlp}`, { duration: "1m",
-    type: "json",
-  })
+  let metadata = null
+
+try {
+     metadata = await Cache(`https://api.microlink.io/?url=${urlp}`, 
+        { duration: "1m", type: "json"})
+} catch (error) {
+  return `
+  <div class="tepiton qembed rounded-border">
+    <header>glitch</header>
+    <section class="with-sidebar" style="--space: 0">
+      <div style="display: flex; flex-direction: column; justify-content: space-between;">
+        <p><code style="font-size: 50%">${error.message}</code></p>
+      </div>
+    </section>
+  </div>
+  `
+}
 
 
   let { title, description,
