@@ -1,4 +1,4 @@
-const { extract, findProvider } = require('oembed-parser/dist/cjs/oembed-parser.js')
+const { extract, findProvider } = require('oembed-parser')
 const imageShortcode = require('./image.js')
 const Cache = require("@11ty/eleventy-cache-assets");
 
