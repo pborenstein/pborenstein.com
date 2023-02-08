@@ -1,7 +1,6 @@
 
 const { EleventyRenderPlugin }  = require('@11ty/eleventy')
 const   markdownIt              = require('markdown-it')
-const   pluginUnfurl            = require("eleventy-plugin-unfurl")
 const   excertptFn              = require('./js/excerpt.js')
 const   imageShortcodeFn        = require('./js/image.js')
 const   oembedShortcodeFn       = require('./js/oembed.js')
@@ -12,7 +11,6 @@ module.exports = function (eleventyConfig) {
   })
 
   eleventyConfig.addPlugin(EleventyRenderPlugin)
-  eleventyConfig.addPlugin(pluginUnfurl)
 
   eleventyConfig.addPassthroughCopy("src/assets")
 

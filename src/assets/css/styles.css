@@ -15,11 +15,11 @@
 }
 
 :root {
-  --lt-color-link:            #F52500;
-  --lt-color-link-hover:      tomato;
+  --lt-color-link:            #b71f45;
+  --lt-color-link-hover:      #E66E8C;
   --lt-color-foreground:      hsl(  0,  0%, 07%);
   --lt-color-background:      hsl(  0,  0%, 95%);
-  --lt-color-heading:         hsl(  0,  0%, 10%);
+  --lt-color-heading:         hsl(345, 71%, 42%);
   --lt-color-logo:            hsl(  0,  0%, 07%);
   --lt-color-border:          hsl(  0,  0%, 75%);
   --lt-weight-body:           400;
@@ -42,13 +42,6 @@
   --color-border:             var(--dk-color-border     , var(--lt-color-border));
   --color-body:               var(--color-foreground);
   --weight-body:              var(--dk-weight-body      , var(--lt-weight-body));
-
-  --font-serif:               Spectral, Georgia, serif;
-  --font-sans-serif:          neue-kabel, 'Poiret One',Vibes, 'Abril Fatface','Onyx','Helvetica Neue', Helvetica, sans-serif;
-  --font-mono:                monospace;
-  --font-logo:                'Helvetica Neue', Spectral, john-doe, sans-serif;
-  --font-body:                var(--font-serif);
-  --font-heading:             var(--font-sans-serif);
 }
 
 :root {
@@ -66,16 +59,20 @@
   --s5:   calc(var(--s4)  *   var(--ratio));  /*  3.05  */
 
   --space:    var(--s2);
-  --measure:  min(90%, 64ch);
+  --measure:  min(90%, 48ch);
 
-  --font-serif:               Spectral, Georgia, serif;
-  --font-sans-serif:          neue-kabel, 'Poiret One',Vibes, 'Abril Fatface','Onyx','Helvetica Neue', Helvetica, sans-serif;
-  --font-mono:                monospace;
-  --font-logo:                'Helvetica Neue', Spectral, john-doe, sans-serif;
+  --font-serif:               Georgia, serif;
+  --font-sans-serif:          'Helvetica Neue', Helvetica, sans-serif;
+  --font-mono:                Monaco, monospace;
+  --font-logo:                'Helvetica Neue', sans-serif;
   --font-body:                var(--font-serif);
   --font-heading:             var(--font-sans-serif);
 
   --tepiton-head-factor:      var(--s-1)
+}
+html {
+  /* https://css-tricks.com/simplified-fluid-typography/ */
+  font-size: clamp(12px, .7rem + 1vw, 24px);
 }
 
 pre {
@@ -95,8 +92,8 @@ hr {
 article {
   -webkit-hyphens: auto;
   hyphens: auto;
-}
 
+}
 
 /***
  *
@@ -111,11 +108,6 @@ article {
     --font-max-width: 900px;
  }
 
-html {
-  /* https://css-tricks.com/simplified-fluid-typography/ */
-  font-size: clamp(12px, .7rem + 1vw, 24px);
-}
-
 body {
   margin: 0;
   width: 100vw;
@@ -124,7 +116,7 @@ body {
   max-inline-size: var(--measure);
   /* border: 1px solid green */;
 
-  font-size: var(--s0);
+  font-size:    var(--s0);
   font-family:  var(--font-body);
   line-height:  var(--s3);
 
@@ -153,14 +145,14 @@ main {
  ***/
 
 footer {
-  font-family:      var(--font-sans-serif);
-  font-size:        var(--s-2);
+  font-family:      var(--font-body);
+  font-size:        var(--s-3);
   line-height:      1.5;
   display:          flex;
   flex-wrap:        wrap;
   border-top:       1px solid var(--color-border);
   margin-top:       var(--s-1);
-  margin-bottom:    var(--s-3);
+  margin-bottom:    var(--s-3) !important;
   padding-top:      var(--s-3);
   justify-content:  space-between;
 }
@@ -223,7 +215,7 @@ ul li + li
 
 .tepiton article.noTitle,
  div.qembed {
-  font-family: neue-kabel, 'Poiret One',Vibes, 'Abril Fatface','Onyx','Helvetica Neue', Helvetica, sans-serif;
+  font-family: var(--font-body);
 }
 
 div.qembed {
@@ -254,6 +246,7 @@ div.qembed cite {
   margin-top: 1em;
   color: var(--color-heading);
   font-size: var(--s-2);
+  font-family: var(--font-heading);
 
   /* border-top: 1px solid var(--color-border) ;
   border-top-left-radius: 10px;
@@ -276,13 +269,12 @@ div.qembed cite {
 .tepiton header a:hover {
   font-family: var(--font-heading);
   font-size: var(--s1);
-  line-height: 1.0;
   font-weight: 700;
   hyphens: auto;
   text-decoration: none;
   margin: 0 0 var(--s-1) 0;
   color: var(--color-heading);
-  line-height: 1.2;
+  line-height: 1.4;
 
   font-feature-settings:"onum",   /*  onum:   Old style numbers */
                         "ss04",   /*  ss04:   Overlapping W   */
@@ -315,8 +307,8 @@ figcaption  a {
   color: var(--color-link);
   text-decoration: none;
   border-top: none;
-  font-family: var(--font-sans-serif);
-  font-size:  var(--s-1);
+  font-family: var(--font-body);
+  font-size:  var(--s-2);
   text-align: right;
   --space: -0.75rem;
   margin-right: 1px;
@@ -325,7 +317,11 @@ figcaption  a {
 .post h1,
 .post h1 a,
 .post h1 a:hover,
-.post h1 a:visited { color: var(--color-heading); }
+.post h1 a:visited {
+  color: var(--color-heading);
+  -webkit-hyphens: none;
+  hyphens: none;
+}
 
 .qimg {  margin-right: .5em;}
 
@@ -361,7 +357,7 @@ h1,
 h2,
 h3,
 h4 {
-  line-height: 1.0;
+  line-height: 1.3;
   font-family: var(--font-heading);
   font-weight: 700;
   hyphens: auto;
@@ -402,6 +398,6 @@ a:hover {
 
 figure  { margin: 0; }
 img     { max-width: 100%;
-          height: auto;
+          height: auto; 
           margin-top: 0 !important;}
 iframe  { max-width: 100%;}

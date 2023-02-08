@@ -1,7 +1,9 @@
+
 const { extract, findProvider } = require('oembed-parser')
 const imageShortcode = require('./image.js')
 const Cache = require("@11ty/eleventy-cache-assets");
 
+// const { extract } = require('oembed-parser/dist/cjs/oembed-parser.js')
 
 
 module.exports = async function oembed(url, params) {
@@ -51,13 +53,8 @@ async function twitterHandler (url, params) {
                 maxwidth: 320,
                 ...params
     }
-    
-    try {
-      let oembed_data = await extract(url, params)
-      return oembed_data.html
-    } catch (error) {
-      return `<p style="font-size: 75%"><code>${error.message}</code></p>`
-    }
+    let oembed_data = await extract(url, params)
+    return oembed_data.html
 }
 
 async function  nytHandler (url, params) {
@@ -85,33 +82,15 @@ async function defaultHandler (url, params) {
 }
 
 async function microlink(urlp) {
-  let metadata = null
-
-try {
-     metadata = await Cache(`https://api.microlink.io/?url=${urlp}`, 
-        { duration: "1m", type: "json"})
-} catch (error) {
-  return `
-  <div class="tepiton qembed rounded-border">
-    <header>glitch</header>
-    <section class="with-sidebar" style="--space: 0">
-      <div style="display: flex; flex-direction: column; justify-content: space-between;">
-        <p><code style="font-size: 50%">${error.message}</code></p>
-      </div>
-    </section>
-  </div>
-  `
-}
-
+  const metadata = await Cache(`https://api.microlink.io/?url=${urlp}`, { duration: "1m",
+    type: "json",
+  })
 
   let { title, description,
     author, publisher,
     image, date,
     url, logo
   } = metadata.data
-
-  console.log(`url ${url}`)
-
 
   if (!image) {
     image = { url: "https://picsum.photos/1024/1024?gravity=center&random" }
