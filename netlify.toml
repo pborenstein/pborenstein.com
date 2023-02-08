@@ -2,11 +2,10 @@
 
 [[redirects]]
 
-  from = "/posts/tablehacks/"
-  to = "https://pborenstein.dev/posts/tablehacks/"
+  from = "/posts/categories/"
+  to = "https://pborenstein.dev/posts/categories/"
   status = 301
   force = true
-
 
 [[redirects]]
 
@@ -15,3 +14,30 @@
   status = 301
   force = true
 
+[[redirects]]
+
+  from = "/posts/dotdotnotation/"
+  to = "https://pborenstein.dev/posts/dotdotnotation/"
+  status = 301
+  force = true
+
+[[redirects]]
+
+  from = "/posts/how-rebase-works/"
+  to = "https://pborenstein.dev/posts/how-rebase-works/"
+  status = 301
+  force = true
+
+[[redirects]]
+
+  from = "/posts/minimal/"
+  to = "https://pborenstein.dev/posts/minimal/"
+  status = 301
+  force = true
+
+[[redirects]]
+
+  from = "/posts/tablehacks/"
+  to = "https://pborenstein.dev/posts/tablehacks/"
+  status = 301
+  force = true
