@@ -1,0 +1,17 @@
+[build]
+
+[[redirects]]
+
+  from = "/posts/tablehacks/"
+  to = "https://pborenstein.dev/posts/tablehacks/"
+  status = 301
+  force = true
+
+
+[[redirects]]
+
+  from = "/posts/collections/"
+  to = "https://pborenstein.dev/posts/collections/"
+  status = 301
+  force = true
+
