@@ -65,11 +65,14 @@ module.exports = class Home {
     let prolog = `<div class="tepiton stack">\n`
     let epilog = '</div>'
     let body = ''
+
+    let notice = 'Technical content is now at <a href="https://pborenstein.dev">pborenstein.dev</a>'
+
     for (const post of posts) {
         body += await this.renderPost(post)
     }
 
-    return head + prolog + body + epilog
+    return head + notice + prolog + body + epilog
   }
 }
 
