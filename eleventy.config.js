@@ -1,16 +1,17 @@
 
 const { EleventyRenderPlugin }  = require('@11ty/eleventy')
 const   markdownIt              = require('markdown-it')
+const   mdContainer             = require('markdown-it-container')
 const   excertptFn              = require('./js/excerpt.js')
 const   imageShortcodeFn        = require('./js/image.js')
 const   oembedShortcodeFn       = require('./js/oembed.js')
+const   syntaxHighlight         = require('@pborenstein/eleventy-md-syntax-highlight')
+const   eleventyNavPlugin       = require("@11ty/eleventy-navigation")
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setBrowserSyncConfig({
-    notify: true
-  })
-
   eleventyConfig.addPlugin(EleventyRenderPlugin)
+  eleventyConfig.addPlugin(syntaxHighlight, { showLineNumbers: false })
+  eleventyConfig.addPlugin(eleventyNavPlugin);
 
   eleventyConfig.addPassthroughCopy("src/assets")
 
@@ -23,7 +24,7 @@ module.exports = function (eleventyConfig) {
   // The ever-popular markdown filter.
   eleventyConfig.addFilter("markdown",  (content) => md.renderInline(content))
   eleventyConfig.addFilter("markdown2", (content) => md.render(content))
-  eleventyConfig.addFilter("debugger", (...args) => {
+  eleventyConfig.addFilter("debugger",  (...args) => {
     console.log('>>>>')
     console.log(...args)
     console.log('<<<<')
@@ -41,8 +42,48 @@ module.exports = function (eleventyConfig) {
 
   const md =  markdownIt({  html: true,
                             breaks: false,
-                            linkify: false,
+                            linkify: true,
                             typographer: true }).disable('code');
+
+  md.use(require('markdown-it-footnote'))
+  md.use(mdContainer, 'note', {
+    marker: '!',
+    validate: function (params) {
+      return true
+    },
+    render: function (tokens, idx) {
+      var m = tokens[idx].info.trim()
+      if (tokens[idx].nesting === 1) {
+        // opening tag
+        let summary =  m === ''
+                       ? ''
+                       : '<summary>' + md.renderInline(m) + '</summary>\n'
+
+        return '<details>' + summary + '<aside>';
+      } else {
+        // closing tag
+        return '</aside>\n</details>\n';
+      }
+    }
+
+  })
+
+
+  md.renderer.rules.footnote_caption = (tokens, idx) => {
+    let n = Number(tokens[idx].meta.id + 1).toString()
+
+    if (tokens[idx].meta.subId > 0) {
+        n += ':' + tokens[idx].meta.subId
+    }
+
+    return n;
+  }
+
+  md.renderer.rules.footnote_block_open = (tokens, idx) => (
+    `<div class="footnotes-sep"></div>
+      <section class="footnotes">
+      <ol class="footnotes-list">`
+  )
 
 
   eleventyConfig.setLibrary("md", md)

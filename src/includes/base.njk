@@ -7,6 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="/assets/icons/favicon-57.png" sizes="57x57">
+  <link rel="icon" href="/assets/icons/favicon-76.png" sizes="76x76">
+  <link rel="icon" href="/assets/icons/favicon-96.png" sizes="96x96">
+  <link rel="icon" href="/assets/icons/favicon-128.png" sizes="128x128">
+  <link rel="icon" href="/assets/icons/favicon-192.png" sizes="192x192">
+  <link rel="icon" href="/assets/icons/favicon-228.png" sizes="228x228">
+
+
   <meta property="og:title" content="{{ renderData.title or title or pkg.name }} • {{ pkg.name }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{page.url | url}}" />
@@ -18,16 +27,13 @@
   <meta name="twitter:image" content="/assets/img/storm-manchester-1024w.jpeg"  />
 
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.typekit.net/szk3asc.css">
-  <link rel="stylesheet" href="https://use.typekit.net/tpw2slk.css">
+
   <link rel="stylesheet" href="https://use.typekit.net/ztn6rcs.css">
+  <link rel="stylesheet" href="https://use.typekit.net/pgn7ley.css">
+
+  <link rel="stylesheet" href="/assets/css/prism/prism-vsc-dark-plus.css">
+  <link rel="stylesheet" href="/assets/css/prism/prism-line-numbers.css">
+
   <script src="/assets/js/darkmode.js" defer></script>
 </head>
 <body class="one-col-grid">
@@ -41,7 +47,7 @@
     {%- block nav -%}
       {% include "nav.njk" ignore missing %}
     {%- endblock -%}
-  </nav>
+</nav>
   <main>
     {% block kontent %}
       {{ content | safe }}

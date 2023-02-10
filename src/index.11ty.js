@@ -6,7 +6,12 @@ module.exports = class Home {
     return {
       layout: "base.njk",
       home: true,
-      excerpt: "all the little things",    }
+      excerpt: "all the little things",
+      eleventyNavigation: {
+        key: "home",
+        order: 1
+      }
+    }
   }
 
   async renderPost(post) {
@@ -61,13 +66,11 @@ module.exports = class Home {
         //                     to copy an array
     let posts = data.collections.tepiton.slice().reverse()
 
-    let head = `<h1 class="logo">${ data.pkg.name }</h1>\n`
+    let head = ``
+    let notice = '<div id="notice">Technical content is now at <a href="https://pborenstein.dev">pborenstein.dev</a></div>'
     let prolog = `<div class="tepiton stack">\n`
     let epilog = '</div>'
     let body = ''
-
-    let notice = 'Technical content is now at <a href="https://pborenstein.dev">pborenstein.dev</a>'
-
     for (const post of posts) {
         body += await this.renderPost(post)
     }

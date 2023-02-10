@@ -1,7 +1,12 @@
 {% extends "base.njk" %}
 {% block kontent %}
   <article class="post {{ "newlines" if newlines }}">
-    <h1><a href="/">{{ title | markdown | safe }}</a></h1>
+    <div>
+    <h1>{{ title | markdown | safe }}</h1>
+    <span class="date">
+      {{ page.date.toDateString()}}
+   </span>
+   </div>
     {% if newlines -%}
       {{ content | nl2br | safe  }}
     {%- else %}

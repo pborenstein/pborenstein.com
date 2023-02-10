@@ -23,7 +23,7 @@ module.exports = function examine(file, options) {
                   : separator
 
       //  default excerpt is the first `excerptLength` chars
-  file.excerpt = file.content.substring(0, excerptLength)
+  file.excerpt = file.data.excerpt || file.content.substring(0, excerptLength)
 
   if (file.excerpt.length == excerptLength)
     file.excerpt += '...'

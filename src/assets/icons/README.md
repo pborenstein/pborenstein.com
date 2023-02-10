@@ -1,3 +1,1 @@
-icons go here
-
-this icon generated https://favicon.io/favicon-generator/
+Icons should go here.
