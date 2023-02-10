@@ -249,7 +249,7 @@
 }
 html {
   /* https://css-tricks.com/simplified-fluid-typography/ */
-  font-size: clamp(12px, .6rem + 1vw, 24px);
+  font-size: clamp(12px, .8rem + 1vw, 24px);
 }
 
 pre {
