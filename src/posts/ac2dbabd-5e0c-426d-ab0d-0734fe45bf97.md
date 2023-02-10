@@ -1,6 +1,6 @@
 ---
 title: What is this?
-date: 2023-02-10T07:28:40.176Z
+date: 2023-02-10T08:46:40.652Z
 draftDate: 2023-02-10T02:33:55.380Z
 draft: drafts://open?uuid=AC2DBABD-5E0C-426D-AB0D-0734FE45BF97
 github: https://github.com/pborenstein/pborenstein.com/blob/main/src/posts/ac2dbabd-5e0c-426d-ab0d-0734fe45bf97.md
@@ -17,4 +17,4 @@ I've been messing around with Eleventy since around 2019. The Twitter implosion 
 
 I suppose I must have about half a dozen posts from each time I've done this project. I'll collect what I've done before. There should be some going back to around 2000. It will be embarrassing.
 
-{{ git.origin }}
+{{ git.repo }}
