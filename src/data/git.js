@@ -6,7 +6,8 @@ module.exports = async function() {
    commitsha:   await git.short,
    curbranch:   await git.branch,
    commitdate:  await git.date,
-   repo:        "pborenstein.dev"
+   origin :     await git.origin,
+   repo:        "pborenstein.com"
  }
 
   return ret
