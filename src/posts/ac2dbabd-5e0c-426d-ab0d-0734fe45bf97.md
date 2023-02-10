@@ -1,12 +1,12 @@
 ---
 title: What is this?
-date: 2023-02-10T06:54:58.225Z
+date: 2023-02-10T06:57:54.461Z
 draftDate: 2023-02-10T02:33:55.380Z
 draft: drafts://open?uuid=AC2DBABD-5E0C-426D-AB0D-0734FE45BF97
 github: https://github.com/pborenstein/pborenstein.com/blob/main/src/posts/ac2dbabd-5e0c-426d-ab0d-0734fe45bf97.md
 newlines: false
 ---
-The fun part of blogging is messing around with the blogging platform. Once you've done that, though, you have to fill it with something.
+The fun part of blogging is messing around with the blogging platform. Once you've done that, you have to fill it with something.
 <!-- excerpt -->
 
 I had a few articles about Git and Markdown, but I had this `pborenstein.dev` domain, because all the cool kids have a `.dev` domain. So I moved all that stuff [over there](https://pborenstein.dev), and now I need some 'content' to fill it with.
