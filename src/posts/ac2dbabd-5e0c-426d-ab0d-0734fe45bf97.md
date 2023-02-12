@@ -1,6 +1,6 @@
 ---
 title: What is this?
-date: 2023-02-10T20:02:51.521Z
+date: 2023-02-12T04:21:06.876Z
 draftDate: 2023-02-10T02:33:55.380Z
 draft: drafts://open?uuid=AC2DBABD-5E0C-426D-AB0D-0734FE45BF97
 github: https://github.com/pborenstein/pborenstein.com/blob/main/src/posts/ac2dbabd-5e0c-426d-ab0d-0734fe45bf97.md
@@ -8,6 +8,8 @@ newlines: false
 ---
 The fun part of blogging is messing around with the blogging platform. But once you've done that, you have to fill it with content.
 <!-- excerpt -->
+
+{% image  "https://picsum.photos/seed/rampo/700/200?grayscale"  %}
 
 I had a few articles about Git and Markdown on this domain, but I also had the `pborenstein.dev` domain (because all the cool kids have a `.dev` domain), and I wanted to use it. So I moved all the technical stuff about Git, Markdown, and Eleventy, [over there](https://pborenstein.dev). An [article about collections](https://pborenstein.dev/posts/collections/) seems to be the most popular.
 
