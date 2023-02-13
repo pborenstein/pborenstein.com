@@ -1,10 +1,6 @@
-
 const { extract, findProvider } = require('oembed-parser')
 const imageShortcode = require('./image.js')
 const Cache = require("@11ty/eleventy-cache-assets");
-
-// const { extract } = require('oembed-parser/dist/cjs/oembed-parser.js')
-
 
 module.exports = async function oembed(url, params) {
 
@@ -19,17 +15,17 @@ module.exports = async function oembed(url, params) {
     return oembed_data.html
   }
 
-  switch ( provider.providerName ) {
+  switch ( provider.endpoint ) {
         case 'The New York Times':
           return microlink(url)
           return nytHandler(url, params)
             break
 
-        case 'Twitter':
+        case 'https://publish.twitter.com/oembed/':
           return twitterHandler(url, params)
             break
 
-        case 'Flickr':
+        case "https://www.flickr.com/services/oembed/":
           return flickrHandler(url, params)
             break
 
