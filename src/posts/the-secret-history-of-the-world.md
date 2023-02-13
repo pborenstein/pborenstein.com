@@ -9,6 +9,9 @@ tags:
 
 So I was reading Boing Boing the other day, when I ran across [this little tidbit](https://www.boingboing.net/2010/05/07/fortean-unusual-frin.html) about odd books. I wasn't actually reading Boing Boing itself; I was reading their feed. But there was something about this post that made me want to see the comments.
 
+{% image  "https://picsum.photos/seed/secret-history/700/200?grayscale", "secret-history"  %}
+
+
 So among the comments chastising the tres hip Boing Boing for carrying a post about something as outré as a list of odd books (in the Weird category, no less), there is a comment to the effect that "_The Secret History of the World_ looks like great fun!"
 
 Reader, it isn't.
