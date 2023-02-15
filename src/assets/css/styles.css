@@ -499,6 +499,10 @@ div.qembed cite {
   margin-top: 0px !important;
 }
 
+.tepiton article footer {
+  border: initial;
+  margin-top: 0px !important;
+}
 
 .tepiton h1, h1,
 .tepiton h2, h2,

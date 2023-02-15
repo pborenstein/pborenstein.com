@@ -34,12 +34,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcodeFn);
   eleventyConfig.addNunjucksAsyncShortcode("oembed", oembedShortcodeFn);
 
-  eleventyConfig.addCollection("byDraftDate", collectionAPI => {
-    let list = collectionAPI.getFilteredByTag('tepiton')
-                            .sort((a, b) => a.data.draftDate - b.data.draftDate)
-    return list
-  })
-
   const md =  markdownIt({  html: true,
                             breaks: false,
                             linkify: true,

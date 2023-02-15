@@ -41,7 +41,8 @@ module.exports = class Home {
     </section>`
     let footer  = `
     <footer>
-      <a href="${post.data.draft}"># ${post.date.toDateString()}</a>
+    <span>&nbsp;</span>
+    <a href="${post.data.draft}">${post.date.toDateString().replace(' 0', ' ')}</a>
     </footer>`
 
     let body = `<article class="rounded-border ${noTitle ? ' noTitle' : ''}">`
@@ -52,6 +53,7 @@ module.exports = class Home {
       body += header
 
     body += section
+    body += footer
 
     if (noTitle)
       body += '</a>'

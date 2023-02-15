@@ -6,7 +6,7 @@
   </div>
   <div>
     {% if date and github -%}
-      post:  <a href={{github}}>{{date.toDateString()}}</a><br>
+      post:  <a href={{github}}>{{date.toDateString().replace(' 0', ' ')}}</a><br>
     {%- else %}
       <a href="https://github.com/pborenstein/{{git.repo}}/blob/main{{ page.inputPath.slice(1) }}">
       {%- if git.curbranch != 'HEAD' -%}
@@ -15,7 +15,7 @@
       {{- git.commitsha -}}</a><br>
     {%- endif %}
     {% if draftDate and draft -%}
-      draft: <a href={{draft}}>{{draftDate.toDateString()}}</a>
+      draft: <a href={{draft}}>{{draftDate.toDateString().replace(' 0', ' ')}}</a>
     {%- else -%}
       that’s how the light gets in
     {%- endif %}

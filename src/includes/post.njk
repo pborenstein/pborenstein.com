@@ -4,7 +4,7 @@
     <div>
     <h1>{{ title | markdown | safe }}</h1>
     <span class="date">
-      {{ page.date.toDateString()}}
+      {{ page.date.toDateString().replace(' 0', ' ')}}
    </span>
    </div>
     {% if newlines -%}
