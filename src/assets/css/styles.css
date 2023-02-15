@@ -269,6 +269,8 @@ code:not([class]) {
   margin: 0.1em 0.2em;
   border-radius: 0.2em;
   color: var(--color-code);
+  -webkit-hyphens: none;
+  hyphens: none;
 }
 /* for naked <code> */
 pre:not([class]) code:not([class]) {

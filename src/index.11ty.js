@@ -42,7 +42,7 @@ module.exports = class Home {
     let footer  = `
     <footer>
     <span>&nbsp;</span>
-    <a href="${post.data.draft}">${post.date.toDateString().replace(' 0', ' ')}</a>
+    <a href="${post.url}">${post.date.toDateString().replace(' 0', ' ')}</a>
     </footer>`
 
     let body = `<article class="rounded-border ${noTitle ? ' noTitle' : ''}">`
