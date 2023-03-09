@@ -655,6 +655,17 @@ details > summary::-webkit-details-marker {
  *
  ***/
 
+sup {
+    vertical-align: baseline;
+    font-feature-settings: "sups";
+}
+sub {
+    vertical-align: baseline;
+    font-feature-settings: "subs";
+}
+
+
+
 figure  { margin: 0; }
 img     { max-width: 100%;
           height: auto; 
