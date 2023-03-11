@@ -655,6 +655,19 @@ details > summary::-webkit-details-marker {
  *
  ***/
 
+    ul {
+        list-style-type: none;
+    }
+    li::before {
+        content: "\25C6";
+        color: var(--color-heading);
+        display: inline-block;
+        width: 1.25em;
+        margin-left: -1em;
+        transform: translateY(-0.05em);
+    }
+
+
 sup {
     vertical-align: baseline;
     font-feature-settings: "sups";
@@ -772,6 +785,11 @@ details:not([open])  {
   font-size: var(--s-2);
   font-weight: 400;
 }
+
+#sitenav ul li::before {
+    content: initial
+}
+
 
 .nav-item-active {
 	font-weight: 500;
