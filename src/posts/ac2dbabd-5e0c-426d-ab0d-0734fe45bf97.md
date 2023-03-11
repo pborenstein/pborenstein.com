@@ -5,6 +5,7 @@ draftDate: 2023-02-10T02:33:55.380Z
 draft: drafts://open?uuid=AC2DBABD-5E0C-426D-AB0D-0734FE45BF97
 github: https://github.com/pborenstein/pborenstein.com/blob/main/src/posts/ac2dbabd-5e0c-426d-ab0d-0734fe45bf97.md
 newlines: false
+permalink: "/posts/{{title|slugify|truncate(32,true, '')}}/"
 ---
 The fun part of blogging is messing around with the blogging platform. But once you've done that, you have to fill it with content.
 <!-- excerpt -->
