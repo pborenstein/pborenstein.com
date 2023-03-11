@@ -667,15 +667,9 @@ details > summary::-webkit-details-marker {
         transform: translateY(-0.05em);
     }
 
-
-sup {
-    vertical-align: baseline;
-    font-feature-settings: "sups";
-}
-sub {
-    vertical-align: baseline;
-    font-feature-settings: "subs";
-}
+    ol li::before {
+        content: initial;
+   }
 
 
 
@@ -702,6 +696,22 @@ iframe  { max-width: 100%;}
   margin-block-start: 0;
 }
 
+/****
+ *
+ *  footnotes
+ *
+ ****/
+
+sup {
+    vertical-align: baseline;
+    font-feature-settings: "sups";
+}
+sub {
+    vertical-align: baseline;
+    font-feature-settings: "subs";
+}
+
+
 
 .footnotes {
   font-size: var(--s-1);
@@ -712,7 +722,7 @@ margin-block-start: 1em;
 }
 
 .footnote-ref {
-  font-size: var(--s-1);
+  font-size: var(--s0);
   margin-left: .125em;
   margin-right: .25em
 }
