@@ -877,3 +877,21 @@ table tbody tr:nth-child(even) {
   background: var(--color-logo);
   background: linear-gradient(90deg, var(--color-logo) 0%, var(--color-link-hover) 60%, var(--color-background) 90%);
 }
+
+
+#notice {
+    animation: fadeOut 1s ease-in-out 4s forwards;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+      visibility: hidden;
+      height: 0;
+    }
+  }
+  
