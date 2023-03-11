@@ -1,4 +1,4 @@
-const stars = "✼ ✼ ✼"
+const stars = ". . ."
 
 module.exports = class Home {
 
