@@ -20,12 +20,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{page.url | url}}" />
   <meta property="og:image" content="https://live.staticflickr.com/1647/25619384566_c903fba327_o.jpg"  />
-  <meta property="og:description" content="{{ excerpt|truncate(132) }}" />
+  <meta property="og:description" content="{{ excerpt|truncate(132)|trim }}" />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ renderData.title or title or pkg.name }} • {{ pkg.name }}" />
   <meta name="twitter:site" content="pborenstein" />
-  <meta name="twitter:description" content="{{ excerpt|truncate(132) }}" />
+  <meta name="twitter:description" content="{{ excerpt|truncate(132)|trim }}" />
   <meta name="twitter:image" content="https://live.staticflickr.com/1647/25619384566_c903fba327_o.jpg"  />
 
 
