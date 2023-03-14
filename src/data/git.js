@@ -7,7 +7,9 @@ module.exports = async function() {
    curbranch:   await git.branch,
    commitdate:  await git.date,
    origin :     await git.origin,
-   repo:       (await git.origin).replace(/.git$/, '').split('/').at(-1)
+   repo:       (await git.origin).replace(/.git$/, '').split('/').at(-1),
+   owner:      (await git.owner),
+   name:       (await git.name)
  }
 
   return ret

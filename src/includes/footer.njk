@@ -5,14 +5,18 @@
     <button class="btn btn-system">S</button>
   </div>
   <div>
+    {% set theBranch%}
+        {%- if git.curbranch != 'HEAD' -%}
+            {{- git.curbranch-}}
+        {%- else -%}
+            main
+        {%- endif -%}
+    {% endset %}
     {% if date and github -%}
       post:  <a href={{github}}>{{date.toDateString().replace(' 0', ' ')}}</a><br>
     {%- else %}
-      <a href="https://github.com/pborenstein/{{git.repo}}/blob/main{{ page.inputPath.slice(1) }}">
-      {%- if git.curbranch != 'HEAD' -%}
-        {{- git.curbranch-}}@
-      {%- endif -%}
-      {{- git.commitsha -}}</a><br>
+      <a href="https://github.com/{{git.owner}}/{{git.name}}/blob/{{theBranch}}{{ page.inputPath.slice(1) }}">
+        {{- theBranch-}}@{{- git.commitsha -}}</a><br>
     {%- endif %}
     {% if draftDate and draft -%}
       draft: <a href={{draft}}>{{draftDate.toDateString().replace(' 0', ' ')}}</a>

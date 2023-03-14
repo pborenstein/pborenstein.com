@@ -7,7 +7,7 @@
 source="."
 dest="$1"
 
-if [[ ! -e $dest/.eleventy.js ]] ; then
+if [[ ! -f $dest/.eleventy.js && ! -f $dest/eleventy.config.js ]] ; then
   echo "missing .eleventy.js"
   echo "start with a clone of the repo"
   exit
