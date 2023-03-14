@@ -1,8 +1,15 @@
 {% extends "base.njk" %}
+{%- set headStyle -%}
+    {%- if title != '. . .' -%}
+        style="display:block;"
+    {%- else -%}
+        style="display:none;"
+    {%- endif -%}
+{%- endset -%}
 {% block kontent %}
   <article class="post {{ "newlines" if newlines }}">
     <div>
-    <h1>{{ title | markdown | safe }}</h1>
+    <h1 {{ headStyle | safe -}}>{{ title | markdown | safe }}</h1>
     <span class="date">
     {% if draftDate and draft -%}
       {{draftDate.toDateString().replace(' 0', ' ')}}
