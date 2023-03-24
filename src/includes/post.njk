@@ -8,7 +8,7 @@
 {%- endset -%}
 {% block kontent %}
   <article class="post {{ "newlines" if newlines }}">
-    <div>
+    <div style="margin-bottom: 1em;"> 
     <h1 {{ headStyle | safe -}}>{{ title | markdown | safe }}</h1>
     <span class="date">
     {% if draftDate and draft -%}

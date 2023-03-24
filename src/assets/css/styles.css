@@ -586,7 +586,7 @@ h4 {
 h2, h3 {
      margin-block-start: 1em !important;
 } 
- 
+
 
 
 h2 + p,
@@ -594,7 +594,7 @@ h3 + p,
 h4 + p {
   margin-top: 0 !important;
 }
-h1 {  font-size: var(--s5)  }
+h1 {  font-size: var(--s4)  }
 h2 {  font-size: var(--s2)  }
 h3 {  font-size: var(--s1)  }
 h4 {  font-size: var(--s1)  }
@@ -771,6 +771,7 @@ details:not([open])  {
 #sitenav {
   margin-top: 0;
   margin-bottom: 0em;
+  border-bottom: 1px solid var(--color-heading);
 }
 
 #sitenav ul {
