@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {#- <!-- https://github.com/11ty/eleventy-base-blog/issues/15 --> #}
+  <title>{{ renderData.title or title or pkg.name }} • {{ pkg.name }}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+<style>
+  --color-foreground:         var(--dk-color-foreground);
+  --color-background:         var(--dk-color-background);
+  --color-link:               var(--dk-accent-04);
+  --color-link-hover:         var(--dk-accent-07);
+  --color-nav-text:           var(--dk-accent-04);
+  --color-nav-hover:          var(--dk-accent-07);
+  --color-heading:            var(--dk-accent-03);
+  --color-logo:               var(--dk-accent-02);
+  --color-code:               var(--dk-color-code);
+  --color-border:             var(--lt-color-code);
+  --color-table-background:   var(--dk-color-table-background);
+  --color-dot:                var(--dk-accent-04);
+  --weight-body:              var(--dk-weight-body);
+</style>
+
+</head>
+<body class="one-col-grid" >
+<div class="stack">
+  <main>
+    {% block kontent %}
+      {{ content | safe }}
+    {% endblock %}
+  </main>
+</div>
+
+</body>
+</html>

@@ -34,6 +34,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcodeFn);
   eleventyConfig.addNunjucksAsyncShortcode("oembed", oembedShortcodeFn);
 
+  eleventyConfig.addCollection("posts", (collection) => {
+    return collection.getFilteredByGlob("src/posts/*.md")
+  })
+
   const md =  markdownIt({  html: true,
                             breaks: false,
                             linkify: true,
