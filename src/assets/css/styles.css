@@ -194,13 +194,13 @@
 
 :root {
   --lt-color-foreground:                        #121212;
-  --lt-color-background:                        #e2e2e2;
+  --lt-color-background:                        #f8f8f8;
   --lt-color-code:                              #2b2b2b;
   --lt-color-table-background:                  #787878;
   --lt-weight-body:                               400;
 
   --dk-color-foreground:        var(--is-dark)  #bebebe;
-  --dk-color-background:        var(--is-dark)  #202020;
+  --dk-color-background:        var(--is-dark)  #0e1116;
   --dk-color-code:              var(--is-dark)  #b3b3b3;
   --dk-color-table-background:  var(--is-dark)  #272525;
   --dk-weight-body:             var(--is-dark)    300;
@@ -586,7 +586,7 @@ h4 {
 h2, h3 {
      margin-block-start: 1em !important;
 } 
-
+ 
 
 
 h2 + p,

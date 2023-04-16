@@ -11,13 +11,13 @@ navtitle: Colophon
 
 <div style='columns: 1;'>
 
-- [Eleventy][]<br>Static site generator
-- [Netlify][]: <br>Hosting and building
-- [BBEdit][]: <br>My go to editor
-- [VS Code][]: <br>My other go to editor
-- [Drafts][]: <br>My go to note taking app and content management system
-- [RandomTextGenerator.com][]: <br>Society excited by cottage private an it esteems
-- [Styles](../stylesheet/): <br>All the styles
+- [Eleventy][]: <br>Static site generator
+- [Netlify][]:  <br>Hosting and building
+- [BBEdit][]:   <br>My go to editor
+- [VS Code][]:  <br>My other go to editor
+- [Drafts][]:   <br>My go to note taking app and content management system
+- [RandomTextGenerator.com][]:  <br>Society excited by cottage private an it esteems
+- [Styles](../stylesheet/):     <br>All the styles
 
 </div>
 

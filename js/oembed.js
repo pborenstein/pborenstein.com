@@ -4,56 +4,61 @@ const Cache = require("@11ty/eleventy-cache-assets");
 
 module.exports = async function oembed(url, params) {
 
-  let provider = findProvider(url)
-  if (! provider) {
-    console.error(`no oembed handler for ${url}`)
-    return microlink(url)
-  }
+    let provider = findProvider(url)
+    if (!provider) {
+        console.error(`no oembed handler for ${url}`)
+        return microlink(url)
+    }
 
-  if (params?.native){
-    let oembed_data = await extract(url, params)
-    return oembed_data.html
-  }
+    if (params?.native) {
+        let oembed_data = await extract(url, params)
+        return oembed_data.html
+    }
 
-  switch ( provider.endpoint ) {
+    switch (provider.endpoint) {
         case 'The New York Times':
-          return microlink(url)
-          return nytHandler(url, params)
+            return microlink(url)
+            return nytHandler(url, params)
             break
 
         case 'https://publish.twitter.com/oembed/':
-          return twitterHandler(url, params)
+            return twitterHandler(url, params)
             break
 
         case "https://www.flickr.com/services/oembed/":
-          return flickrHandler(url, params)
-            break
+            try {
+                return flickrHandler(url, params)
+            } catch (e) {
+                console.error(e)
+                // return defaultHandler(url, params)
+            }
 
         default:
-          return defaultHandler(url, params)
+            return defaultHandler(url, params)
             break
-      }
+    }
 }
 
 
-async function flickrHandler (url, params) {
-  let oembed_data = await extract(url, params)
-  let txt = `<span>${oembed_data.title} &bull; ${oembed_data.author_name}</span>`
-  let ret = imageShortcode(oembed_data.url, oembed_data.title, oembed_data.web_page, txt,  sizes = "100vw")
+async function flickrHandler(url, params) {
+    let oembed_data = await extract(url, params)
+    let txt = `<span>${oembed_data.title} &bull; ${oembed_data.author_name}</span>`
+    let ret = imageShortcode(oembed_data.url, oembed_data.title, oembed_data.web_page, txt, sizes = "100vw")
 
-  return ret
+    return ret
 }
 
-async function twitterHandler (url, params) {
-    params = {  theme: 'dark',
-                maxwidth: 320,
-                ...params
+async function twitterHandler(url, params) {
+    params = {
+        theme: 'dark',
+        maxwidth: 320,
+        ...params
     }
     let oembed_data = await extract(url, params)
     return oembed_data.html
 }
 
-async function  nytHandler (url, params) {
+async function nytHandler(url, params) {
     let oembed_data = await extract(url, params)
     let ret = `
       <blockquote>
@@ -65,10 +70,10 @@ async function  nytHandler (url, params) {
           </a>
           <br>${oembed_data.publication_date}</cite>
         </blockquote>`
-      return ret
+    return ret
 }
 
-async function defaultHandler (url, params) {
+async function defaultHandler(url, params) {
     let oembed_data = await extract(url, params)
     let embed_html = oembed_data.html
     // console.log('\n')
@@ -78,18 +83,19 @@ async function defaultHandler (url, params) {
 }
 
 async function microlink(urlp) {
-  const metadata = await Cache(`https://api.microlink.io/?url=${urlp}`, { duration: "1m",
-    type: "json",
-  })
+    const metadata = await Cache(`https://api.microlink.io/?url=${urlp}`, {
+        duration: "1m",
+        type: "json",
+    })
 
-  let { title, description,
-    author, publisher,
-    image, date,
-    url, logo
-  } = metadata.data
+    let { title, description,
+        author, publisher,
+        image, date,
+        url, logo
+    } = metadata.data
 
-  if (!image) {
-    image = { url: "https://picsum.photos/1024/1024?gravity=center&random" }
+    if (!image) {
+        image = { url: "https://picsum.photos/1024/1024?gravity=center&random" }
   }
 
   let ret = `
@@ -104,5 +110,5 @@ async function microlink(urlp) {
   </section>
 </div>
 `
-  return ret
+    return ret
 }

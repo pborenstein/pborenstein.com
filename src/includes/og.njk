@@ -11,11 +11,13 @@
   <meta property="og:title" content="{{ renderData.title or title or pkg.name }} • {{ pkg.name }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{page.url | url}}" />
-  <meta property="og:image" content="https://screenshot.xhosi.com/{{ (pkg.siteData.url + "og" + page.url) |urlencode}}/opengraph/_{{ [3,4,5,6] | random}}"  />
   <meta property="og:description" content="{{ description | trim | safe }}" />
+  <meta property="og:image" content="https://screenshot.xhosi.com/{{ (pkg.siteData.url + "og" + page.url) |urlencode}}/opengraph/_{{ [3,4,5,6] | random}}"  />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ renderData.title or title or pkg.name }} • {{ pkg.name }}" />
   <meta name="twitter:site" content="pborenstein" />
   <meta name="twitter:description" content="{{ description | trim | safe }}" />
   <meta name="twitter:image" content="https://screenshot.xhosi.com/{{ (pkg.siteData.url + "og" + page.url) |urlencode}}/opengraph/_{{ [3,4,5,6] | random}}"  />
+
+
